@@ -1,5 +1,5 @@
 {
-  "state": "Three-position peek with existing natural blink reviewed",
+  "state": "Three distinct section peeks with exclusive playback reviewed",
   "checks": [
     "Seven HTML routes: links, assets, fragments and original prompt download checked",
     "Main navigation: Home, Skills, About Chris",
@@ -14,7 +14,10 @@
     "One peek per page, clear of text and controls; desktop About and mobile Home reviewed",
     "Encoded 13-second peek checked for alpha, 390 frames, physical dip and fully hidden ending",
     "Existing encoded idle has full blink closure and reopening while held in place",
-    "Single peek rotates right, left, center only during fully transparent dip ending"
+    "Single peek rotates right, left, center only during fully transparent dip ending",
+    "Every content page has exactly three peek slots",
+    "Home slots at distinct vertical offsets: Featured, tile grid, footer",
+    "Scroll transitions activate tile-grid/footer slots with only one peek playing"
   ],
   "release_scope": "No public skills or new private resources released"
 }

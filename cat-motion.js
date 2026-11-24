@@ -3,10 +3,34 @@
 const assetURLs = JSON.parse(document.querySelector('#character-assets')?.textContent || '{}');
 const assetURL = path => assetURLs[path] || path;
 const characters = [...document.querySelectorAll('.decoder-cat')];
+const peekSlots = [...document.querySelectorAll('.peek-edge')];
+let activePeek = -1;
+function inViewport(element) {
+  const box = element.getBoundingClientRect();
+  return box.bottom > 0 && box.top < innerHeight && box.right > 0 && box.left < innerWidth;
+}
+function activatePeek(index) {
+  activePeek = index;
+  peekSlots.forEach((slot, i) => {
+    slot.toggleAttribute('data-peek-active', i === index);
+    const video = slot.querySelector('video');
+    video.pause();
+    if (video.readyState) video.currentTime = 0;
+  });
+  if (index >= 0) refreshCharacter(peekSlots[index].querySelector('.decoder-cat'));
+}
+function followVisibleSection() {
+  if (activePeek >= 0 && inViewport(peekSlots[activePeek])) return;
+  for (let step = 1; step <= peekSlots.length; step++) {
+    const index = (activePeek + step) % peekSlots.length;
+    if (inViewport(peekSlots[index])) { activatePeek(index); break; }
+  }
+}
 function refreshCharacter(container) {
   const video = container.querySelector('video');
   const image = container.querySelector('img');
   const action = container.dataset.action;
+  if (action === 'peek' && !container.closest('[data-peek-active]')) { video.pause(); return; }
   if (!video.canPlayType('video/webm; codecs="vp9"')) return;
   if (video.dataset.action !== action) {
     video.pause();
@@ -30,30 +54,24 @@ for (const container of characters) {
   video.addEventListener('playing', () => container.classList.add('has-video'));
   video.addEventListener('error', () => container.classList.remove('has-video'));
 }
-function refreshCharacters() { characters.forEach(refreshCharacter); }
+function refreshCharacters() { followVisibleSection(); characters.forEach(refreshCharacter); }
 document.addEventListener('library:motion-update', refreshCharacters);
 document.addEventListener('visibilitychange', refreshCharacters);
 refreshCharacters();
 
 // Load/play a character only when its reserved area enters the viewport.
 if ('IntersectionObserver' in window) {
-  const observer = new IntersectionObserver(entries => entries.forEach(entry => refreshCharacter(entry.target)));
+  const observer = new IntersectionObserver(() => refreshCharacters());
   characters.forEach(container => observer.observe(container));
 }
 
-// Relocate only during the fully transparent end of the approved dip.
-// The existing continuation supplies natural blinks while the cat stays put.
-for (const edge of document.querySelectorAll('.peek-edge')) {
-  const video = edge.querySelector('video');
-  const positions = ['right', 'left', 'center'];
-  let position = 0;
-  let relocated = false;
+
+// Each appearance completes its opaque dip before another section receives it.
+for (const [index, slot] of peekSlots.entries()) {
+  const video = slot.querySelector('video');
   video.addEventListener('timeupdate', () => {
-    if (video.currentTime < 1) relocated = false;
-    if (!relocated && Number.isFinite(video.duration) && video.currentTime >= video.duration - 19 / 30) {
-      position = (position + 1) % positions.length;
-      edge.dataset.peekPosition = positions[position];
-      relocated = true;
+    if (index === activePeek && Number.isFinite(video.duration) && video.currentTime >= video.duration - 19 / 30) {
+      activatePeek((index + 1) % peekSlots.length);
     }
   });
 }
