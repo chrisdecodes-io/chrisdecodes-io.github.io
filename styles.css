@@ -61,13 +61,13 @@
 @media(max-width:480px){.footer{grid-template-columns:minmax(0,1fr)}.footer-monogram{justify-self:end}.footer-inner:has([data-footer-cat]){grid-template-columns:76px minmax(0,1fr)}}
 
 /* Approved peek artwork sits on the source ledge at row 436/512. */
-.peek-surface{position:relative;border-top:1px solid var(--line);padding-top:28px;margin-top:140px}
+.peek-surface{position:relative;border-top:1px solid var(--line);padding-top:28px;margin-top:80px}
 .peek-edge{position:absolute;right:24px;top:-128px;width:150px;height:128px;overflow:hidden;pointer-events:none}
 .peek-edge .decoder-cat{width:150px;height:150px;position:relative}
-.footer-peek{margin-top:140px}.footer-peek .footer-inner{justify-content:center}.footer-peek .footer-inner nav{justify-content:center}
-.prompt-peek{margin-top:140px!important}.channels.peek-surface{margin-top:140px}
+.footer-peek{margin-top:80px}.footer-peek .footer-inner{justify-content:center}.footer-peek .footer-inner nav{justify-content:center}
+.prompt-peek{margin-top:80px!important}.channels.peek-surface{margin-top:80px}
 .footer-monogram{overflow:hidden}.footer-monogram img{border-radius:8px}
-@media(max-width:760px){.peek-surface{margin-top:110px}.peek-edge{right:12px;top:-103px;width:120px;height:103px}.peek-edge .decoder-cat{width:120px;height:120px}.footer-peek,.channels.peek-surface{margin-top:110px}.prompt-peek{margin-top:110px!important}}
+@media(max-width:760px){.peek-surface{margin-top:64px}.peek-edge{right:12px;top:-103px;width:120px;height:103px}.peek-edge .decoder-cat{width:120px;height:120px}.footer-peek,.channels.peek-surface{margin-top:64px}.prompt-peek{margin-top:64px!important}}
 
 /* Three unobstructed positions on the originating section edge. */
 .peek-edge[data-peek-position=left]{right:auto;left:24px}
@@ -77,6 +77,15 @@
 /* Peeks occupy three separate section edges; only the active slot is shown. */
 .peek-edge{visibility:hidden}.peek-edge[data-peek-active]{visibility:visible}
 .feature-peek-wrap{padding:0;border:0}.feature-peek-wrap>.featured-panel{margin-bottom:0}
-.home-grid.peek-surface{margin-top:140px;padding-top:28px}
+.home-grid.peek-surface{margin-top:80px;padding-top:28px}
 .home-grid>.peek-edge{display:block}.about-skills h2{font-size:2rem;color:var(--blue)}
-@media(max-width:760px){.home-grid.peek-surface{margin-top:110px}.skills-page .page-intro.peek-surface{margin-top:110px}.skills-collection.peek-surface{margin-top:110px}}
+@media(max-width:760px){.home-grid.peek-surface{margin-top:64px}.skills-page .page-intro.peek-surface{margin-top:64px}.skills-collection.peek-surface{margin-top:64px}}
+
+/* Compact rhythm follows the visible artwork, rather than transparent frame padding. */
+main{padding-bottom:40px}.footer-peek{margin-top:32px}
+.featured-panel{grid-template-columns:minmax(0,1.9fr) minmax(250px,1fr)}
+.featured-panel .decoder-cat{width:300px;height:300px}
+.empty-state .decoder-cat{width:270px;height:270px}
+@media(max-width:1150px){.featured-panel{grid-template-columns:minmax(0,1.7fr) minmax(190px,1fr)}.featured-panel .decoder-cat{width:225px;height:225px}}
+@media(max-width:1000px){.empty-state .decoder-cat{width:230px;height:230px}}
+@media(max-width:760px){main{padding-bottom:32px}.featured-panel{grid-template-columns:minmax(0,1fr) 115px}.featured-panel .decoder-cat{width:115px;height:115px}.empty-state .decoder-cat{width:180px;height:180px}.footer-peek{margin-top:32px}}

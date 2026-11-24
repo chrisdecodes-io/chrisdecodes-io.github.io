@@ -1,5 +1,5 @@
 {
-  "state": "Three distinct section peeks with exclusive playback reviewed",
+  "state": "Compact spacing and proportionate companion sizes reviewed",
   "checks": [
     "Seven HTML routes: links, assets, fragments and original prompt download checked",
     "Main navigation: Home, Skills, About Chris",
@@ -17,7 +17,10 @@
     "Single peek rotates right, left, center only during fully transparent dip ending",
     "Every content page has exactly three peek slots",
     "Home slots at distinct vertical offsets: Featured, tile grid, footer",
-    "Scroll transitions activate tile-grid/footer slots with only one peek playing"
+    "Scroll transitions activate tile-grid/footer slots with only one peek playing",
+    "Home desktop intro-to-feature gap 80 px and Curious container 300 px",
+    "320 px Home and Skills have no horizontal overflow; Work container 180 px",
+    "Footer spacing reduced; keyboard focus and section peeks preserved"
   ],
   "release_scope": "No public skills or new private resources released"
 }
