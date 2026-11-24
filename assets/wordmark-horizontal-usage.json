@@ -1,0 +1,17 @@
+{
+  "state": "Website-specific horizontal derivative requested by Christopher",
+  "source": "assets/wordmark-ink.svg; approved wordmark-smooth-v1 outlines",
+  "source_sha256": "3f2a193b097bed6b7a78fc71e0562bd47ea8a8b2310c01cfe9a9edfd4e89a391",
+  "output_sha256": "714584d99f5005a213ff4190cd7449aa2fee19af6cc646e0805763d4b5018abe",
+  "role": "Unboxed centered header and centered footer signature",
+  "method": "First five and final seven original paths translated into one row; align median letter baselines; no path edits, retyping, scaling or stretching",
+  "word_gap": 46.7221,
+  "viewBox": [
+    0,
+    0,
+    995.4002,
+    140.1662
+  ],
+  "path_count": 12,
+  "rebuild": "python3 scripts/prepare-wordmark.py"
+}

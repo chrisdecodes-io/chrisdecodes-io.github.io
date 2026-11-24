@@ -1,5 +1,5 @@
 {
-  "state": "Centered layout and final solid brand-color pictograms reviewed",
+  "state": "Horizontal wordmark and tagline-led opening reviewed",
   "content_pages": [
     "/",
     "/skills/",
@@ -16,23 +16,20 @@
   ],
   "layout_cases": 24,
   "checks": [
-    "Header wordmark and footer brand centers measured within 1 px of page center in every case",
-    "Shared page frame no wider than 1440 px; footer spans page width",
-    "No horizontal overflow; channels visible and clear of branding",
-    "Desktop page headings no larger than 56 px; Featured no larger than 40 px",
-    "Home tile headings render in ink",
-    "Exact approved wordmark SVGs retained; proportions preserved",
-    "Desktop and mobile screenshots reviewed for all four content pages",
-    "Companion cats stay inside their areas; three peek slots and one active per page",
-    "Mobile sidebar expands, prompt copies, header Home and browser Back work",
-    "Legacy guide, Resources, Projects and root-query links reach Skills",
-    "Text download matches catalog; all local links and assets resolve",
-    "Home spacing refinements rechecked at all six widths",
-    "About Chris spans the desktop grid as a compact row, avoiding an empty half-row",
-    "Five decorative rounded-square destination icons checked at all six widths",
-    "320 px About Chris heading stays on one line after compact icon sizing",
-    "Final icons have solid #173FBF fields, cream fills, no strokes and no AI sparkle",
-    "Desktop and 320 px final pictograms visually reviewed, headings remain ink"
+    "All 12 original approved letter paths preserved exactly in horizontal SVG",
+    "Source hash checked; derivative recipe and provenance stored",
+    "Transparent ink header wordmark centered at every viewport",
+    "Header widths 240/200/140/128 px and footer widths 180/156 px verified",
+    "Home stays solid blue with cream text on all content pages",
+    "No Home/wordmark or channel overlap; 8 px Home separation at 320 px",
+    "No horizontal overflow; footer branding centered",
+    "Home has one H1 containing the approved tagline in Inter, max 40 px desktop and 28 px mobile",
+    "Tagline appears exactly once per content page",
+    "All four content pages visually reviewed on desktop and mobile",
+    "Ink grid headings, solid pictograms and three-section cat behavior preserved",
+    "Legacy guide/collection/root-query links reach Skills",
+    "Prompt copies successfully; download attribute and file match catalog; Home navigation and Back work",
+    "Seven generated HTML routes checked for headings, IDs, local destinations and assets"
   ],
-  "release_scope": "No new resources, private content, product claims or animation sources"
+  "release_scope": "Website-specific brand derivative only; no new public resources or animation changes"
 }

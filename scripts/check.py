@@ -2,10 +2,10 @@
 from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit,unquote
-import json,hashlib
+import json,hashlib,xml.etree.ElementTree as ET
 root=Path(__file__).resolve().parent.parent
 class Page(HTMLParser):
- def __init__(self):super().__init__();self.ids=[];self.refs=[];self.h1=0;self.videos=[];self.images=[];self.heading=False;self.heading_text=[];self.text=[];self.ignore_text=False;self.tile_count=0;self.home_tiles=[];self.nav_items=[];self.in_sidebar=False
+ def __init__(self):super().__init__();self.ids=[];self.refs=[];self.h1=0;self.videos=[];self.images=[];self.heading=False;self.heading_text=[];self.text=[];self.ignore_text=False;self.tile_count=0;self.home_tiles=[];self.nav_items=[];self.in_sidebar=False;self.in_h1=False;self.h1_text=[]
  def handle_starttag(self,t,attrs):
   a=dict(attrs)
   if 'id' in a:self.ids.append(a['id'])
@@ -13,7 +13,7 @@ class Page(HTMLParser):
   if 'home-tile' in a.get('class','').split():self.tile_count+=1;self.home_tiles.append(a)
   if t=='nav' and a.get('id')=='sidebar-links':self.in_sidebar=True
   if t=='a' and self.in_sidebar and 'data-nav' in a:self.nav_items.append(a.get('data-nav'))
-  if t=='h1':self.h1+=1
+  if t=='h1':self.h1+=1;self.in_h1=True
   if t in ['h1','h2','h3']:self.heading=True
   if t=='video':self.videos.append(a)
   if t=='img':self.images.append(a)
@@ -22,10 +22,12 @@ class Page(HTMLParser):
  def handle_endtag(self,t):
   if t in ['script','style']:self.ignore_text=False
   if t=='nav':self.in_sidebar=False
+  if t=='h1':self.in_h1=False
   if t in ['h1','h2','h3']:self.heading=False
  def handle_data(self,s):
   if not self.ignore_text:self.text.append(s)
   if self.heading:self.heading_text.append(s)
+  if self.in_h1:self.h1_text.append(s)
 pages={}
 for p in root.rglob('*.html'):
  if '.git' in p.parts:continue
@@ -50,6 +52,10 @@ for p,q in pages.items():
   assert dest.is_file(),(p.relative_to(root),x)
   if u.fragment:assert u.fragment in pages[dest].ids,(p,x,'missing fragment')
 home=pages[root/'index.html']
+assert ' '.join(' '.join(home.h1_text).split())==json.loads((root/'data/site.json').read_text())['tagline'],'Home must lead with the approved tagline'
+original=[p.attrib['d'] for p in ET.parse(root/'assets/wordmark-ink.svg').getroot().iter() if p.tag.endswith('path')]
+horizontal=[p.attrib['d'] for p in ET.parse(root/'assets/wordmark-horizontal-ink.svg').getroot().iter() if p.tag.endswith('path')]
+assert original==horizontal,'Horizontal wordmark must preserve every approved letter outline'
 assert home.tile_count==5,'Home must highlight Skills, Instagram, Substack, GitHub and About Chris'
 assert sum('href' not in tile for tile in home.home_tiles)==2,'Instagram and Substack remain visible placeholders'
 assert 'featured-title' in home.ids,'Featured must have its own labeled panel'

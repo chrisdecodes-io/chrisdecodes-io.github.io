@@ -67,3 +67,11 @@ Featured uses 32 px wide-screen padding. Grid cards use 24 px padding with a 210
 Use flat ultramarine #173FBF rounded-square fields with filled cream #F4F1EA pictograms. Skills uses a puzzle piece, Instagram a camera, Substack a publication/bookmark mark, GitHub a code folder and About Chris a person. These functional inline SVGs are decorative (`aria-hidden`), alongside live ink headings. No AI sparkle, thin outline icon set, pale icon wells or gradients. This supersedes the initial line-icon treatment by Christopher’s explicit direction.
 
 Keep fields at 36 px, with 32 px fields and 1.8 rem headings below 361 px so About Chris stays on one line. Coming-soon availability remains explicit in text and placeholders remain non-interactive; icon color stays in the brand palette. Preserve approved wordmark and CD artwork unchanged.
+
+## Horizontal wordmark and tagline-led Home
+
+Header and footer use assets/wordmark-horizontal-ink.svg on cream, without a blue wordmark container. This website-specific derivative repositions the exact 12 approved smooth wordmark paths into two word groups on a shared optical baseline. There is no retyping, path redrawing, stretching or source-library change. scripts/prepare-wordmark.py reproduces it from the checked approved assets/wordmark-ink.svg; assets/wordmark-horizontal-usage.json records source hash, output hash, bounds and method.
+
+Header widths are 240 px desktop, 200 px below 1024, 140 px on phones and 128 px below 361. Footer widths are 180 px desktop and 156 px mobile, beside the unchanged CD square. Keep Home solid blue with cream lettering and icon, with dark-blue hover. Below 361 px compact Home’s padding, icon and text to maintain at least 8 px separation from the centered wordmark at a 320 px viewport.
+
+Home has one main heading: the exact approved tagline, split into its two sentences. Use Inter, ink opening and blue closing, at a 40 px desktop maximum and 28 px on phones. The old repeated Chris Decodes heading and separate tagline paragraph are superseded. Keep one complete tagline per content page and preserve the peek’s 80/64 px clearance.
