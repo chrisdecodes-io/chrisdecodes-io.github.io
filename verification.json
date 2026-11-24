@@ -1,5 +1,5 @@
 {
-  "state": "Previous compact platform layout restored at Christopher\u2019s request",
+  "state": "Increased icon motion reviewed inside the unchanged compact frame",
   "content_pages": [
     "/",
     "/skills/",
@@ -37,7 +37,22 @@
     "Skills retains one active peek and no walking lane; navigation and browser Back verified",
     "Updated Home checked at six widths: left Featured peek inset 24px desktop / 12px mobile, no horizontal overflow",
     "Floating cluster shifted left with preserved heading clearance; desktop appearance inspected",
-    "Restored exact compact layout and platform motion from dd7f502; left Featured peek and walking interlude retained"
+    "Restored exact compact layout and platform motion from dd7f502; left Featured peek and walking interlude retained",
+    "Before/after intro, H1, platform orbit and Featured rectangles identical at all ten widths",
+    "Full blue-frame and label envelopes clear text, one another and cat lane, with no horizontal overflow",
+    "20/22/24-second asymmetric paths reviewed on desktop and mobile"
   ],
-  "release_scope": "Existing public resource only; existing brand/platform mark geometry; no new private content"
+  "release_scope": "Existing public resource only; existing brand/platform mark geometry; no new private content",
+  "motion_viewports": [
+    1920,
+    1440,
+    1151,
+    1150,
+    1024,
+    900,
+    761,
+    760,
+    390,
+    320
+  ]
 }

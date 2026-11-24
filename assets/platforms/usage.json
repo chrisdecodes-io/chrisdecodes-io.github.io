@@ -25,20 +25,59 @@
     }
   },
   "motion": {
-    "duration_seconds": 18,
-    "style": "Shared smooth two-axis drift with staggered phases; bounded around the Home tagline",
-    "wide_travel_px": [
-      14,
-      12
-    ],
-    "intermediate_travel_px": [
-      6,
-      8
-    ],
-    "mobile_travel_px": [
-      8,
-      10
-    ],
-    "reduced_motion": "Static positions when preferred; cat video behavior is separate"
+    "duration_seconds": {
+      "claude": 20,
+      "chatgpt": 22,
+      "codex": 24
+    },
+    "style": "Gentle asymmetric two-axis paths within the unchanged compact icon region; staggered phases",
+    "wide_travel_px": {
+      "claude": {
+        "left": 8,
+        "right": 18,
+        "up": 20,
+        "down": 14
+      },
+      "chatgpt": {
+        "left": 14,
+        "right": 14,
+        "up": 0,
+        "down": 40
+      },
+      "codex": {
+        "left": 18,
+        "right": 8,
+        "up": 28,
+        "down": 8
+      }
+    },
+    "intermediate_travel_px": {
+      "claude": {
+        "left": 8,
+        "right": 8,
+        "up": 18,
+        "down": 14
+      },
+      "chatgpt": {
+        "left": 8,
+        "right": 8,
+        "up": 0,
+        "down": 30
+      },
+      "codex": {
+        "left": 8,
+        "right": 8,
+        "up": 24,
+        "down": 10
+      }
+    },
+    "mobile_travel_px": {
+      "left": 14,
+      "right": 14,
+      "up": 10,
+      "down": 2
+    },
+    "reduced_motion": "Static positions when preferred; cat video behavior is separate",
+    "constraint": "No changes to intro, heading, orbit or Featured geometry. Frame-and-label travel envelopes must remain separate and clear of text and the cat lane."
   }
 }

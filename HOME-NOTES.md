@@ -111,3 +111,11 @@ Christopher requested both the platform cluster and the peek above Featured fart
 ## Compact platform layout restored
 
 Christopher rejected the surrounding-icon composition because it introduced too much empty space. Restore the compact layout from dd7f502: icons grouped close to the tagline on desktop and left-aligned beneath it on mobile, with the shared 18-second drift. Preserve the left Featured peek and alternating walking interlude. Do not reintroduce reserved rows above and below the heading merely to surround it with platform marks; future refinements should preserve the compact opening.
+
+## More motion inside the compact frame
+
+Christopher requested slightly more icon travel while preserving the compact layout and avoiding extra whitespace. The grid, tagline, orbit region and Featured geometry remain exactly as in the restored compact layout. Keep the 280×144 px wide-screen orbit, 220×136 px intermediate orbit and existing 82 px mobile row. Only the bounded animation paths and timings change.
+
+Use asymmetric vertical travel to let ChatGPT descend within the group and the lower icons rise, with gentle sideways variation. Cycles are 20/22/24 seconds for Claude/ChatGPT/Codex. Mobile increases horizontal travel to ±14 px, with −10/+2 px vertical limits so the labels remain above the walking lane. Asset styling and the existing cat sequence are unchanged. Full conservative envelopes include the actual blue frames and visible labels; they must stay inside the orbit horizontally, clear of the tagline and one another, and above the cat lane.
+
+Before/after measurements at 1920, 1440, 1151, 1150, 1024, 900, 761, 760, 390 and 320 px confirmed identical intro, heading, orbit and Featured boxes, no overflow and all clearance checks passing. Preserve this compact geometry in later motion revisions. Detailed motion limits and asset provenance remain in assets/platforms/usage.json.
