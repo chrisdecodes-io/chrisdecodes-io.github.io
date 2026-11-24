@@ -45,3 +45,7 @@ Retain the exact approved wording and punctuation. On Home, set the two sentence
 Use a consistent paper-colored header and footer with a quiet cool-gray boundary. Header: compact cream-on-blue wordmark, lighter Home control with house icon, matching channel link surfaces, and a solid blue GitHub action. On mobile, branding/Home share the first row and three channels share the second.
 
 Footer: group the cream-on-blue CD mark and Chris Decodes name as one brand block, paired with compact navigation. Inner-page tagline belongs under the name; Home keeps its only tagline in the introduction. Mobile stacks the navigation below a subtle divider. Preserve clear keyboard focus, the approved logos and section-edge peek clearance.
+
+## Exact footer wordmark and whole-site review
+
+The footer name is now assets/wordmark-ink.svg, the approved fixed outlined Chris Decodes wordmark, alongside the cream-on-blue CD monogram. Do not retype it using Emphasis or a substitute font. Use the same artwork across every content page, scale proportionally (132 px desktop, 120 px mobile), and keep the live-text tagline separate. Header uses the matching cream wordmark. This fulfills Christopher’s request for the true brand wordmark lettering.

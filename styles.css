@@ -114,3 +114,7 @@ main{padding-bottom:40px}.footer-peek{margin-top:32px}
 .footer nav{gap:22px;justify-content:flex-end}.footer nav a{font-size:.875rem;font-weight:550;text-decoration:none;color:#414650}.footer nav a:hover{color:var(--blue);text-decoration:underline}
 @media(max-width:950px){.footer .footer-inner{grid-template-columns:1fr;gap:24px}.footer nav{justify-content:flex-start}}
 @media(max-width:760px){.header{padding:16px 20px;gap:16px}.header .brand-home{justify-content:space-between;gap:20px}.header .brand img{width:88px}.header .brand{padding:10px 14px}.header .top-channels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.header .top-channels a{min-width:0;align-items:center;padding:8px 6px;font-size:.875rem;min-height:50px}.header .top-channels .github-link{min-width:0}.header .top-channels a>span{font-size:.68rem}.footer{padding:24px 20px}.footer .footer-inner{gap:22px}.footer nav{gap:16px 22px;padding-top:20px;border-top:1px solid var(--line)}.footer-brand{gap:14px}.footer-name{font-size:1.35rem}.footer .footer-monogram{width:58px;height:58px}}
+
+/* The footer name uses the exact outlined brand wordmark, never a font approximation. */
+.footer-wordmark{display:block;width:132px;height:auto}.footer-brand>div{min-width:0}
+@media(max-width:760px){.footer-wordmark{width:120px}.footer .footer-tagline{max-width:250px}}

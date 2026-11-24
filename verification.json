@@ -1,29 +1,30 @@
 {
-  "state": "Polished tagline, header and footer reviewed",
-  "checks": [
-    "Seven HTML routes: links, assets, fragments and original prompt download checked",
-    "Main navigation: Home, Skills, About Chris",
-    "Home: one heading plus tagline, featured starter prompt, separate Skills tile, restored Instagram/Substack/GitHub squares and About Chris tile",
-    "No empty Resources/Projects sections or broad filter controls in active navigation",
-    "Compatibility routes forward to standalone Skills; prior prompt remains direct-link-only",
-    "Centered cat media slots and approved quiet Rest footer animation; original twelve-second pacing retained",
-    "Larger page/feature/tile headings reviewed on desktop and 390 px mobile",
-    "Sidebar Featured and Find Chris Decodes destinations checked; local fragments validated",
-    "Approved Organic v2 CD footer link checked on mobile with keyboard focus",
-    "Approved cream-on-blue Organic v2 logo proportionally placed in footer",
-    "One peek per page, clear of text and controls; desktop About and mobile Home reviewed",
-    "Encoded 13-second peek checked for alpha, 390 frames, physical dip and fully hidden ending",
-    "Existing encoded idle has full blink closure and reopening while held in place",
-    "Single peek rotates right, left, center only during fully transparent dip ending",
-    "Every content page has exactly three peek slots",
-    "Home slots at distinct vertical offsets: Featured, tile grid, footer",
-    "Scroll transitions activate tile-grid/footer slots with only one peek playing",
-    "Home desktop intro-to-feature gap 80 px and Curious container 300 px",
-    "320 px Home and Skills have no horizontal overflow; Work container 180 px",
-    "Footer spacing reduced; keyboard focus and section peeks preserved",
-    "Approved tagline text preserved once per page, with deliberate typography",
-    "Header channels visible at 320 px with no horizontal overflow",
-    "Grouped CD brand lockup and footer navigation reviewed on desktop and mobile"
+  "state": "Whole-site desktop and mobile review passed; exact footer wordmark installed",
+  "content_pages": [
+    "/",
+    "/skills/",
+    "/about/",
+    "/resources/task-context-starter-prompt/"
   ],
-  "release_scope": "No public skills or new private resources released"
+  "viewport_widths": [
+    1440,
+    900,
+    390,
+    320
+  ],
+  "layout_cases": 16,
+  "checks": [
+    "No horizontal overflow across all 16 layouts",
+    "All three header channel links remain within the viewport",
+    "One consistent heading scale across content pages at each width",
+    "Exactly three separate peek slots per page with one active",
+    "Curious and Work companions reviewed for proportions and text clearance",
+    "Approved footer wordmark SVG used across all content pages, preserving its 624:340 ratio",
+    "Desktop and mobile footer alignment and keyboard focus visually checked",
+    "Tagline appears once per content page",
+    "Legacy guides, Resources, Projects and root-query links reach Skills",
+    "Copy prompt confirmed in browser; text download matches catalog",
+    "Seven generated HTML routes checked for heading hierarchy, IDs, links, assets and fragments"
+  ],
+  "release_scope": "Existing public prompt and approved branding/characters only"
 }
