@@ -28,6 +28,14 @@ Legacy `/resources/` type links and old root type queries route to the correspon
 
 Keep `data/resources.json` as the explicit public-release catalog. Do not scan or publish private repositories automatically. The generic article feed and standalone Projects/Resources indexes remain retired. New collection pages do not authorize releasing additional content.
 
+## Latest highlight
+
+The blue Home banner selects the newest dated item from confirmed Instagram publications in `data/highlights.json` and eligible available resources in `data/resources.json`. A confirmed Instagram post wins a same-day tie; future-dated items do not appear before their Pacific publication date. Resource content and release status remain separate from Instagram highlights.
+
+For a published Instagram post, add an entry with `id`, `title`, `description`, `publishedOn` (`YYYY-MM-DD`), direct HTTPS `url` (`/p/…/` or `/reel/…/`), and `confirmed: true`. Use the actual publication date, verify the destination and use an approved short summary. Do not put drafts, private media or planned posts here. Build, review and publish the site after updating the list. An Instagram highlight changes only the banner, not the resource collections.
+
+The list is currently empty because the latest Instagram publication has not been supplied or verified. The existing starter prompt remains the truthful fallback. There is no live Instagram feed, polling or automatic detection configured. Christopher is deciding whether website updates should accompany joint posting sessions or use a separate automated integration.
+
 ## Channel links
 
 `data/site.json` → `channels` is the single source for channel links in every header, the Home tiles and About Chris. Destinations are [Instagram chris.decodes](https://www.instagram.com/chris.decodes/), the [Substack @chrisdecodes profile](https://substack.com/@chrisdecodes) and [GitHub chrisdecodes-io](https://github.com/chrisdecodes-io). Header links use matching blue-and-cream buttons labeled Instagram, Substack and GitHub. Do not display private/public status labels unless Christopher requests them. Both former social placeholders are linked.

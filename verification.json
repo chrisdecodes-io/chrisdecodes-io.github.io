@@ -27,5 +27,16 @@
     "No active peek during walking; original approved media, native gait and vertical clearance unchanged",
     "Generated-site checks and JavaScript syntax checks pass"
   ],
-  "release_scope": "Usability and animation framing only; no new resources or private content"
+  "release_scope": "Usability and animation framing only; no new resources or private content",
+  "highlight_selection": {
+    "state": "Prepared and tested; awaiting current Instagram publication and update-trigger choice",
+    "checks": [
+      "Newest confirmed publication selected over older resource",
+      "Future-dated publication excluded",
+      "Instagram wins same-day tie",
+      "Unconfirmed publication and non-Instagram destination rejected",
+      "Empty publication list leaves existing Featured HTML unchanged"
+    ],
+    "live_instagram_detection": false
+  }
 }

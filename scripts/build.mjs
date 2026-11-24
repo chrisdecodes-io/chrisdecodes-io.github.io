@@ -4,6 +4,7 @@ import path from 'node:path';
 import {createHash} from 'node:crypto';
 const root=fileURLToPath(new URL('../',import.meta.url));
 const catalog=JSON.parse(await readFile(path.join(root,'data/resources.json'),'utf8'));
+const highlights=JSON.parse(await readFile(path.join(root,'data/highlights.json'),'utf8'));
 const assetURLs={};
 for(const name of ['/styles.css','/app.js','/cat-motion.js',...['curious','work','presenting','rest','peek','walk'].flatMap(action=>[`/assets/characters/${action}.webm`,`/assets/characters/${action}.png`])]) {
  const hash=createHash('sha256').update(await readFile(path.join(root,name.slice(1)))).digest('hex').slice(0,12);
@@ -56,14 +57,25 @@ function homeTile({title,description,label,url,action}) {
 }
 const collectionKeys=['prompts','instructions','skills'];
 const collectionItems=key=>catalog.filter(item=>item.type===key && item.listed!==false);
-const featured=[...catalog.filter(item=>item.featured===true || (item.type==='skills' && item.listed!==false))].sort((a,b)=>(b.publishedOn||'').localeCompare(a.publishedOn||''))[0];
+// Only explicitly confirmed publications belong here, never private drafts or a scraped feed.
+for(const item of highlights){
+ if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(item.id) || !item.title || !item.description || !/^\d{4}-\d{2}-\d{2}$/.test(item.publishedOn) || !Number.isFinite(Date.parse(item.publishedOn)) || new Date(item.publishedOn).toISOString().slice(0,10)!==item.publishedOn || item.confirmed!==true)throw new Error('Highlights require a confirmed publication, date, title and description');
+ const target=new URL(item.url);
+ if(target.protocol!=='https:' || !['www.instagram.com','instagram.com'].includes(target.hostname) || !/^\/(p|reel)\/[^/]+\/?$/.test(target.pathname) || target.search || target.hash || target.username || target.password)throw new Error('Instagram highlights require a direct HTTPS post or reel URL');
+}
+const today=new Intl.DateTimeFormat('en-CA',{timeZone:'America/Los_Angeles',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+const featureCandidates=[
+ ...catalog.filter(item=>item.listed!==false && item.availability==='available' && (item.featured===true || item.type==='skills')).map(item=>({...item,url:`/resources/${item.id}/`,meta:`${singular[item.type]} · Available now`,action:`Open ${singular[item.type].toLowerCase()}`})),
+ ...highlights.map(item=>({...item,meta:`Instagram · ${new Intl.DateTimeFormat('en-US',{timeZone:'UTC',month:'long',day:'numeric',year:'numeric'}).format(new Date(item.publishedOn+'T12:00:00Z'))}`,action:'View on Instagram'}))
+];
+const featured=featureCandidates.filter(item=>item.publishedOn && item.publishedOn<=today).sort((a,b)=>b.publishedOn.localeCompare(a.publishedOn) || (highlights.some(item=>item.id===b.id)?1:0)-(highlights.some(item=>item.id===a.id)?1:0) || a.id.localeCompare(b.id))[0];
 const homeTiles=[
  ...collectionKeys.map(key=>({title:types[key],description:site.types[key].tileDescription,label:collectionItems(key).length?`${collectionItems(key).length} ${collectionItems(key).length===1?singular[key].toLowerCase():types[key].toLowerCase()} available`:'None available yet',url:urls[key],action:`View ${key}`})),
  ...site.channels.map(channel=>({title:channel.label,description:channel.description,url:channel.url,action:channel.action})),
  {title:'About Chris',description:'Meet the person behind Chris Decodes and the perspective behind the work.',url:'/about/',action:'Meet Chris'}
 ];
 const featurePanel=featured
- ? `<section id="featured" class="featured-panel" aria-labelledby="featured-title"><div class="featured-copy"><p class="featured-label">Featured</p><h2 id="featured-title">${esc(featured.title)}</h2><p class="featured-description">${esc(featured.description)}</p><p class="featured-meta">${singular[featured.type]} · Available now</p><a class="button featured-button" href="/resources/${featured.id}/">Open ${singular[featured.type].toLowerCase()}</a></div>${cat('curious')}</section>`
+ ? `<section id="featured" class="featured-panel" aria-labelledby="featured-title"><div class="featured-copy"><p class="featured-label">Featured</p><h2 id="featured-title">${esc(featured.title)}</h2><p class="featured-description">${esc(featured.description)}</p><p class="featured-meta">${esc(featured.meta)}</p><a class="button featured-button" href="${esc(featured.url)}">${esc(featured.action)}</a></div>${cat('curious')}</section>`
  : `<section id="featured" class="featured-panel" aria-labelledby="featured-title"><div class="featured-copy"><h2 id="featured-title">Skills</h2><p class="featured-description">${esc(site.types.skills.description)}</p><p class="featured-meta">No public skills available yet</p><a class="button featured-button" href="/skills/">View skills</a></div>${cat('curious')}</section>`;
 await save('index.html',shell('Home','home',`<section class="home-page"><div class="home-intro"><h1 class="home-tagline">${tagline()}</h1>${platformCluster()}</div><div class="feature-peek-wrap peek-surface">${peek('tagline')}<div class="walk-track" aria-hidden="true">${cat('walk')}</div>${featurePanel}</div><nav class="home-grid peek-surface" aria-label="Resources, channels and about Chris">${peek('left')}${homeTiles.map(homeTile).join('')}</nav></section>`));
 // The three collections share a template and draw only from the explicit public catalog.

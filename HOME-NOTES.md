@@ -196,3 +196,10 @@ Measure this lane on load, resize and each crossing. Pause CSS travel until the 
 Recognized legacy category/type links open the matching current collection. Unknown and retired category/project destinations return to Home, where visitors can choose, rather than sending them to an unrelated empty Skills page. Retrieval: README → these notes → scripts/build.mjs, cat-motion.js, styles.css and assets/characters/usage.json.
 
 Verification: six content pages at 1920, 1440, 1024, 900, 390 and 320 px, one H1 and three header channels with no horizontal overflow; collection ordering/empty states; mobile menu; fragment focus, successful Copy prompt feedback and browser Back; compatibility URLs and matching download bytes. Timed desktop and mobile samples show off-lane entry, uninterrupted playback through the right edge, zero active peeks during travel, one after handoff, and the next cycle. See verification.json for the current reviewed scope.
+
+
+## Instagram-responsive Featured selection, November 24, 2026
+
+Christopher requested that the hub reflect Instagram posting and show the most recent highlight. Keep the compact blue Featured panel, Curious companion, Home tiles and resource pages. Its content now selects the most recent dated confirmed Instagram post or eligible available resource. Instagram wins a same-day tie. Future dates remain hidden until their Pacific publication date.
+
+The explicit Instagram publication list is data/highlights.json, reached through README → Latest highlight → shared page generator. Record only confirmed post/reel links, real dates and approved short copy. This supports a posting-session update and can accept data from a separately approved integration later. It does not create a polling job or authorize private content release. The signed-out Instagram profile did not expose posts during this review, so the list remains empty and the existing public prompt remains Featured until a verified post is supplied. The update trigger is awaiting Christopher’s choice.
