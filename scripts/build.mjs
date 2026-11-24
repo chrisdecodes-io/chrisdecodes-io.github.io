@@ -39,8 +39,15 @@ function card(item){return `<article class="resource-card" data-type="${item.typ
 function collectionRedirect() {
  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Skills · Chris Decodes</title><script src="/legacy-guides.js" defer></script></head><body data-redirect="skills"><h1>The library now focuses on Skills</h1><p>Continue to <a href="/skills/">Skills</a> or return <a href="/">Home</a>.</p></body></html>\n`;
 }
+const tileIcons={
+ Skills:'<path d="m12 3 2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/><path d="M19 3v4M17 5h4"/>',
+ Instagram:'<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/>',
+ Substack:'<path d="M5 4h14M5 8h14M5 12h14v9l-7-4-7 4z"/>',
+ GitHub:'<path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 18"/>',
+ 'About Chris':'<circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/>'
+};
 function homeTile({title,description,label,url,action}) {
- const body=`<h2>${esc(title)}</h2><p>${esc(description)}</p><div class="tile-bottom">${label?`<span class="tile-status">${esc(label)}</span>`:''}${action?`<span class="tile-action">${esc(action)}</span>`:''}</div>`;
+ const body=`<div class="tile-heading"><span class="tile-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" focusable="false">${tileIcons[title]}</svg></span><h2>${esc(title)}</h2></div><p>${esc(description)}</p><div class="tile-bottom">${label?`<span class="tile-status">${esc(label)}</span>`:''}${action?`<span class="tile-action">${esc(action)}</span>`:''}</div>`;
  return url?`<a class="home-tile" href="${url}">${body}</a>`:`<article class="home-tile placeholder-tile">${body}</article>`;
 }
 const skills=catalog.filter(item=>item.type==='skills' && item.listed!==false);

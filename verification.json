@@ -1,5 +1,5 @@
 {
-  "state": "Balanced shared layout and proportional Home spacing reviewed",
+  "state": "Balanced layout, compact proportions and rounded destination icons reviewed",
   "content_pages": [
     "/",
     "/skills/",
@@ -28,7 +28,10 @@
     "Legacy guide, Resources, Projects and root-query links reach Skills",
     "Text download matches catalog; all local links and assets resolve",
     "Home spacing refinements rechecked at all six widths",
-    "About Chris spans the desktop grid as a compact row, avoiding an empty half-row"
+    "About Chris spans the desktop grid as a compact row, avoiding an empty half-row",
+    "Five decorative rounded-square destination icons checked at all six widths",
+    "Coming-soon icon wells muted; all grid headings remain ink",
+    "320 px About Chris heading stays on one line after compact icon sizing"
   ],
   "release_scope": "No new resources, private content, product claims or animation sources"
 }
