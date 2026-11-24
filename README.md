@@ -34,7 +34,7 @@ Keep `data/resources.json` as the explicit public-release catalog. Do not scan o
 
 ## Future additions
 
-[Affiliate links and brand inquiries](HOME-NOTES.md#future-affiliate-links-and-brand-inquiries) are recorded for future planning. No new page, contact address or affiliate offer is live. Review the documented hosting dependency before adding monetization.
+GitHub Pages remains the current host; no migration is planned. [Outbound affiliate links and brand inquiries](HOME-NOTES.md#future-affiliate-links-and-brand-inquiries) are deferred additions. No new section, contact address or affiliate offer is live.
 
 ## Visual and character direction
 
