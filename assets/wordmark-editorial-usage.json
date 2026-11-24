@@ -1,0 +1,8 @@
+{
+  "role": "Live tagline text matching the Chris side of the fixed wordmark",
+  "source": "CDWordmarkLedEditorialPreview.ttf, reference-wordmark-v1.1",
+  "sha256": "759b3fd51b923fd5427041592e70bf81e56112dada6697f9d13b30503900b191",
+  "weight": 400,
+  "license": "licenses/DMSerifDisplay-OFL.txt",
+  "selection": "Christopher explicitly requested the Chris watermark font for the website tagline; this is a scoped website selection, not an engine-wide typography change"
+}

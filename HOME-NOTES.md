@@ -89,3 +89,9 @@ The Home introduction displays the three explicitly named platforms: Claude, Cha
 Desktop places the cluster beside the tagline; mobile uses a compact centered row beneath it. These marks are descriptive, non-interactive list items, separate from resource releases. All three remain clear of the text and peeking cat. New decorative CSS floating respects reduced-motion preferences; the existing user-directed cat-video behavior is unchanged. Public asset identities and hashes are in assets/platforms/usage.json.
 
 The floating platform cluster uses bounded X/Y travel rather than a fixed vertical bob: 14×12 px on wide screens, 6×8 px at intermediate widths and 8×10 px on mobile. Shared timing and geometry keep the three marks coherent; the amplitudes preserve text, neighboring icon and peek clearance.
+
+## Wordmark serif for the tagline
+
+Christopher selected the serif associated with “Chris” in the approved watermark. Home’s main tagline and inner-page footer taglines now use the bundled CD Wordmark Led Editorial Preview at its native regular 400 weight, without synthetic bolding. This supersedes the earlier Inter tagline treatment only; body copy, controls and platform labels remain Inter. Preserve the exact approved wording, ink opening and blue closing.
+
+The website copy is assets/WordmarkEditorial.ttf. Its source identity, SHA-256, role and OFL license route are recorded in assets/wordmark-editorial-usage.json. This is a website-specific selection, not a change to the shared brand masters or production engines. Home remains 40 px maximum and 28 px on phones; footer taglines use 16 px. The shared generator preloads the font for all four content pages. Review covered all four pages at 1920, 1440, 1024, 900, 390 and 320 px, with loaded native-weight text and no horizontal overflow.

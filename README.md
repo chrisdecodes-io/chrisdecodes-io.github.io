@@ -4,6 +4,8 @@ Public website: https://chrisdecodes-io.github.io/
 
 A focused home for Chris Decodes, a standalone Skills section and the Instagram, Substack and GitHub destinations. The broader resource library is deferred while Christopher decides what belongs in it.
 
+Taglines use the wordmark-led Editorial serif associated with “Chris”, at its native regular weight. Body text remains Inter.
+
 Current visual decisions and supersessions: [website maintenance notes](HOME-NOTES.md).
 
 ## Build and preview

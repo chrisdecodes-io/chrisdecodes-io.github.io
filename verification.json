@@ -1,5 +1,5 @@
 {
-  "state": "Restored CTA lockup and consistent two-axis platform drift reviewed",
+  "state": "CTA lockup, floating platform marks and wordmark-serif taglines reviewed",
   "content_pages": [
     "/",
     "/skills/",
@@ -28,7 +28,9 @@
     "Mobile sidebar, CTA Home link and browser Back verified",
     "All generated HTML links, fragments, downloads and asset hashes checked",
     "18-second shared two-axis drift verified on all three platform tokens",
-    "Conservative full-travel envelopes remain non-overlapping, inside the viewport and clear of the tagline at all six widths"
+    "Conservative full-travel envelopes remain non-overlapping, inside the viewport and clear of the tagline at all six widths",
+    "WordmarkEditorial loaded at native 400 weight on Home and inner-page footer taglines in all 24 layouts",
+    "One descriptive H1 per page and no horizontal overflow at all six widths"
   ],
   "release_scope": "Existing public resource only; existing brand/platform mark geometry; no new private content"
 }
