@@ -1,6 +1,6 @@
 {
   "state": "Original approved Expressive v7 assets selected for calmer website pacing; supersedes short website derivatives",
-  "display": "Center characters in their reserved open media areas. One main-content companion plus a quiet Home footer Rest pose requested by Christopher; no extra cards or headings.",
+  "display": "Primary companions stay beside related copy. One approved edge peek per page: Home/Skills footer, About channel section, starter prompt text section. Home footer peek replaces Rest.",
   "motion": "Normal-speed 12-second full gestures; automatic silent inline loops without pause controls; OS reduced-motion preferences do not alter playback per standing website direction",
   "fallback": "Original matching transparent still if playback is unsupported or blocked",
   "assets": {
@@ -35,6 +35,14 @@
       "seconds": 12,
       "sha256": "f57a9287e5f8accc488139c39a6c4e0e5690483b24b4d7f3c8a629f66ca94219",
       "role": "Quiet Home footer companion centered beside navigation links"
+    },
+    "peek": {
+      "source": "Approved Peek Rise and Blink entry (49 frames), On-Screen Loops/peek continuation (147 frames twice), Peek Dip Exit (28 frames), 19 transparent frames; see scripts/prepare-peek.py",
+      "playback": "13-second normal-speed composition with opaque dip, silent continuous loop while visible",
+      "frames": 390,
+      "seconds": 13,
+      "sha256": "a9a381fa64bb903fff54e3fb9df2f5ed168f21554e78243b7fc9dae3ca438f61",
+      "role": "Quiet section-edge reveals on Home, Skills, About and starter prompt; source row 436 aligned to edge"
     }
   }
 }

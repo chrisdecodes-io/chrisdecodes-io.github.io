@@ -1,5 +1,5 @@
 {
-  "state": "Heading hierarchy, sidebar shortcuts and approved footer CD logo reviewed",
+  "state": "Square CD footer logo and approved edge peeks reviewed",
   "checks": [
     "Seven HTML routes: links, assets, fragments and original prompt download checked",
     "Main navigation: Home, Skills, About Chris",
@@ -9,7 +9,10 @@
     "Centered cat media slots and approved quiet Rest footer animation; original twelve-second pacing retained",
     "Larger page/feature/tile headings reviewed on desktop and 390 px mobile",
     "Sidebar Featured and Find Chris Decodes destinations checked; local fragments validated",
-    "Approved Organic v2 CD footer link checked on mobile with keyboard focus"
+    "Approved Organic v2 CD footer link checked on mobile with keyboard focus",
+    "Approved cream-on-blue Organic v2 logo proportionally placed in footer",
+    "One peek per page, clear of text and controls; desktop About and mobile Home reviewed",
+    "Encoded 13-second peek checked for alpha, 390 frames, physical dip and fully hidden ending"
   ],
   "release_scope": "No public skills or new private resources released"
 }

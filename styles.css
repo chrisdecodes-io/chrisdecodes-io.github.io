@@ -59,3 +59,12 @@
 .footer{display:grid;grid-template-columns:minmax(0,1fr) 80px;align-items:center;gap:32px}.footer-monogram{display:block;width:80px;height:80px;border-radius:8px}.footer-monogram img{display:block;width:100%;height:auto}
 @media(max-width:760px){.home-page .home-intro h1,.skills-page .page-intro h1,.about-page h1,.detail-intro h1{font-size:clamp(2.6rem,9.5vw,3.1rem)}.featured-panel h2{font-size:clamp(2.05rem,7.5vw,2.55rem);overflow-wrap:break-word}.home-tile h2{font-size:1.95rem}.resource-detail section h2,.about-page>h2,.channels>h2{font-size:1.8rem}.sidebar .nav-label{margin-top:10px}.footer{grid-template-columns:minmax(0,1fr) 60px;gap:18px}.footer-monogram{width:60px;height:60px}.footer-inner:has([data-footer-cat]){grid-template-columns:76px minmax(0,1fr);gap:12px}.footer .decoder-cat[data-footer-cat]{width:76px;height:76px}}
 @media(max-width:480px){.footer{grid-template-columns:minmax(0,1fr)}.footer-monogram{justify-self:end}.footer-inner:has([data-footer-cat]){grid-template-columns:76px minmax(0,1fr)}}
+
+/* Approved peek artwork sits on the source ledge at row 436/512. */
+.peek-surface{position:relative;border-top:1px solid var(--line);padding-top:28px;margin-top:140px}
+.peek-edge{position:absolute;right:24px;top:-128px;width:150px;height:128px;overflow:hidden;pointer-events:none}
+.peek-edge .decoder-cat{width:150px;height:150px;position:relative}
+.footer-peek{margin-top:140px}.footer-peek .footer-inner{justify-content:center}.footer-peek .footer-inner nav{justify-content:center}
+.prompt-peek{margin-top:140px!important}.channels.peek-surface{margin-top:140px}
+.footer-monogram{overflow:hidden}.footer-monogram img{border-radius:8px}
+@media(max-width:760px){.peek-surface{margin-top:110px}.peek-edge{right:12px;top:-103px;width:120px;height:103px}.peek-edge .decoder-cat{width:120px;height:120px}.footer-peek,.channels.peek-surface{margin-top:110px}.prompt-peek{margin-top:110px!important}}
