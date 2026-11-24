@@ -12,7 +12,7 @@ function fitWalkingTrack() {
   if (!walkTrack) return;
   const host = walkTrack.offsetParent.getBoundingClientRect();
   const banner = document.querySelector('.featured-panel').getBoundingClientRect();
-  // Rise and dip behind the Featured edge, keeping the complete frame inside it.
+  // Walk straight through matching left/right Featured boundaries at a fixed height.
   const left = banner.left;
   walkTrack.style.setProperty('--walk-left', `${left - host.left}px`);
   walkTrack.style.setProperty('--walk-width', `${banner.width}px`);

@@ -41,13 +41,14 @@
     "update_trigger": "Update website during joint Instagram publication sessions"
   },
   "tagline_cat_revision": {
-    "state": "Desktop and mobile cycles reviewed",
+    "state": "Straight entrance/exit observed on desktop and mobile",
     "scope": "Home tagline peek and walking interlude only",
     "checks": [
       "Home-only 1.12x entry and 1.18x idle; complete dip at 1x",
-      "Walker fits Featured, rises and dips without an interior wall or outer-margin drift",
+      "Walker fits Featured and travels horizontally through matching left/right boundaries at a fixed height, without outer-margin drift",
       "Tagline peek returns after walking when visible; inactive walker hidden",
-      "Approved source media hashes unchanged; primary Featured and inner-page pacing unchanged"
+      "Approved source media hashes unchanged; primary Featured and inner-page pacing unchanged",
+      "Timed full cycles show identical Y coordinates and no transform during entrance, travel and exit; entire frame starts left of the lane and finishes right of it"
     ]
   }
 }

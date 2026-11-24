@@ -47,11 +47,11 @@
     },
     "walk": {
       "source": "Decoder Cat Flow Neon Walk 2026-10-20/Loop asset v1/loop-transparent.webm",
-      "playback": "Native one-second gait repeated through a 7.5\u201317-second Home crossing, with an opaque rise and dip behind Featured; no media changes",
+      "playback": "Native one-second gait during a 7.5\u201317-second straight horizontal Home crossing at fixed height; symmetric off-lane entrance and exit, no media changes",
       "frames": 30,
       "seconds": 1,
       "sha256": "0e60369b88139db064f3afd565a59db9bd37712421360edda578d8802e4ac217",
-      "role": "Home only: lane matches Featured width; character rises near the left end and dips near the right, staying inside the composition; exclusive with peeking cats",
+      "role": "Home only: Featured-width lane; enters through the left boundary and exits through the right, without vertical travel or outer-margin drift; exclusive with peeking cats",
       "limits": "Approved source retains generated shape variation. No artwork or timing changes; no new engine integration."
     }
   }

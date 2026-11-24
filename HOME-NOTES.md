@@ -212,3 +212,8 @@ Christopher requested a slightly shorter blank hold and sooner arrivals specific
 For the Home tagline peek only, play the 49-frame entry at 1.12× and 294 idle frames at 1.18×, saving about 1.5 seconds of idle; restore 1× for the complete opaque dip. The encoded 390-frame source remains unchanged. After walking, return to the tagline peek if visible rather than handing to a barely visible lower section. Scrolling still transfers the peek to the grid/footer. Featured Curious, inner pages, other peek slots, native walking gait, artwork and reserved vertical space remain unchanged.
 
 Review: full desktop and 390 px mobile cycles, ready playback, rise/cross/dip and immediate visible peek return; bounding boxes stay within Featured and the inactive walker is hidden. Generated checks and source-media hashes pass. The publication workflow remains update-together, with no Instagram posts published yet and the starter prompt retained as Featured.
+
+
+## Straight, matching walking entrance and exit, November 24, 2026
+
+Christopher found the walking rise strange and requested straight entry from one end with a matching exit. This supersedes the vertical rise/dip for the walking interlude only. Retain the Featured-width lane, fixed walking baseline and current timing, but begin the entire frame beyond its left boundary and finish beyond its right. Use identical horizontal masking at both ends, without vertical translation, fade or movement into the page’s outer margins. The separate peeking cat retains its complete physical dip. Artwork, native gait, earlier tagline return and other-page behavior remain unchanged.
