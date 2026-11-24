@@ -25,3 +25,5 @@ Edit `index.html` to update copy, guides and social links; `styles.css` controls
 Preserve cream #F4F1EA, blue #173FBF, the supplied fixed wordmark, Organic Emphasis headings and Inter body copy. The quiet resource surface supports reading; the organic blue hero shape balances the cream canvas. Basis: existing brand guidance and November 22 approved surface direction. The website composition is the initial hub; this does not adopt it as a template for other formats.
 
 Assets are copied from the existing project’s website concept and approved logo library. This folder is the reviewable source package for this task; the original concept is unchanged. Its README provides the local maintenance and retrieval route. Registration in the maintained external project catalog is pending, so future automatic discovery is not claimed.
+
+Font license notices are preserved in `assets/licenses/`. Chris Decodes brand artwork is included for this hub; no blanket license to reuse that artwork is granted.
