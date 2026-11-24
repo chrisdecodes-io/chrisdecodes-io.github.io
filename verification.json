@@ -95,5 +95,31 @@
       "Shared header aligns to main column on Skills, About and prompt detail at 1440/900/390px",
       "Original brand artwork and proportions preserved; footer unchanged"
     ]
+  },
+  "freer_platform_motion": {
+    "state": "Full desktop cycle and complete responsive motion bounds reviewed",
+    "widths": [
+      1920,
+      1440,
+      1280,
+      1151,
+      1150,
+      1024,
+      951,
+      950,
+      900,
+      761,
+      760,
+      390,
+      361,
+      360,
+      320
+    ],
+    "checks": [
+      "Complete asymmetric mark/label envelopes clear actual text-line bounds and all other icons at fifteen widths",
+      "No horizontal overflow or changes to intro dimensions, header/peek centerlines or approved artwork",
+      "25-second desktop observation: roughly 35\u201336px horizontal travel, 17px upper and 8px lower vertical travel",
+      "Lower pair moves in reverse with separate staggered durations; decorative reduced-motion preference retained"
+    ]
   }
 }

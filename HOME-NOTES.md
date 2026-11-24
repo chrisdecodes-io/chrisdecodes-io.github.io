@@ -250,3 +250,12 @@ Christopher requested the CD logo and wordmark be centered more closely over the
 Move channels to a second row below 1200 px to preserve clearance; while the sidebar remains visible, that row shares the same content centerline. Home stays left aligned. Phone branding and channels use the full page center as before. Apply through the shared header styles across every page. Footer layout is unchanged.
 
 Verification: brand, tagline and peek centerlines match at 1920, 1440, 1280, 1200, 1199, 1024, 900, 761, 760, 390 and 320 px. No overlap with Home or channels and no horizontal overflow. Skills, About and the starter prompt also match the main-column center at 1440, 900 and 390 px, retaining all three channel buttons.
+
+
+## Freer platform flow within the compact opening, November 24, 2026
+
+Christopher requested more freedom for the icons to flow around the tagline. Expand the former 5/3 px movement bounds without changing the introduction, heading size, icon size, centered header/peek or whitespace. At wide widths, each mark travels up to 32 px toward the tagline and 4 px outward; upper marks rise 14 px, lower marks 5 px, and both settle by up to 3 px. Reverse the lower pair’s path while retaining separate 20/23/22/24-second cycles and staggered phases. Keep the marks upright and source geometry unchanged.
+
+Reduce inward travel to 14 px at intermediate widths, 8 px on phones and 5 px below 361 px. Phones get up to 10 px upper rise, 5 px lower rise and 3 px settling; outward travel is 2 px. Keep Claude Code’s label on one line above 760 px so the wider paths retain clean spacing between icons. Reduced-motion preference still makes these decorative icons static; cat behavior is unchanged.
+
+Review full conservative mark-and-label envelopes, including asymmetric movement on both axes, against every actual tagline line and every neighboring icon at 1920, 1440, 1280, 1151, 1150, 1024, 951, 950, 900, 761, 760, 390, 361, 360 and 320 px. No intersections or horizontal overflow were found. A complete 25-second desktop observation confirms approximately 35–36 px total horizontal travel with visibly different paths; upper marks travel about 17 px vertically and lower marks 8 px. This supersedes the earlier 5/3 px movement limits only.

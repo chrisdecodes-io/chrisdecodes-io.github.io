@@ -44,10 +44,30 @@
       "chatgpt": 22,
       "codex": 24
     },
-    "style": "Gentle bounded asymmetric float around four fixed flank positions",
-    "desktop_travel_px": 5,
-    "mobile_travel_px": 3,
+    "style": "Wider asymmetric inward drift with distinct staggered phases; lower pair follows the path in reverse",
+    "desktop_travel_px": {
+      "inward": 32,
+      "outward": 4,
+      "upper_rise": 14,
+      "lower_rise": 5,
+      "settle": 3
+    },
+    "mobile_travel_px": {
+      "inward": 8,
+      "outward": 2,
+      "upper_rise": 10,
+      "lower_rise": 5,
+      "settle": 3,
+      "inward_below_361px": 5
+    },
     "reduced_motion": "Static positions when preferred; cat behavior separate",
-    "constraint": "Two marks per side, clear of the heading and cat lane through their full movement envelopes; retain compact mobile composition"
+    "constraint": "Keep existing intro dimensions and centerlines. Complete mark/label movement envelopes must clear text, other icons and the cat lane; desktop Claude Code label stays on one line.",
+    "intermediate_travel_px": {
+      "inward": 14,
+      "outward": 4,
+      "upper_rise": 12,
+      "lower_rise": 4,
+      "settle": 2
+    }
   }
 }
