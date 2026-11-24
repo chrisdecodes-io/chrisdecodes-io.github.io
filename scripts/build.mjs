@@ -40,14 +40,14 @@ function collectionRedirect() {
  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Skills · Chris Decodes</title><script src="/legacy-guides.js" defer></script></head><body data-redirect="skills"><h1>The library now focuses on Skills</h1><p>Continue to <a href="/skills/">Skills</a> or return <a href="/">Home</a>.</p></body></html>\n`;
 }
 const tileIcons={
- Skills:'<path d="m12 3 2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/><path d="M19 3v4M17 5h4"/>',
- Instagram:'<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/>',
- Substack:'<path d="M5 4h14M5 8h14M5 12h14v9l-7-4-7 4z"/>',
- GitHub:'<path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 18"/>',
- 'About Chris':'<circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/>'
+ Skills:'<path d="M6 5h4V3a2 2 0 0 1 4 0v2h4a2 2 0 0 1 2 2v3h2a2 2 0 0 1 0 4h-2v4a2 2 0 0 1-2 2h-4v-2a2 2 0 0 0-4 0v2H6a2 2 0 0 1-2-2v-4h2a2 2 0 0 0 0-4H4V7a2 2 0 0 1 2-2z"/>',
+ Instagram:'<path fill-rule="evenodd" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm5-2a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/><circle cx="12" cy="12" r="3"/>',
+ Substack:'<path d="M4 2h16v3H4zM4 7h16v3H4zM4 12h16v10l-8-4-8 4z"/>',
+ GitHub:'<path d="M4 4h5l3 3h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path fill="#173fbf" d="m10 10-4 4 4 4 1.5-1.5L9 14l2.5-2.5zm4 0-1.5 1.5L15 14l-2.5 2.5L14 18l4-4z"/>',
+ 'About Chris':'<circle cx="12" cy="7" r="4"/><path d="M3 22v-2a9 9 0 0 1 18 0v2z"/>'
 };
 function homeTile({title,description,label,url,action}) {
- const body=`<div class="tile-heading"><span class="tile-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" focusable="false">${tileIcons[title]}</svg></span><h2>${esc(title)}</h2></div><p>${esc(description)}</p><div class="tile-bottom">${label?`<span class="tile-status">${esc(label)}</span>`:''}${action?`<span class="tile-action">${esc(action)}</span>`:''}</div>`;
+ const body=`<div class="tile-heading"><span class="tile-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" focusable="false">${tileIcons[title]}</svg></span><h2>${esc(title)}</h2></div><p>${esc(description)}</p><div class="tile-bottom">${label?`<span class="tile-status">${esc(label)}</span>`:''}${action?`<span class="tile-action">${esc(action)}</span>`:''}</div>`;
  return url?`<a class="home-tile" href="${url}">${body}</a>`:`<article class="home-tile placeholder-tile">${body}</article>`;
 }
 const skills=catalog.filter(item=>item.type==='skills' && item.listed!==false);

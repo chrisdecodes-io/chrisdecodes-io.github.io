@@ -62,6 +62,8 @@ Header/footer CSS is consolidated into the final authoritative frame section of 
 
 Featured uses 32 px wide-screen padding. Grid cards use 24 px padding with a 210 px minimum height, allowing content to determine final height, and ink headings at 2 rem. On desktop the last About Chris destination spans the grid as a compact copy-and-action row; this removes the empty half-row without adding content. Mobile keeps the single-column card flow. Keep the 80/64 px section-edge allowance for the visible peek; shrinking transparent canvas clearance must not crowd surrounding text.
 
-## Rounded-square destination icons
+## Solid destination pictograms
 
-Each Home destination has a small functional line icon beside its ink heading: sparkle for Skills, camera for Instagram, publication/bookmark for Substack, code brackets for GitHub and person for About Chris. These inline SVGs are decorative (`aria-hidden`) and do not replace destination names or the approved brand artwork. Available destinations use blue-on-pale icon wells; coming-soon channels use muted gray. Keep icon wells at 36 px, with 32 px wells and 1.8 rem headings below 361 px to preserve a compact one-line About Chris label.
+Use flat ultramarine #173FBF rounded-square fields with filled cream #F4F1EA pictograms. Skills uses a puzzle piece, Instagram a camera, Substack a publication/bookmark mark, GitHub a code folder and About Chris a person. These functional inline SVGs are decorative (`aria-hidden`), alongside live ink headings. No AI sparkle, thin outline icon set, pale icon wells or gradients. This supersedes the initial line-icon treatment by Christopher’s explicit direction.
+
+Keep fields at 36 px, with 32 px fields and 1.8 rem headings below 361 px so About Chris stays on one line. Coming-soon availability remains explicit in text and placeholders remain non-interactive; icon color stays in the brand palette. Preserve approved wordmark and CD artwork unchanged.

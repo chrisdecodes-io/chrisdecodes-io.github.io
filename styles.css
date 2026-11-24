@@ -424,6 +424,6 @@ body{min-height:100vh;display:flex;flex-direction:column}
 
 /* Quiet functional icons improve scanning; destination headings remain ink. */
 .tile-heading{display:flex;align-items:center;gap:12px;margin-bottom:16px;min-width:0}.tile-heading h2{margin:0;min-width:0}
-.tile-icon{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;width:36px;height:36px;border-radius:10px;background:var(--pale);border:1px solid #cbd5f5;color:var(--blue)}
-.placeholder-tile .tile-icon{background:#e6e5df;border-color:#d2d2cc;color:#686b72}
+.tile-icon{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;width:36px;height:36px;border-radius:10px;background:var(--blue);color:var(--cream)}
+
 @media(max-width:360px){.tile-heading{gap:10px}.tile-icon{width:32px;height:32px;border-radius:9px}.tile-heading h2{font-size:1.8rem}}
