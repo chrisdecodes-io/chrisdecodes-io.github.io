@@ -35,7 +35,7 @@ for p in root.rglob('*.html'):
  assert q.h1==1,(p,'one h1 required')
  if p not in [root/f'{name}/index.html' for name in ['guides','resources','projects']]:
   assert p.read_text().count('class="peek-edge"')==3,(p,'three distinct peek slots required')
-  assert q.nav_items==['home','skills','about'],(p,'unexpected sidebar entries')
+  assert q.nav_items==[item['id'] for item in json.loads((root/'data/site.json').read_text())['navigation']],(p,'unexpected sidebar entries')
   text=' '.join(' '.join(q.text).split())
   assert text.count("Understand what's possible. Decide what matters to you.")==1,(p,'tagline must appear once')
  assert len(q.ids)==len(set(q.ids)),(p,'duplicate IDs')
@@ -57,7 +57,7 @@ original=[p.attrib['d'] for p in ET.parse(root/'assets/wordmark-ink.svg').getroo
 cta=[p.attrib['d'] for p in ET.parse(root/'assets/wordmark-cta-ink.svg').getroot().iter() if p.tag.endswith('path')]
 assert original==cta,'CTA wordmark must preserve the original approved outlines and stacked arrangement'
 assert (root/'index.html').read_text().count('class="platform-token"')==3,'Home should show the three named platform marks'
-assert home.tile_count==5,'Home must highlight Skills, Instagram, Substack, GitHub and About Chris'
+assert home.tile_count==7,'Home must highlight three resource collections, the three channels and About Chris'
 assert sum('href' not in tile for tile in home.home_tiles)==2,'Instagram and Substack remain visible placeholders'
 assert 'featured-title' in home.ids,'Featured must have its own labeled panel'
 assert (root/'resources/index.html') in pages
@@ -79,3 +79,15 @@ assert (root/'assets'/font_usage['license']).is_file(),'Tagline font license mus
 
 assert (root/'index.html').read_text().count('class="walk-track"')==1,'Home has one reserved walking lane'
 assert all('class="walk-track"' not in p.read_text() for p in pages if p!=root/'index.html'),'Walking interlude is Home-only'
+
+for key in ['prompts','instructions','skills']:
+ page=(root/f'{key}/index.html').read_text()
+ assert f'data-nav="{key}" aria-current="page"' in page,'Collection navigation must be selected'
+ if key=='prompts':assert 'href="/resources/task-context-starter-prompt/"' in page and '1 prompt available' in page
+ else:assert f'No public {key} available yet' in page and 'download=' not in page
+assert '<a href="/prompts/">Prompts</a>' in (root/'resources/task-context-starter-prompt/index.html').read_text()
+
+for item in items:
+ page=(root/f"resources/{item['id']}/index.html").read_text()
+ assert 'Purpose</h2>' in page and 'Expected outcomes</h2>' in page and 'What you need</h2>' in page and 'How to use it</h2>' in page
+ assert item['expectedOutcomes'] and item['requirements'] and item['instructions']

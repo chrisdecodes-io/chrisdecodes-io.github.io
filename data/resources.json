@@ -21,7 +21,14 @@
     "note": "Keep private information out unless you understand and accept how your chosen tool handles it.",
     "content": "I want to [specific goal].\nHere’s the relevant context: [background].\nMy constraints are [time, tools, or limits].\nA useful result would look like [format or example].\nAsk me about any missing information that would materially change your answer.",
     "publishedOn": "2026-11-23",
-    "listed": false,
-    "featured": true
+    "listed": true,
+    "featured": true,
+    "expectedOutcomes": [
+      "A task brief that brings your goal, relevant context, constraints and preferred output together.",
+      "A request for the assistant to clarify missing information that could materially change its answer."
+    ],
+    "limitations": [
+      "This prompt organizes your task brief. It does not verify facts or guarantee a correct answer; review the assistant’s response before using it."
+    ]
   }
 ]

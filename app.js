@@ -1,5 +1,9 @@
 const params = new URLSearchParams(location.search);
-if (location.pathname === '/' && (params.has('type') || params.has('q'))) location.replace('/skills/');
+const siteConfig = JSON.parse(document.querySelector('#site-config')?.textContent || '{}');
+if (location.pathname === '/' && (params.has('type') || params.has('q'))) {
+  const type = params.get('type');
+  location.replace(['prompts','instructions','skills'].includes(type) ? siteConfig.types[type].url : '/skills/');
+}
 const sidebarToggle = document.querySelector('.sidebar-toggle');
 sidebarToggle?.addEventListener('click', () => {
   const expanded = sidebarToggle.getAttribute('aria-expanded') !== 'true';
@@ -13,18 +17,21 @@ document.addEventListener('keydown', event => {
     sidebarToggle.focus();
   }
 });
-document.querySelector('#copy-prompt')?.addEventListener('click', async () => {
-  const prompt = document.querySelector('#starter-prompt');
+document.querySelectorAll('[data-copy-target]').forEach(button => button.addEventListener('click', async () => {
+  const prompt = document.querySelector(button.dataset.copyTarget);
   const status = document.querySelector('#copy-status');
+  let copyTimeout;
   try {
-    await navigator.clipboard.writeText(prompt.textContent);
-    status.textContent = 'Copied. Replace the brackets with your task.';
+    await Promise.race([navigator.clipboard.writeText(prompt.textContent), new Promise((_, reject) => { copyTimeout = setTimeout(() => reject(new Error('Clipboard unavailable')), 1500); })]);
+    status.textContent = button.dataset.copyMessage || 'Copied.';
   } catch {
     const selection = window.getSelection();
     const range = document.createRange();
     range.selectNodeContents(prompt);
     selection.removeAllRanges();
     selection.addRange(range);
-    status.textContent = 'Prompt selected. Use your device’s Copy command.';
+    status.textContent = 'Text selected. Use your device’s Copy command.';
+  } finally {
+    clearTimeout(copyTimeout);
   }
-});
+}));

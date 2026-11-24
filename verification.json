@@ -1,7 +1,9 @@
 {
-  "state": "Increased icon motion reviewed inside the unchanged compact frame",
+  "state": "Prompts, Instructions and Skills pages with explicit purpose and outcomes reviewed",
   "content_pages": [
     "/",
+    "/prompts/",
+    "/instructions/",
     "/skills/",
     "/about/",
     "/resources/task-context-starter-prompt/"
@@ -14,7 +16,7 @@
     390,
     320
   ],
-  "layout_cases": 24,
+  "layout_cases": 36,
   "checks": [
     "Original stacked wordmark paths and letter placement preserved; only transparent margins cropped",
     "Header/footer lockups use adopted CTA-v2 proportions",
@@ -40,7 +42,14 @@
     "Restored exact compact layout and platform motion from dd7f502; left Featured peek and walking interlude retained",
     "Before/after intro, H1, platform orbit and Featured rectangles identical at all ten widths",
     "Full blue-frame and label envelopes clear text, one another and cat lane, with no horizontal overflow",
-    "20/22/24-second asymmetric paths reviewed on desktop and mobile"
+    "20/22/24-second asymmetric paths reviewed on desktop and mobile",
+    "Six pages at six widths: one H1, correct selected navigation, shared six-link footer, no horizontal overflow",
+    "Home has seven tiles, including all three collections and both honest social placeholders",
+    "Prompts lists exactly one approved resource; Instructions and Skills have honest empty states",
+    "Resource detail explicitly includes purpose, expected outcomes, requirements, usage and limitations",
+    "Legacy type/category routes reach the right active collection",
+    "Copy success feedback observed; pending clipboard falls back to a matching full-text selection",
+    "Original prompt file unchanged and browser Back returns to Prompts"
   ],
   "release_scope": "Existing public resource only; existing brand/platform mark geometry; no new private content",
   "motion_viewports": [

@@ -7,6 +7,16 @@
       "url": "/"
     },
     {
+      "id": "prompts",
+      "label": "Prompts",
+      "url": "/prompts/"
+    },
+    {
+      "id": "instructions",
+      "label": "Instructions",
+      "url": "/instructions/"
+    },
+    {
       "id": "skills",
       "label": "Skills",
       "url": "/skills/"
@@ -31,15 +41,19 @@
       "singular": "Skill",
       "url": "/skills/",
       "nav": "skills",
-      "description": "Reusable instructions for specific tasks. Find out what each skill does, where it works and how to use it."
+      "description": "Reusable task packages built around instructions, sometimes with templates, scripts or supporting files. Each skill will explain its requirements and setup.",
+      "tileDescription": "Reusable task packages, with requirements and setup guidance.",
+      "emptyDescription": "Released skills will appear here with their purpose, supported tools and setup steps."
     },
     "prompts": {
       "label": "Prompts",
       "title": "Prompts",
       "singular": "Prompt",
-      "url": "/resources/?type=prompts",
-      "nav": "resources",
-      "description": "Copyable starting points for your next task. Open a prompt to see what it needs and how to use it."
+      "url": "/prompts/",
+      "nav": "prompts",
+      "description": "Copyable starting points for a specific task. Add your context, paste into your AI assistant and refine the result.",
+      "tileDescription": "Copyable starting points for a task, with space for your context.",
+      "emptyDescription": "Released prompts will appear here with copyable text and usage steps."
     },
     "templates": {
       "label": "Templates",
@@ -64,6 +78,16 @@
       "url": "/resources/?type=projects",
       "nav": "resources",
       "description": "Released tools and code projects, with documentation and source links."
+    },
+    "instructions": {
+      "label": "Instructions",
+      "title": "Instructions",
+      "singular": "Instruction set",
+      "url": "/instructions/",
+      "nav": "instructions",
+      "description": "Reusable rules and preferences that guide how an AI assistant works. Each set will explain where to save or paste it and when it applies.",
+      "tileDescription": "Reusable rules and preferences for how your AI assistant should work.",
+      "emptyDescription": "Released instruction sets will appear here with requirements and steps for saving or pasting them into your AI assistant."
     }
   },
   "shortcuts": [
