@@ -5,6 +5,34 @@ const assetURL = path => assetURLs[path] || path;
 const characters = [...document.querySelectorAll('.decoder-cat')];
 const peekSlots = [...document.querySelectorAll('.peek-edge')];
 let activePeek = -1;
+const walkTrack = document.querySelector('.walk-track');
+let walking = false;
+let nextPeek = 0;
+function finishWalk() {
+  if (!walking) return;
+  walking = false;
+  walkTrack.removeAttribute('data-walk-active');
+  walkTrack.querySelector('video').pause();
+  activatePeek(nextPeek);
+  refreshCharacters();
+}
+function startWalk(next) {
+  if (!walkTrack || !inViewport(walkTrack) || document.hidden) return false;
+  const video = walkTrack.querySelector('video');
+  if (!video.canPlayType('video/webm; codecs="vp9"')) return false;
+  nextPeek = next;
+  walking = true;
+  activatePeek(-1);
+  const size = walkTrack.querySelector('.decoder-cat').getBoundingClientRect().width;
+  const seconds = Math.min(18, Math.max(8, (walkTrack.clientWidth + size) / (size * .65)));
+  walkTrack.style.setProperty('--walk-duration', `${seconds}s`);
+  if (video.readyState) video.currentTime = 0;
+  walkTrack.setAttribute('data-walk-active', '');
+  refreshCharacter(walkTrack.querySelector('.decoder-cat'));
+  return true;
+}
+walkTrack?.querySelector('.decoder-cat').addEventListener('animationend', finishWalk);
+walkTrack?.querySelector('video').addEventListener('error', finishWalk);
 function inViewport(element) {
   const box = element.getBoundingClientRect();
   return box.bottom > 0 && box.top < innerHeight && box.right > 0 && box.left < innerWidth;
@@ -20,6 +48,10 @@ function activatePeek(index) {
   if (index >= 0) refreshCharacter(peekSlots[index].querySelector('.decoder-cat'));
 }
 function followVisibleSection() {
+  if (walking) {
+    if (inViewport(walkTrack)) return;
+    finishWalk();
+  }
   if (activePeek >= 0 && inViewport(peekSlots[activePeek])) return;
   for (let step = 1; step <= peekSlots.length; step++) {
     const index = (activePeek + step) % peekSlots.length;
@@ -30,6 +62,7 @@ function refreshCharacter(container) {
   const video = container.querySelector('video');
   const image = container.querySelector('img');
   const action = container.dataset.action;
+  if (action === 'walk' && !walking) { video.pause(); return; }
   if (action === 'peek' && !container.closest('[data-peek-active]')) { video.pause(); return; }
   if (!video.canPlayType('video/webm; codecs="vp9"')) return;
   if (video.dataset.action !== action) {
@@ -71,7 +104,8 @@ for (const [index, slot] of peekSlots.entries()) {
   const video = slot.querySelector('video');
   video.addEventListener('timeupdate', () => {
     if (index === activePeek && Number.isFinite(video.duration) && video.currentTime >= video.duration - 19 / 30) {
-      activatePeek((index + 1) % peekSlots.length);
+      const next = (index + 1) % peekSlots.length;
+      if (!startWalk(next)) activatePeek(next);
     }
   });
 }

@@ -5,7 +5,7 @@ import {createHash} from 'node:crypto';
 const root=fileURLToPath(new URL('../',import.meta.url));
 const catalog=JSON.parse(await readFile(path.join(root,'data/resources.json'),'utf8'));
 const assetURLs={};
-for(const name of ['/styles.css','/app.js','/cat-motion.js',...['curious','work','presenting','rest','peek'].flatMap(action=>[`/assets/characters/${action}.webm`,`/assets/characters/${action}.png`])]) {
+for(const name of ['/styles.css','/app.js','/cat-motion.js',...['curious','work','presenting','rest','peek','walk'].flatMap(action=>[`/assets/characters/${action}.webm`,`/assets/characters/${action}.png`])]) {
  const hash=createHash('sha256').update(await readFile(path.join(root,name.slice(1)))).digest('hex').slice(0,12);
  assetURLs[name]=`${name}?v=${hash}`;
 }
@@ -63,7 +63,7 @@ const homeTiles=[
 const featurePanel=featured
  ? `<section id="featured" class="featured-panel" aria-labelledby="featured-title"><div class="featured-copy"><p class="featured-label">Featured</p><h2 id="featured-title">${esc(featured.title)}</h2><p class="featured-description">${esc(featured.description)}</p><p class="featured-meta">${singular[featured.type]} · Available now</p><a class="button featured-button" href="/resources/${featured.id}/">Open ${singular[featured.type].toLowerCase()}</a></div>${cat('curious')}</section>`
  : `<section id="featured" class="featured-panel" aria-labelledby="featured-title"><div class="featured-copy"><h2 id="featured-title">Skills</h2><p class="featured-description">Reusable instructions for specific tasks. Public skills will appear here with a clear purpose and the details you need to use them.</p><p class="featured-meta">No public skills available yet</p><a class="button featured-button" href="/skills/">View skills</a></div>${cat('curious')}</section>`;
-await save('index.html',shell('Home','home',`<section class="home-page"><div class="home-intro"><h1 class="home-tagline">${tagline()}</h1>${platformCluster()}</div><div class="feature-peek-wrap peek-surface">${peek()}${featurePanel}</div><nav class="home-grid peek-surface" aria-label="Skills, channels and about Chris">${peek('left')}${homeTiles.map(homeTile).join('')}</nav></section>`));
+await save('index.html',shell('Home','home',`<section class="home-page"><div class="home-intro"><h1 class="home-tagline">${tagline()}</h1>${platformCluster()}</div><div class="feature-peek-wrap peek-surface">${peek()}<div class="walk-track" aria-hidden="true">${cat('walk')}</div>${featurePanel}</div><nav class="home-grid peek-surface" aria-label="Skills, channels and about Chris">${peek('left')}${homeTiles.map(homeTile).join('')}</nav></section>`));
 await save('skills/index.html',shell('Skills','skills',`<section class="skills-page"><div class="page-intro peek-surface">${peek()}<div><h1>Skills</h1><p>Reusable instructions for specific tasks, with a clear purpose, requirements and setup guidance.</p></div></div><div class="skills-collection peek-surface">${peek('left')}${skills.length?`<div class="resource-grid">${skills.map(card).join('')}</div>`:`<div class="empty-state">${cat('work')}<div><h2>No public skills available yet</h2><p>This is where released Chris Decodes skills will live. There are no downloads available yet.</p><a class="button secondary" href="/">Back to Home</a></div></div>`}</div></section>`));
 for(const route of ['resources','projects','guides']) await save(`${route}/index.html`,collectionRedirect());
 for(const item of catalog){

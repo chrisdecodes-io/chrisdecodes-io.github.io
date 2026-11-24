@@ -1,5 +1,5 @@
 {
-  "state": "CTA lockup, floating platform marks and wordmark-serif taglines reviewed",
+  "state": "Closer platform cluster and exclusive Home walking interlude reviewed",
   "content_pages": [
     "/",
     "/skills/",
@@ -30,7 +30,11 @@
     "18-second shared two-axis drift verified on all three platform tokens",
     "Conservative full-travel envelopes remain non-overlapping, inside the viewport and clear of the tagline at all six widths",
     "WordmarkEditorial loaded at native 400 weight on Home and inner-page footer taglines in all 24 layouts",
-    "One descriptive H1 per page and no horizontal overflow at all six widths"
+    "One descriptive H1 per page and no horizontal overflow at all six widths",
+    "Home icon spacing and walking-lane clearance reviewed at all six widths with no overflow",
+    "Actual desktop and mobile walking playback observed with zero active peek slots",
+    "Crossing finishes, walking video pauses and one peek resumes",
+    "Skills retains one active peek and no walking lane; navigation and browser Back verified"
   ],
   "release_scope": "Existing public resource only; existing brand/platform mark geometry; no new private content"
 }

@@ -1,6 +1,6 @@
 {
   "state": "Approved collection artwork with Curious neck refinement adopted November 24, 2026",
-  "display": "One active peeking cat among three distinct section edges per page; primary Curious/Work companions stay in their roles.",
+  "display": "One active peek or walking interlude at a time; primary Curious/Work companions stay in their roles.",
   "motion": "Normal-speed 12-second full gestures; automatic silent inline loops without pause controls; OS reduced-motion preferences do not alter playback per standing website direction",
   "fallback": "Original matching transparent still if playback is unsupported or blocked",
   "assets": {
@@ -44,6 +44,15 @@
       "seconds": 13,
       "sha256": "a9a381fa64bb903fff54e3fb9df2f5ed168f21554e78243b7fc9dae3ca438f61",
       "role": "Three separate section locations on each content page, coordinated so at most one peek plays"
+    },
+    "walk": {
+      "source": "Decoder Cat Flow Neon Walk 2026-10-20/Loop asset v1/loop-transparent.webm",
+      "playback": "Existing one-second gait at native timing, repeated during a bounded 8\u201318-second left-to-right Home crossing after the active peek completes its opaque dip",
+      "frames": 30,
+      "seconds": 1,
+      "sha256": "0e60369b88139db064f3afd565a59db9bd37712421360edda578d8802e4ac217",
+      "role": "Home only: cream lane immediately above Featured, mutually exclusive with all peeking cats",
+      "limits": "Approved source retains generated shape variation. No artwork or timing changes; no new engine integration."
     }
   }
 }

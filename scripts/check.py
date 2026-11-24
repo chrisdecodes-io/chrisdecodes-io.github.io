@@ -70,9 +70,12 @@ usage=json.loads((root/'assets/characters/usage.json').read_text())
 for name,asset in usage['assets'].items():
  assert hashlib.sha256((root/f'assets/characters/{name}.webm').read_bytes()).hexdigest()==asset['sha256']
 print(f'{len(pages)} pages checked: headings, links, assets, fragments, video attributes and prompt download match.')
-assert all(asset['frames']==390 and asset['seconds']==13 if name=='peek' else asset['frames']==360 and asset['seconds']==12 for name,asset in usage['assets'].items()),'Use original full gestures or the recorded complete 13-second peek composition'
+assert all(asset['frames']==390 and asset['seconds']==13 if name=='peek' else asset['frames']==30 and asset['seconds']==1 if name=='walk' else asset['frames']==360 and asset['seconds']==12 for name,asset in usage['assets'].items()),'Use original full gestures or the recorded complete 13-second peek composition'
 print('Release scope: one public prompt, approved character animations; no private resource imports.')
 
 font_usage=json.loads((root/'assets/wordmark-editorial-usage.json').read_text())
 assert hashlib.sha256((root/'assets/WordmarkEditorial.ttf').read_bytes()).hexdigest()==font_usage['sha256'],'Tagline font differs from selected wordmark-led source'
 assert (root/'assets'/font_usage['license']).is_file(),'Tagline font license must ship with the website'
+
+assert (root/'index.html').read_text().count('class="walk-track"')==1,'Home has one reserved walking lane'
+assert all('class="walk-track"' not in p.read_text() for p in pages if p!=root/'index.html'),'Walking interlude is Home-only'
