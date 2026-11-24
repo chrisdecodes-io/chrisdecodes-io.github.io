@@ -8,6 +8,8 @@ Taglines use the wordmark-led Editorial serif associated with “Chris”, at it
 
 Current visual decisions and supersessions: [website maintenance notes](HOME-NOTES.md).
 
+Preferred format for future resources: [starter-prompt detail page pattern](HOME-NOTES.md#preferred-resource-detail-format).
+
 ## Build and preview
 
 Run `node scripts/build.mjs`, then `python3 scripts/check.py`. No package installation is required. Generated HTML is committed. To preview, run `python3 -m http.server 4186 --bind 127.0.0.1` from this directory and open http://127.0.0.1:4186/.
