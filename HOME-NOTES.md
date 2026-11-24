@@ -107,3 +107,9 @@ The walking interlude starts only after a visible peek completes its opaque dip.
 ## Leftward Home accents
 
 Christopher requested both the platform cluster and the peek above Featured farther left. The wide-screen tagline column now caps at 550 px with a 12 px gap; intermediate layouts reserve a 240 px second column for the 220 px cluster, leaving 20 px on its right. On mobile the cluster aligns to the content’s left edge with an 8 px drift allowance. The Featured peek now uses the shared left-position placement (24 px inset desktop, 12 px mobile). Grid and footer peek positions and the exclusive walking interlude remain unchanged. Preserve heading and platform-label clearance across the full floating cycle.
+
+## Platform marks surrounding the tagline
+
+Christopher approved replacing the right-hand cluster with a loose composition around the tagline. On wide screens Claude sits above/left of the text, ChatGPT above/right, and Codex below the closing sentence with a leftward offset. The heading has a protected column; platform tokens use independent amplitudes, staggered phases and 22/26/24-second cycles. At intermediate widths the two upper marks occupy a reserved row above the full-width heading. On phones all three sit below the text at staggered heights, preserving readability and balance. This supersedes earlier cluster positions and eighteen-second shared timing.
+
+The full conservative travel envelopes, including labels, were reviewed at 1920, 1440, 1351, 1350, 1024, 900, 761, 760, 390 and 320 px. They remain mutually separate, inside the viewport, clear of the heading and above the walking lane. Keep these constraints when changing icon size, typography or breakpoints. The existing cream-on-blue mark geometry, visible names, reduced-motion treatment and cat timing remain unchanged. Asset provenance remains assets/platforms/usage.json, retrieved through these maintenance notes.

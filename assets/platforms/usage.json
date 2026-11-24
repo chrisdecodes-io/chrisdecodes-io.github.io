@@ -1,5 +1,5 @@
 {
-  "role": "Home introduction platform cluster; three non-interactive labeled marks",
+  "role": "Three labeled platform marks surrounding the Home tagline on desktop; staggered below it on mobile",
   "palette": {
     "field": "#173FBF",
     "mark": "#F4F1EA"
@@ -25,20 +25,31 @@
     }
   },
   "motion": {
-    "duration_seconds": 18,
-    "style": "Shared smooth two-axis drift with staggered phases; bounded around the Home tagline",
-    "wide_travel_px": [
-      14,
-      12
-    ],
-    "intermediate_travel_px": [
-      6,
-      8
-    ],
+    "style": "Independent gentle two-axis paths surrounding a protected heading area; staggered below the words on mobile",
+    "duration_seconds": {
+      "claude": 22,
+      "chatgpt": 26,
+      "codex": 24
+    },
+    "travel_px": {
+      "claude": [
+        12,
+        16
+      ],
+      "chatgpt": [
+        18,
+        10
+      ],
+      "codex": [
+        16,
+        12
+      ]
+    },
     "mobile_travel_px": [
       8,
       10
     ],
-    "reduced_motion": "Static positions when preferred; cat video behavior is separate"
+    "reduced_motion": "Static positions when preferred; cat video behavior is separate",
+    "clearance": "Full travel envelopes including labels must clear the tagline, neighboring marks and cat lane"
   }
 }

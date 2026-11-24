@@ -1,5 +1,5 @@
 {
-  "state": "Leftward Home icon group and Featured peek reviewed",
+  "state": "Surrounding platform composition reviewed on desktop, tablet and mobile",
   "content_pages": [
     "/",
     "/skills/",
@@ -36,7 +36,22 @@
     "Crossing finishes, walking video pauses and one peek resumes",
     "Skills retains one active peek and no walking lane; navigation and browser Back verified",
     "Updated Home checked at six widths: left Featured peek inset 24px desktop / 12px mobile, no horizontal overflow",
-    "Floating cluster shifted left with preserved heading clearance; desktop appearance inspected"
+    "Floating cluster shifted left with preserved heading clearance; desktop appearance inspected",
+    "Conservative full-motion envelopes including labels checked at ten widths and breakpoint edges: text clear, tokens separate, inside viewport, cat lane clear",
+    "Desktop marks surround the tagline; mobile marks use staggered positions below the words",
+    "Independent 22/26/24-second motion cycles preserve the shared icon styling"
   ],
-  "release_scope": "Existing public resource only; existing brand/platform mark geometry; no new private content"
+  "release_scope": "Existing public resource only; existing brand/platform mark geometry; no new private content",
+  "surround_viewports": [
+    1920,
+    1440,
+    1351,
+    1350,
+    1024,
+    900,
+    761,
+    760,
+    390,
+    320
+  ]
 }
