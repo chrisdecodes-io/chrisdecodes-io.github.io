@@ -32,6 +32,10 @@ Keep `data/resources.json` as the explicit public-release catalog. Do not scan o
 
 `data/site.json` → `channels` is the single source for channel links in every header, the Home tiles and About Chris. Destinations are [Instagram chris.decodes](https://www.instagram.com/chris.decodes/), the [Substack @chrisdecodes profile](https://substack.com/@chrisdecodes) and [GitHub chrisdecodes-io](https://github.com/chrisdecodes-io). Header links use matching blue-and-cream buttons labeled Instagram, Substack and GitHub. Do not display private/public status labels unless Christopher requests them. Both former social placeholders are linked.
 
+## Future additions
+
+[Affiliate links and brand inquiries](HOME-NOTES.md#future-affiliate-links-and-brand-inquiries) are recorded for future planning. No new page, contact address or affiliate offer is live. Review the documented hosting dependency before adding monetization.
+
 ## Visual and character direction
 
 Preserve cream #F4F1EA, rich blue #173FBF, the restrained corner lift toward #4667CC, Organic Emphasis headings and Inter supporting text. Use the restored CTA lockup in the header and footer: the original stacked ink wordmark beside the cream-on-blue CD square, proportionally scaled as one centered group. The original stacked wordmark masters remain unchanged. Use sentence case, preserving official names.
