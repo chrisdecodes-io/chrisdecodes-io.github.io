@@ -49,7 +49,7 @@ for p,q in pages.items():
   assert dest.is_file(),(p.relative_to(root),x)
   if u.fragment:assert u.fragment in pages[dest].ids,(p,x,'missing fragment')
 home=pages[root/'index.html']
-assert home.tile_count==4,'Home must highlight Instagram, Substack, GitHub and About Chris'
+assert home.tile_count==5,'Home must highlight Skills, Instagram, Substack, GitHub and About Chris'
 assert sum('href' not in tile for tile in home.home_tiles)==2,'Instagram and Substack remain visible placeholders'
 assert 'featured-title' in home.ids,'Featured must have its own labeled panel'
 assert (root/'resources/index.html') in pages

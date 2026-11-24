@@ -1,9 +1,9 @@
 {
-  "state": "Skills-focused consolidation validated locally; deployment pending",
+  "state": "Featured public prompt and separate Skills tile validated locally",
   "checks": [
     "Seven HTML routes: links, assets, fragments and original prompt download checked",
     "Main navigation: Home, Skills, About Chris",
-    "Home: one heading plus tagline, Skills panel, restored Instagram/Substack/GitHub squares and About Chris tile",
+    "Home: one heading plus tagline, featured starter prompt, separate Skills tile, restored Instagram/Substack/GitHub squares and About Chris tile",
     "No empty Resources/Projects sections or broad filter controls in active navigation",
     "Compatibility routes forward to standalone Skills; prior prompt remains direct-link-only",
     "Centered cat media slots and approved quiet Rest footer animation; original twelve-second pacing retained"
