@@ -66,12 +66,34 @@
     ],
     "checks": [
       "Tagline, original-peek position and intro have identical centerlines at all seven widths",
-      "Header lockup centered horizontally and CD/wordmark centers aligned vertically, preserving exact asset proportions",
+      "Header lockup centered over the content/tagline column; CD/wordmark centers aligned vertically, preserving exact asset proportions",
       "Four labeled flanking marks: Claude and Claude Code left, ChatGPT and Codex right",
       "Full conservative floating envelopes of icons and labels do not intersect rendered tagline text lines",
       "No horizontal overflow; larger 48px maximum heading and 32/30px phone typography",
       "Correct GitHub SVG replaces folder and Instructions checkmark centered; keyboard focus reviewed",
       "Routes, resource catalog and approved walking media unchanged"
+    ]
+  },
+  "header_content_alignment": {
+    "state": "Reviewed",
+    "widths": [
+      1920,
+      1440,
+      1280,
+      1200,
+      1199,
+      1024,
+      900,
+      761,
+      760,
+      390,
+      320
+    ],
+    "checks": [
+      "Header brand, tagline and peek share a horizontal centerline at all tested widths",
+      "No Home/channel overlap or horizontal overflow; channel row separates below 1200px",
+      "Shared header aligns to main column on Skills, About and prompt detail at 1440/900/390px",
+      "Original brand artwork and proportions preserved; footer unchanged"
     ]
   }
 }

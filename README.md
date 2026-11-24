@@ -66,6 +66,6 @@ The CTA wordmark is reproducible with `python3 scripts/prepare-cta-wordmark.py`.
 
 ## Home tagline and icon alignment
 
-The Home tagline is centered in the content frame at up to 48 px on desktop, 32 px on phones and 30 px on the narrowest layout. Claude and the Claude Code pixel avatar flank the left; ChatGPT and Codex flank the right. Their full float envelopes must clear the words and cat lane. The Featured-edge peek follows the same centerline. Header branding retains the approved CD/wordmark proportions, common vertical center and geometrically centered lockup.
+The Home tagline is centered in the content frame at up to 48 px on desktop, 32 px on phones and 30 px on the narrowest layout. Claude and the Claude Code pixel avatar flank the left; ChatGPT and Codex flank the right. Their full float envelopes must clear the words and cat lane. The Featured-edge peek follows the same centerline. Header branding retains the approved CD/wordmark proportions and common vertical center, with the complete lockup centered over the content/tagline column. When the sidebar collapses, it centers over the full page. Below 1200 px the channel buttons use a separate row, sharing that content centerline while the sidebar is visible.
 
 Platform asset provenance is recorded in assets/platforms/usage.json. The Claude Code avatar reuses Lobe Icons vector geometry with its license in assets/licenses/lobe-icons-LICENSE. The GitHub Home square reuses the existing GitHub mark rather than the retired folder pictogram. Instructions uses one clear, centered clipboard checkmark.

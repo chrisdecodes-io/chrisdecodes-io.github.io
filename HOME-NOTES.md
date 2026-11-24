@@ -241,3 +241,12 @@ The Featured-edge peek shares the heading’s centerline at every breakpoint. Wa
 Reuse the existing Claude Code pixel avatar vector from Lobe Icons, with source geometry, checksum and license recorded in assets/platforms/usage.json. GitHub reuses the existing local platform mark with native proportions, converted only to cream. Replace the folder pictogram in the GitHub card. Instructions uses one clean blue tick centered within its cream clipboard, without the interfering short list line.
 
 Review: Home at actual 1920, 1440, 1024, 900, 760, 390 and 320 px; heading, peek and header centers match; no horizontal overflow. Conservative full-motion mark/label bounds do not intersect any tagline text line at all seven widths. The header lockup’s square and wordmark vertical centers match. Review the corrected grid icons and keyboard focus. Existing generated-site checks pass; no resource releases or route changes.
+
+
+## Header branding aligned to the tagline, November 24, 2026
+
+Christopher requested the CD logo and wordmark be centered more closely over the tagline. The approved lockup is now centered over the main content column rather than the entire page. Use half the actual shared sidebar-width token as its offset; when the sidebar collapses at 760 px, remove the offset. Keep the artwork, native proportions and common vertical center unchanged. This supersedes whole-page header centering only.
+
+Move channels to a second row below 1200 px to preserve clearance; while the sidebar remains visible, that row shares the same content centerline. Home stays left aligned. Phone branding and channels use the full page center as before. Apply through the shared header styles across every page. Footer layout is unchanged.
+
+Verification: brand, tagline and peek centerlines match at 1920, 1440, 1280, 1200, 1199, 1024, 900, 761, 760, 390 and 320 px. No overlap with Home or channels and no horizontal overflow. Skills, About and the starter prompt also match the main-column center at 1440, 900 and 390 px, retaining all three channel buttons.

@@ -369,7 +369,7 @@ body{min-height:100vh;display:flex;flex-direction:column}
 .site-shell{width:100%;flex:1}
 .header{width:100%;background:var(--paper);border-bottom:1px solid #ccd0dc}
 .header-inner{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:24px;width:100%;max-width:1440px;margin:auto;padding:16px 32px}
-.brand{grid-column:2;grid-row:1;justify-self:center;display:flex;align-items:center;--cta-width:220px;width:var(--cta-width);gap:calc(var(--cta-width) * 49.3 / 741.3);min-height:44px;padding:0;background:transparent}
+.brand{position:relative;left:calc(var(--sidebar) / 2);grid-column:2;grid-row:1;justify-self:center;display:flex;align-items:center;--cta-width:220px;width:var(--cta-width);gap:calc(var(--cta-width) * 49.3 / 741.3);min-height:44px;padding:0;background:transparent}
 .brand img{display:block;height:auto;flex-shrink:0}
 .brand .brand-symbol{width:calc(var(--cta-width) * 176 / 741.3);border-radius:calc(var(--cta-width) * 8 / 236)}
 .brand .brand-wordmark{width:calc(var(--cta-width) * 516 / 741.3)}
@@ -391,14 +391,15 @@ body{min-height:100vh;display:flex;flex-direction:column}
 .footer nav{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px 24px}
 .footer nav a{display:inline-flex;align-items:center;min-height:44px;padding:8px 0;font-size:.875rem;font-weight:550;text-decoration:none;color:#414650}
 .footer nav a:hover{color:var(--blue);text-decoration:underline}
-@media(max-width:1023px){
+@media(max-width:1199px){
 .header-inner{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px 16px;padding:16px 24px}
 
 .brand{--cta-width:192px}
-.top-channels{grid-column:1/-1;grid-row:2;justify-self:center;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;width:100%;max-width:360px}
+.top-channels{position:relative;left:calc(var(--sidebar) / 2);grid-column:1/-1;grid-row:2;justify-self:center;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;width:100%;max-width:360px}
 .top-channels a{min-width:0;min-height:46px}
 }
 @media(max-width:760px){
+.brand,.top-channels{left:0}
 .footer-brand{--cta-width:220px}
 .footer{padding:24px 20px}
 .footer nav{display:grid;grid-template-columns:repeat(2,max-content);gap:4px 24px}
