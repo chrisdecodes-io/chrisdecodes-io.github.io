@@ -5,10 +5,14 @@ from urllib.parse import urlsplit,unquote
 import json,hashlib
 root=Path(__file__).resolve().parent.parent
 class Page(HTMLParser):
- def __init__(self):super().__init__();self.ids=[];self.refs=[];self.h1=0;self.videos=[];self.images=[];self.heading=False;self.heading_text=[]
+ def __init__(self):super().__init__();self.ids=[];self.refs=[];self.h1=0;self.videos=[];self.images=[];self.heading=False;self.heading_text=[];self.text=[];self.ignore_text=False;self.tile_count=0;self.home_tiles=[];self.nav_items=[];self.in_sidebar=False
  def handle_starttag(self,t,attrs):
   a=dict(attrs)
   if 'id' in a:self.ids.append(a['id'])
+  if t in ['script','style']:self.ignore_text=True
+  if 'home-tile' in a.get('class','').split():self.tile_count+=1;self.home_tiles.append(a)
+  if t=='nav' and a.get('id')=='sidebar-links':self.in_sidebar=True
+  if t=='a' and self.in_sidebar:self.nav_items.append(a.get('data-nav'))
   if t=='h1':self.h1+=1
   if t in ['h1','h2','h3']:self.heading=True
   if t=='video':self.videos.append(a)
@@ -16,14 +20,21 @@ class Page(HTMLParser):
   for k in ['src','href','poster']:
    if k in a:self.refs.append(a[k])
  def handle_endtag(self,t):
+  if t in ['script','style']:self.ignore_text=False
+  if t=='nav':self.in_sidebar=False
   if t in ['h1','h2','h3']:self.heading=False
  def handle_data(self,s):
+  if not self.ignore_text:self.text.append(s)
   if self.heading:self.heading_text.append(s)
 pages={}
 for p in root.rglob('*.html'):
  if '.git' in p.parts:continue
  q=Page();q.feed(p.read_text());pages[p]=q
  assert q.h1==1,(p,'one h1 required')
+ if p!=root/'guides/index.html':
+  assert q.nav_items==['home','resources','skills','projects','about'],(p,'unexpected sidebar entries')
+  text=' '.join(' '.join(q.text).split())
+  assert text.count("Understand what's possible. Decide what matters to you.")==1,(p,'tagline must appear once')
  assert len(q.ids)==len(set(q.ids)),(p,'duplicate IDs')
  for text in q.heading_text:
   assert not(text.strip().isupper() and len(text.strip())>2),(p,'all-caps heading')
@@ -37,6 +48,10 @@ for p,q in pages.items():
   if dest.is_dir():dest=dest/'index.html'
   assert dest.is_file(),(p.relative_to(root),x)
   if u.fragment:assert u.fragment in pages[dest].ids,(p,x,'missing fragment')
+home=pages[root/'index.html']
+assert home.tile_count==8,'Home must contain exactly eight destination/featured tiles'
+assert sum('href' not in tile for tile in home.home_tiles)==2,'Only Instagram/Substack are non-clickable placeholders'
+assert (root/'resources/index.html') in pages
 items=json.loads((root/'data/resources.json').read_text())
 assert len(items)==1 and items[0]['id']=='task-context-starter-prompt','Initial release must contain only the existing approved prompt'
 for item in items:
@@ -46,4 +61,5 @@ usage=json.loads((root/'assets/characters/usage.json').read_text())
 for name,asset in usage['assets'].items():
  assert hashlib.sha256((root/f'assets/characters/{name}.webm').read_bytes()).hexdigest()==asset['sha256']
 print(f'{len(pages)} pages checked: headings, links, assets, fragments, video attributes and prompt download match.')
-print('Release scope: one public prompt, three character derivatives; no private resource imports.')
+assert all(asset['frames']==360 and asset['seconds']==12 for asset in usage['assets'].values()),'Use original 12-second full gestures'
+print('Release scope: one public prompt, three approved character animations; no private resource imports.')

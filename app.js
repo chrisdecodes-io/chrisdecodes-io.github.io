@@ -1,12 +1,12 @@
-const types = {
-  all: {title:'All resources', description:'Browse reusable resources and projects. Find what fits your task, then copy it, download it or explore the source.'},
-  skills: {title:'Skills', description:'Reusable instructions for specific tasks. Find out what each skill does, where it works and how to use it.'},
-  prompts: {title:'Prompts', description:'Copyable starting points for your next task. Open a prompt to see what it needs and how to use it.'},
-  templates: {title:'Templates', description:'Reusable files that give a familiar task a clear starting structure.'},
-  workflows: {title:'Workflows', description:'Repeatable processes with the steps and requirements needed to use them.'},
-  projects: {title:'Projects', description:'Released tools and code projects, with documentation and source links.'}
-};
+const site = JSON.parse(document.querySelector('#site-config').textContent);
+const types = site.types;
 const params = new URLSearchParams(location.search);
+if (location.pathname === '/' && (params.has('type') || params.has('q'))) {
+  const target = new URL('/resources/', location.origin);
+  if (Object.hasOwn(types, params.get('type'))) target.searchParams.set('type', params.get('type'));
+  if (params.get('q')) target.searchParams.set('q',params.get('q'));
+  location.replace(target);
+}
 const collection = document.querySelector('[data-collection]');
 const search = document.querySelector('#resource-search');
 const typeSelect = document.querySelector('#resource-type');
@@ -32,7 +32,7 @@ function updateCatalog() {
   document.title = `${type.title} · Chris Decodes`;
   typeSelect.value = selectedType;
   for (const link of document.querySelectorAll('[data-nav]')) {
-    if (link.dataset.nav === selectedType) link.setAttribute('aria-current','page');
+    if (link.dataset.nav === type.nav) link.setAttribute('aria-current','page');
     else link.removeAttribute('aria-current');
   }
   document.querySelector('#resource-count').textContent = `${matches} resource${matches === 1 ? '' : 's'}${query ? ' found' : ''}`;
@@ -60,13 +60,11 @@ if (collection) {
   });
   typeSelect.addEventListener('change', () => {
     const type = typeSelect.value;
-    const route = type === 'skills' ? '/skills/' : type === 'projects' ? '/projects/' : '/';
-    const url = new URL(route, location.origin);
-    if (!['all','skills','projects'].includes(type)) url.searchParams.set('type',type);
+    const url = new URL(types[type].url, location.origin);
     if (search.value.trim()) url.searchParams.set('q',search.value.trim());
     location.assign(url);
   });
-  clear.addEventListener('click', () => location.assign('/'));
+  clear.addEventListener('click', () => location.assign(types.all.url));
 }
 const sidebarToggle = document.querySelector('.sidebar-toggle');
 sidebarToggle?.addEventListener('click', () => {

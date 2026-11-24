@@ -1,0 +1,79 @@
+{
+  "tagline": "Understand what's possible. Decide what matters to you.",
+  "navigation": [
+    {
+      "id": "home",
+      "label": "Home",
+      "url": "/"
+    },
+    {
+      "id": "resources",
+      "label": "Resources",
+      "url": "/resources/"
+    },
+    {
+      "id": "skills",
+      "label": "Skills",
+      "url": "/skills/"
+    },
+    {
+      "id": "projects",
+      "label": "Projects",
+      "url": "/projects/"
+    },
+    {
+      "id": "about",
+      "label": "About Chris",
+      "url": "/about/"
+    }
+  ],
+  "types": {
+    "all": {
+      "label": "All resources",
+      "title": "Resources",
+      "url": "/resources/",
+      "nav": "resources",
+      "description": "Browse reusable resources and projects. Find what fits your task, then copy it, download it or explore the source."
+    },
+    "skills": {
+      "label": "Skills",
+      "title": "Skills",
+      "singular": "Skill",
+      "url": "/skills/",
+      "nav": "skills",
+      "description": "Reusable instructions for specific tasks. Find out what each skill does, where it works and how to use it."
+    },
+    "prompts": {
+      "label": "Prompts",
+      "title": "Prompts",
+      "singular": "Prompt",
+      "url": "/resources/?type=prompts",
+      "nav": "resources",
+      "description": "Copyable starting points for your next task. Open a prompt to see what it needs and how to use it."
+    },
+    "templates": {
+      "label": "Templates",
+      "title": "Templates",
+      "singular": "Template",
+      "url": "/resources/?type=templates",
+      "nav": "resources",
+      "description": "Reusable files that give a familiar task a clear starting structure."
+    },
+    "workflows": {
+      "label": "Workflows",
+      "title": "Workflows",
+      "singular": "Workflow",
+      "url": "/resources/?type=workflows",
+      "nav": "resources",
+      "description": "Repeatable processes with the steps and requirements needed to use them."
+    },
+    "projects": {
+      "label": "Projects",
+      "title": "Projects",
+      "singular": "Project",
+      "url": "/projects/",
+      "nav": "projects",
+      "description": "Released tools and code projects, with documentation and source links."
+    }
+  }
+}

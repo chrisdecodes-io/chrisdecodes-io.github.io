@@ -1,20 +1,22 @@
 {
-  "state": "Validated resource-library revision; public deployment pending",
-  "release_scope": "One already-public starter prompt plus selected character artwork derivatives; no private resource releases",
+  "state": "Validated Home hub revision; public deployment pending",
   "checks": [
-    "Six static pages: one h1, unique IDs, local links/assets/fragments resolve",
-    "Build is deterministic for unchanged catalog and shared template",
-    "JavaScript syntax checks pass",
-    "Local HTTP: all ten checked destinations return 200; text download equals catalog content",
-    "Browser: search no-match, filtered collection labels/counts, Skills and Projects empty states, legacy guide route and prompt copy verified",
-    "Desktop 1440 px and mobile 390/320 px reviewed; no horizontal overflow at mobile widths; three channel links remain visible",
-    "Mobile sidebar open/close and Escape keyboard behavior verified",
-    "Curious and Presenting: 100 frames at 30 fps, 3.333 seconds; Work: 120 frames at 30 fps, 4 seconds",
-    "Transparent WebM playback observed; looping enabled; no visible pause controls; one visible cat per main view"
+    "Seven pages: local links, assets, fragments, one h1 and unique IDs pass",
+    "Eight Home tiles; only Instagram/Substack are non-clickable placeholders",
+    "Shared five-entry navigation and exactly one visible tagline per page",
+    "Generated pages reproduce byte-for-byte from unchanged inputs",
+    "Browser: Home search, filters, Back navigation, prompt copying, legacy root filters and guide routes verified",
+    "Desktop 1440 px, tablet 820 px, mobile 390/320 px reviewed; menu open/close and Escape verified",
+    "Cat videos match original approved sources, each 360 frames at 30 fps (12 seconds), silent and looping at normal speed",
+    "Prompt download remains byte-identical to the sole approved catalog entry",
+    "Local HTTP: 11 destinations return 200; Home has eight tiles and prompt download matches catalog",
+    "Final tablet check: adjacent tile bounds separated by 20 px; final 320 px check: all eight tile right edges stay within the viewport",
+    "Browser: Home form explicitly reaches /resources/?q=context with Resources heading and one result; no console errors observed",
+    "Original Curious, Work and Presenting video playback observed across complete cycles and restarts; duration 12 seconds, rate 1, loop enabled"
   ],
-  "limitations": [
-    "Other collections are intentionally empty until approved releases are available",
-    "Instagram and Substack URLs remain placeholders",
-    "Unsupported or blocked video playback uses transparent still posters"
+  "release_scope": "Existing starter prompt only; no additional private resources",
+  "placeholders": [
+    "Skills and Projects releases",
+    "Instagram and Substack profile links"
   ]
 }
