@@ -32,6 +32,7 @@ for p in root.rglob('*.html'):
  q=Page();q.feed(p.read_text());pages[p]=q
  assert q.h1==1,(p,'one h1 required')
  if p not in [root/f'{name}/index.html' for name in ['guides','resources','projects']]:
+  assert p.read_text().count('class="peek-edge"')==3,(p,'three distinct peek slots required')
   assert q.nav_items==['home','skills','about'],(p,'unexpected sidebar entries')
   text=' '.join(' '.join(q.text).split())
   assert text.count("Understand what's possible. Decide what matters to you.")==1,(p,'tagline must appear once')

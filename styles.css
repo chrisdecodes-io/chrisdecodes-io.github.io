@@ -73,3 +73,10 @@
 .peek-edge[data-peek-position=left]{right:auto;left:24px}
 .peek-edge[data-peek-position=center]{right:auto;left:calc(50% - 75px)}
 @media(max-width:760px){.peek-edge[data-peek-position=left]{left:12px}.peek-edge[data-peek-position=center]{left:calc(50% - 60px)}}
+
+/* Peeks occupy three separate section edges; only the active slot is shown. */
+.peek-edge{visibility:hidden}.peek-edge[data-peek-active]{visibility:visible}
+.feature-peek-wrap{padding:0;border:0}.feature-peek-wrap>.featured-panel{margin-bottom:0}
+.home-grid.peek-surface{margin-top:140px;padding-top:28px}
+.home-grid>.peek-edge{display:block}.about-skills h2{font-size:2rem;color:var(--blue)}
+@media(max-width:760px){.home-grid.peek-surface{margin-top:110px}.skills-page .page-intro.peek-surface{margin-top:110px}.skills-collection.peek-surface{margin-top:110px}}

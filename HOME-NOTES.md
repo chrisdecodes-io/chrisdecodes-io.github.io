@@ -25,3 +25,7 @@ The website peek is a 13-second transparent derivative of existing approved sour
 ## Three-position peek sequence
 
 One peek per page rotates right, left and center along its originating section edge. Reposition only during the 19 fully transparent end frames after the complete opaque dip. Existing approved idle continuation supplies natural blinks while the cat holds in place; do not add rapid blinking or move the cat while visible. The loop remains 13 seconds. No extra simultaneous peeking cats, extra empty sections or artwork changes.
+
+## Separate section locations supersede same-edge rotation
+
+The three peek slots now sit at different vertical sections. Home: Featured, destination grid and footer. Skills: introduction, collection and footer. About: Skills explanation, channel section and footer. Prompt detail: usage instructions, prompt text and footer. At most one slot is active. Advance after the opaque dip reaches its fully transparent ending. If scrolling leaves the active slot offscreen, a visible section may start from the hidden entry; no visible character teleports. Idle blink source and 13-second pacing are unchanged. Existing source artwork and release scope remain unchanged.
