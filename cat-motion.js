@@ -11,11 +11,11 @@ let nextPeek = 0;
 function fitWalkingTrack() {
   if (!walkTrack) return;
   const host = walkTrack.offsetParent.getBoundingClientRect();
-  const main = document.querySelector('main').getBoundingClientRect();
-  // Enter at the visible content boundary, exit beyond the actual viewport edge.
-  const left = Math.max(0, main.left);
+  const banner = document.querySelector('.featured-panel').getBoundingClientRect();
+  // Rise and dip behind the Featured edge, keeping the complete frame inside it.
+  const left = banner.left;
   walkTrack.style.setProperty('--walk-left', `${left - host.left}px`);
-  walkTrack.style.setProperty('--walk-width', `${document.documentElement.clientWidth - left}px`);
+  walkTrack.style.setProperty('--walk-width', `${banner.width}px`);
 }
 fitWalkingTrack();
 window.addEventListener('resize', fitWalkingTrack);
@@ -24,7 +24,7 @@ function finishWalk() {
   walking = false;
   walkTrack.removeAttribute('data-walk-active');
   walkTrack.querySelector('video').pause();
-  activatePeek(nextPeek);
+  activatePeek(inViewport(peekSlots[0]) ? 0 : nextPeek);
   refreshCharacters();
 }
 function startWalk(next) {
@@ -37,7 +37,7 @@ function startWalk(next) {
   walkTrack.querySelector('.decoder-cat').classList.remove('has-video');
   activatePeek(-1);
   const size = walkTrack.querySelector('.decoder-cat').getBoundingClientRect().width;
-  const seconds = Math.min(18, Math.max(8, (walkTrack.clientWidth + size) / (size * .65)));
+  const seconds = Math.min(17, Math.max(7.5, (walkTrack.clientWidth + size) / (size * .72)));
   walkTrack.style.setProperty('--walk-duration', `${seconds}s`);
   if (video.readyState) video.currentTime = 0;
   walkTrack.setAttribute('data-walk-active', '');
@@ -116,6 +116,10 @@ if ('IntersectionObserver' in window) {
 for (const [index, slot] of peekSlots.entries()) {
   const video = slot.querySelector('video');
   video.addEventListener('timeupdate', () => {
+    // Home tagline only: a slightly quicker arrival and shorter idle, full-speed dip.
+    if (walkTrack && index === 0) {
+      video.playbackRate = video.currentTime < 49 / 30 ? 1.12 : video.currentTime < 343 / 30 ? 1.18 : 1;
+    }
     if (index === activePeek && Number.isFinite(video.duration) && video.currentTime >= video.duration - 19 / 30) {
       const next = (index + 1) % peekSlots.length;
       if (!startWalk(next)) activatePeek(next);

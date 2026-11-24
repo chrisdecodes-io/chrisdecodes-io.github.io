@@ -39,7 +39,7 @@
     },
     "peek": {
       "source": "Approved Peek Rise and Blink entry (49 frames), On-Screen Loops/peek continuation (147 frames twice), Peek Dip Exit (28 frames), 19 transparent frames; see scripts/prepare-peek.py",
-      "playback": "Approved 13-second rise, natural idle blink and complete opaque dip; next section activates only at fully transparent ending, or when the previous location has scrolled offscreen",
+      "playback": "Encoded 13-second complete rise, natural blink and opaque dip. Home tagline slot only: entry 1.12x, idle 1.18x, dip 1x; other slots retain 1x. No source frames changed.",
       "frames": 390,
       "seconds": 13,
       "sha256": "a9a381fa64bb903fff54e3fb9df2f5ed168f21554e78243b7fc9dae3ca438f61",
@@ -47,11 +47,11 @@
     },
     "walk": {
       "source": "Decoder Cat Flow Neon Walk 2026-10-20/Loop asset v1/loop-transparent.webm",
-      "playback": "Existing one-second gait at native timing, repeated during a bounded 8\u201318-second left-to-right Home crossing after the active peek completes its opaque dip",
+      "playback": "Native one-second gait repeated through a 7.5\u201317-second Home crossing, with an opaque rise and dip behind Featured; no media changes",
       "frames": 30,
       "seconds": 1,
       "sha256": "0e60369b88139db064f3afd565a59db9bd37712421360edda578d8802e4ac217",
-      "role": "Home only: cream lane beneath the tagline, entering at the main-content boundary (viewport edge on mobile) and exiting at the actual right viewport edge; mutually exclusive with all peeking cats",
+      "role": "Home only: lane matches Featured width; character rises near the left end and dips near the right, staying inside the composition; exclusive with peeking cats",
       "limits": "Approved source retains generated shape variation. No artwork or timing changes; no new engine integration."
     }
   }

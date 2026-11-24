@@ -23,7 +23,7 @@
     "Go to prompt jumps to and focuses the content heading; Copy prompt succeeds; browser Back returns to the introduction",
     "Mobile sidebar expands with all current destinations; recognized compatibility routes select corresponding collections; unknown and retired routes return Home",
     "13 HTTP destinations return 200; prompt download bytes match the catalog",
-    "Timed desktop and mobile observations: walking starts outside its lane with video playing, crosses beyond the former clip, exits at the real viewport edge, hands off to one peek and restarts",
+    "Superseded by tagline_cat_revision: banner-bound rise/cross/dip with a sooner tagline peek return",
     "No active peek during walking; original approved media, native gait and vertical clearance unchanged",
     "Generated-site checks and JavaScript syntax checks pass"
   ],
@@ -39,5 +39,15 @@
     ],
     "live_instagram_detection": false,
     "update_trigger": "Update website during joint Instagram publication sessions"
+  },
+  "tagline_cat_revision": {
+    "state": "Desktop and mobile cycles reviewed",
+    "scope": "Home tagline peek and walking interlude only",
+    "checks": [
+      "Home-only 1.12x entry and 1.18x idle; complete dip at 1x",
+      "Walker fits Featured, rises and dips without an interior wall or outer-margin drift",
+      "Tagline peek returns after walking when visible; inactive walker hidden",
+      "Approved source media hashes unchanged; primary Featured and inner-page pacing unchanged"
+    ]
   }
 }
