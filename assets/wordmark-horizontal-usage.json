@@ -1,9 +1,9 @@
 {
-  "state": "Website-specific horizontal derivative requested by Christopher",
+  "state": "Superseded website experiment; restored CTA stacked lockup is active",
   "source": "assets/wordmark-ink.svg; approved wordmark-smooth-v1 outlines",
   "source_sha256": "3f2a193b097bed6b7a78fc71e0562bd47ea8a8b2310c01cfe9a9edfd4e89a391",
   "output_sha256": "714584d99f5005a213ff4190cd7449aa2fee19af6cc646e0805763d4b5018abe",
-  "role": "Unboxed centered header and centered footer signature",
+  "role": "Historical rollback artifact; no active page use",
   "method": "First five and final seven original paths translated into one row; align median letter baselines; no path edits, retyping, scaling or stretching",
   "word_gap": 46.7221,
   "viewBox": [

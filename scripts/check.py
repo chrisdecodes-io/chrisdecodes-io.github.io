@@ -54,8 +54,9 @@ for p,q in pages.items():
 home=pages[root/'index.html']
 assert ' '.join(' '.join(home.h1_text).split())==json.loads((root/'data/site.json').read_text())['tagline'],'Home must lead with the approved tagline'
 original=[p.attrib['d'] for p in ET.parse(root/'assets/wordmark-ink.svg').getroot().iter() if p.tag.endswith('path')]
-horizontal=[p.attrib['d'] for p in ET.parse(root/'assets/wordmark-horizontal-ink.svg').getroot().iter() if p.tag.endswith('path')]
-assert original==horizontal,'Horizontal wordmark must preserve every approved letter outline'
+cta=[p.attrib['d'] for p in ET.parse(root/'assets/wordmark-cta-ink.svg').getroot().iter() if p.tag.endswith('path')]
+assert original==cta,'CTA wordmark must preserve the original approved outlines and stacked arrangement'
+assert (root/'index.html').read_text().count('class="platform-token"')==3,'Home should show the three named platform marks'
 assert home.tile_count==5,'Home must highlight Skills, Instagram, Substack, GitHub and About Chris'
 assert sum('href' not in tile for tile in home.home_tiles)==2,'Instagram and Substack remain visible placeholders'
 assert 'featured-title' in home.ids,'Featured must have its own labeled panel'

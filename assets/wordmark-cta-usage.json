@@ -1,0 +1,21 @@
+{
+  "state": "Restored approved stacked CTA wordmark; supersedes horizontal website derivative",
+  "source": "assets/wordmark-ink.svg; approved smooth-v1 artwork",
+  "method": "Crop transparent viewBox margins only; all original paths and word arrangement unchanged",
+  "viewBox": [
+    38.495,
+    45.012,
+    533.0116,
+    244.49349999999998
+  ],
+  "lockup_proportions": {
+    "square": 176,
+    "gap": 49.3,
+    "wordmark": 516,
+    "total": 741.3
+  },
+  "proportion_source": "Adopted refined logo lockup v2, October 16, 2026",
+  "output_sha256": "d1f946fed0f652dd8bd2d88a4d55cc39283a9dfc2880bb81458d5681829eafc3",
+  "role": "Header and footer CTA-style lockup",
+  "rebuild": "python3 scripts/prepare-cta-wordmark.py"
+}

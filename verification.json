@@ -1,5 +1,5 @@
 {
-  "state": "Horizontal wordmark and tagline-led opening reviewed",
+  "state": "Restored CTA lockup and consistent two-axis platform drift reviewed",
   "content_pages": [
     "/",
     "/skills/",
@@ -16,20 +16,19 @@
   ],
   "layout_cases": 24,
   "checks": [
-    "All 12 original approved letter paths preserved exactly in horizontal SVG",
-    "Source hash checked; derivative recipe and provenance stored",
-    "Transparent ink header wordmark centered at every viewport",
-    "Header widths 240/200/140/128 px and footer widths 180/156 px verified",
-    "Home stays solid blue with cream text on all content pages",
-    "No Home/wordmark or channel overlap; 8 px Home separation at 320 px",
-    "No horizontal overflow; footer branding centered",
-    "Home has one H1 containing the approved tagline in Inter, max 40 px desktop and 28 px mobile",
-    "Tagline appears exactly once per content page",
-    "All four content pages visually reviewed on desktop and mobile",
-    "Ink grid headings, solid pictograms and three-section cat behavior preserved",
-    "Legacy guide/collection/root-query links reach Skills",
-    "Prompt copies successfully; download attribute and file match catalog; Home navigation and Back work",
-    "Seven generated HTML routes checked for headings, IDs, local destinations and assets"
+    "Original stacked wordmark paths and letter placement preserved; only transparent margins cropped",
+    "Header/footer lockups use adopted CTA-v2 proportions",
+    "CTA group geometrically centered on all content pages",
+    "No Home/branding or channel overlap and no horizontal overflow",
+    "Claude, ChatGPT and Codex use matching blue frames, cream marks, labels and float rules",
+    "Platform frames identical in width, height, radius and color at each viewport",
+    "Platform imagery loaded and clear of the tagline on desktop and mobile",
+    "Only Home has the descriptive platform cluster",
+    "Three peek slots and one active cat per content page preserved",
+    "Mobile sidebar, CTA Home link and browser Back verified",
+    "All generated HTML links, fragments, downloads and asset hashes checked",
+    "18-second shared two-axis drift verified on all three platform tokens",
+    "Conservative full-travel envelopes remain non-overlapping, inside the viewport and clear of the tagline at all six widths"
   ],
-  "release_scope": "Website-specific brand derivative only; no new public resources or animation changes"
+  "release_scope": "Existing public resource only; existing brand/platform mark geometry; no new private content"
 }

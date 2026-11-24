@@ -30,7 +30,7 @@ The already-public starter prompt remains at `/resources/task-context-starter-pr
 
 ## Visual and character direction
 
-Preserve cream #F4F1EA, rich blue #173FBF, the restrained corner lift toward #4667CC, Organic Emphasis headings and Inter supporting text. Use the ink horizontal wordmark on cream in the header and footer, with the cream-on-blue CD square retained in the footer. The original stacked wordmark masters remain unchanged. Use sentence case, preserving official names.
+Preserve cream #F4F1EA, rich blue #173FBF, the restrained corner lift toward #4667CC, Organic Emphasis headings and Inter supporting text. Use the restored CTA lockup in the header and footer: the original stacked ink wordmark beside the cream-on-blue CD square, proportionally scaled as one centered group. The original stacked wordmark masters remain unchanged. Use sentence case, preserving official names.
 
 Show the exact tagline once per content page: in the Home introduction and in inner-page footers. Keep welcome eyebrows, repeated introduction copy, sidebar slogans and duplicate Featured labels out of the page. The footer adds navigation, not a new heading or card.
 
@@ -46,4 +46,4 @@ Font notices remain in `assets/licenses/`. Brand artwork and characters are incl
 
 Christopher approved propagation of the corrected Curious motion. The Home Featured banner uses one smaller tilt and quiet return, preserving the artwork, 12-second timing, blinks, tail and inward facing placement. Current exports in the shared character library and original export pack match this correction; old media remain in their history folders. See `assets/characters/usage.json`. The correction recipe and QA are in the shared collection’s `Curious-Refinement-2026-11-24.json` and source checkpoint. The separate Curious Notice animation is unchanged.
 
-The horizontal wordmark is reproducible with `python3 scripts/prepare-wordmark.py`. Its receipt is `assets/wordmark-horizontal-usage.json`; source outlines are checked byte-for-byte by `scripts/check.py`.
+The CTA wordmark is reproducible with `python3 scripts/prepare-cta-wordmark.py`. Its receipt is `assets/wordmark-cta-usage.json`; the unchanged source letter paths are checked by `scripts/check.py`. The earlier horizontal derivative is superseded and unused. Home’s Claude, ChatGPT and Codex cluster uses consistent cream-on-blue platform marks; see `assets/platforms/usage.json` and HOME-NOTES.md for roles and behavior.

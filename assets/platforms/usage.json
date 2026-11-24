@@ -1,0 +1,44 @@
+{
+  "role": "Home introduction platform cluster; three non-interactive labeled marks",
+  "palette": {
+    "field": "#173FBF",
+    "mark": "#F4F1EA"
+  },
+  "assets": {
+    "claude": {
+      "source": "claude-mark.svg",
+      "source_sha256": "d653d522158b0e9c0483ac75dd936f602394f86a8dcfdcd1ccf967ac92ce7325",
+      "output_sha256": "baaa2e4411049086dd2460673e984ca3f6f2ee8ed534f8a9ecb89d7a06d442f2",
+      "treatment": "Existing mark geometry, monochrome cream on a blue website tile; no redraw"
+    },
+    "codex": {
+      "source": "codex-mark.source.svg",
+      "source_sha256": "e91cfa9eec40f794ef38d733938fd004bfa350c6c0ec59a9f1edf6a80df5f562",
+      "output_sha256": "00f5f886d3953797a68358bb5379a152550f85c363022c8563afdf20605a2c85",
+      "treatment": "Existing mark geometry, monochrome cream on a blue website tile; no redraw"
+    },
+    "chatgpt": {
+      "source": "chatgpt-mark.source.svg",
+      "source_sha256": "2c2564eefacbe75904ebc4c30857d4036dfb07e8295ae470e558fa6506e32145",
+      "output_sha256": "cc28015facdeca301ac5d6ea9f58b94b66389a36cec5a759c1ff2e0bbf923040",
+      "treatment": "Existing mark geometry, monochrome cream on a blue website tile; no redraw"
+    }
+  },
+  "motion": {
+    "duration_seconds": 18,
+    "style": "Shared smooth two-axis drift with staggered phases; bounded around the Home tagline",
+    "wide_travel_px": [
+      14,
+      12
+    ],
+    "intermediate_travel_px": [
+      6,
+      8
+    ],
+    "mobile_travel_px": [
+      8,
+      10
+    ],
+    "reduced_motion": "Static positions when preferred; cat video behavior is separate"
+  }
+}

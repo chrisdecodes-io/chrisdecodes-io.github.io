@@ -75,3 +75,17 @@ Header and footer use assets/wordmark-horizontal-ink.svg on cream, without a blu
 Header widths are 240 px desktop, 200 px below 1024, 140 px on phones and 128 px below 361. Footer widths are 180 px desktop and 156 px mobile, beside the unchanged CD square. Keep Home solid blue with cream lettering and icon, with dark-blue hover. Below 361 px compact Home’s padding, icon and text to maintain at least 8 px separation from the centered wordmark at a 320 px viewport.
 
 Home has one main heading: the exact approved tagline, split into its two sentences. Use Inter, ink opening and blue closing, at a 40 px desktop maximum and 28 px on phones. The old repeated Chris Decodes heading and separate tagline paragraph are superseded. Keep one complete tagline per content page and preserve the peek’s 80/64 px clearance.
+
+## Restored CTA lockup supersedes horizontal wordmark
+
+Christopher rejected the horizontal arrangement and requested the CTA watermark treatment. Header and footer now use the original stacked smooth wordmark beside the CD square, following the adopted refined-v2 proportions: square 176, gap 49.3 and wordmark 516, normalized as one centered group. Header group widths are 220/192/160/128 px; footer groups are 236 px desktop and 220 px mobile. No blue pill surrounds the wordmark.
+
+assets/wordmark-cta-ink.svg changes only the transparent viewBox margins of the approved stacked source; all letter shapes, positions and spacing remain original. scripts/prepare-cta-wordmark.py is the rebuild route, and assets/wordmark-cta-usage.json records provenance. The horizontal SVG/recipe are historical rollback artifacts, with no active page use. Original shared brand masters remain unchanged.
+
+## Consistent floating platform cluster
+
+The Home introduction displays the three explicitly named platforms: Claude, ChatGPT and Codex. Reuse the existing platform mark geometry in a unified cream-on-blue treatment, with matching rounded frames, visible labels, radius, spacing and gentle eighteen-second two-axis drift, with one shared path and staggered timing. Do not substitute generic AI symbols. Optical image sizing compensates for different source padding, preserving proportions.
+
+Desktop places the cluster beside the tagline; mobile uses a compact centered row beneath it. These marks are descriptive, non-interactive list items, separate from resource releases. All three remain clear of the text and peeking cat. New decorative CSS floating respects reduced-motion preferences; the existing user-directed cat-video behavior is unchanged. Public asset identities and hashes are in assets/platforms/usage.json.
+
+The floating platform cluster uses bounded X/Y travel rather than a fixed vertical bob: 14×12 px on wide screens, 6×8 px at intermediate widths and 8×10 px on mobile. Shared timing and geometry keep the three marks coherent; the amplitudes preserve text, neighboring icon and peek clearance.
