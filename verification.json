@@ -1,5 +1,5 @@
 {
-  "state": "Compact spacing and proportionate companion sizes reviewed",
+  "state": "Polished tagline, header and footer reviewed",
   "checks": [
     "Seven HTML routes: links, assets, fragments and original prompt download checked",
     "Main navigation: Home, Skills, About Chris",
@@ -20,7 +20,10 @@
     "Scroll transitions activate tile-grid/footer slots with only one peek playing",
     "Home desktop intro-to-feature gap 80 px and Curious container 300 px",
     "320 px Home and Skills have no horizontal overflow; Work container 180 px",
-    "Footer spacing reduced; keyboard focus and section peeks preserved"
+    "Footer spacing reduced; keyboard focus and section peeks preserved",
+    "Approved tagline text preserved once per page, with deliberate typography",
+    "Header channels visible at 320 px with no horizontal overflow",
+    "Grouped CD brand lockup and footer navigation reviewed on desktop and mobile"
   ],
   "release_scope": "No public skills or new private resources released"
 }

@@ -35,3 +35,13 @@ The three peek slots now sit at different vertical sections. Home: Featured, des
 Section-edge clearance is 80 px on desktop and 64 px on mobile, based on the visible peek artwork rather than its transparent 512 px canvas. Footer spacing combines 40/32 px main bottom padding with 32 px footer clearance. Keep all three peek locations and the physical ledge mask intact.
 
 The featured Curious container is 300 px on wide screens (25% larger), 225 px on medium screens and 115 px on mobile. Skills Work is 270 px wide, 230 px on medium screens and 180 px on mobile. Preserve proportions and center the visible art beside copy; do not crop or alter the source animation. This follows Christopher’s request for proportionate cats and less open space.
+
+## Tagline typography
+
+Retain the exact approved wording and punctuation. On Home, set the two sentences on deliberate lines in Inter: a quiet graphite opening and a stronger blue closing, with restrained tracking and 1.5 line height. This establishes a clear reading rhythm beneath the Emphasis title. Inner-page footers use a smaller companion treatment with blue closing emphasis. No repeated slogan in the sidebar or header. The tagline remains live text and appears once per content page.
+
+## Header and footer finish
+
+Use a consistent paper-colored header and footer with a quiet cool-gray boundary. Header: compact cream-on-blue wordmark, lighter Home control with house icon, matching channel link surfaces, and a solid blue GitHub action. On mobile, branding/Home share the first row and three channels share the second.
+
+Footer: group the cream-on-blue CD mark and Chris Decodes name as one brand block, paired with compact navigation. Inner-page tagline belongs under the name; Home keeps its only tagline in the introduction. Mobile stacks the navigation below a subtle divider. Preserve clear keyboard focus, the approved logos and section-edge peek clearance.

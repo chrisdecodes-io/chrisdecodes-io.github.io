@@ -89,3 +89,28 @@ main{padding-bottom:40px}.footer-peek{margin-top:32px}
 @media(max-width:1150px){.featured-panel{grid-template-columns:minmax(0,1.7fr) minmax(190px,1fr)}.featured-panel .decoder-cat{width:225px;height:225px}}
 @media(max-width:1000px){.empty-state .decoder-cat{width:230px;height:230px}}
 @media(max-width:760px){main{padding-bottom:32px}.featured-panel{grid-template-columns:minmax(0,1fr) 115px}.featured-panel .decoder-cat{width:115px;height:115px}.empty-state .decoder-cat{width:180px;height:180px}.footer-peek{margin-top:32px}}
+
+/* The approved two-part tagline reads as a considered statement. */
+.home-page .home-intro .home-tagline{font-size:clamp(1.125rem,1.7vw,1.3rem)!important;line-height:1.5;font-weight:450;letter-spacing:-.018em;margin-top:16px!important}
+.home-tagline .tagline-opening,.home-tagline .tagline-closing{display:block}
+.home-tagline .tagline-opening{color:#414650;font-weight:450}
+.home-tagline .tagline-closing{color:var(--blue);font-weight:600}
+.footer-tagline{line-height:1.6;letter-spacing:-.01em}.footer-tagline .tagline-closing{color:var(--blue);font-weight:550}
+@media(max-width:760px){.home-page .home-intro .home-tagline{font-size:1.1rem!important;line-height:1.55;margin-top:14px!important}.footer-tagline .tagline-opening,.footer-tagline .tagline-closing{display:block}}
+
+/* A coherent cream-and-blue frame, with compact branding and functional links. */
+.header{min-height:104px;padding:16px 32px;background:var(--paper);border-bottom-color:#ccd0dc;gap:28px}
+.header .brand{padding:11px 16px;border-radius:10px}.header .brand img{width:96px}
+.header .brand-home{gap:24px}.header .home-link{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:8px;padding:10px 14px;font-size:.9375rem;min-height:44px;background:transparent}
+.header .home-link[aria-current=page],.header .home-link:hover{background:var(--pale)}.home-icon{flex-shrink:0}
+.header .top-channels{gap:12px;align-items:stretch}.header .top-channels a{flex-direction:column;align-items:flex-start;justify-content:center;gap:0;padding:8px 14px;min-width:112px;min-height:52px;border:1px solid var(--line);border-radius:8px;font-size:.9375rem;background:var(--cream)}
+.header .top-channels a>span{border:0;padding:0;font-size:.7rem;font-weight:450;line-height:1.4}
+.header .top-channels .github-link{min-width:90px;align-items:center;background:var(--blue);border-color:var(--blue);color:var(--cream)}
+.footer{display:block;width:100%;background:var(--paper);border-top-color:#ccd0dc;padding:28px 36px}
+.footer .footer-inner{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:center}
+.footer-brand{display:flex;align-items:center;gap:16px;min-width:0}.footer .footer-monogram{width:64px;height:64px;flex-shrink:0;border-radius:9px}.footer .footer-monogram img{border-radius:9px}
+.footer-name{font:800 1.5rem/1.2 Emphasis,Arial,sans-serif;color:var(--ink);margin:0}
+.footer .footer-tagline{font-size:.8125rem;margin:7px 0 0;max-width:400px;line-height:1.55}
+.footer nav{gap:22px;justify-content:flex-end}.footer nav a{font-size:.875rem;font-weight:550;text-decoration:none;color:#414650}.footer nav a:hover{color:var(--blue);text-decoration:underline}
+@media(max-width:950px){.footer .footer-inner{grid-template-columns:1fr;gap:24px}.footer nav{justify-content:flex-start}}
+@media(max-width:760px){.header{padding:16px 20px;gap:16px}.header .brand-home{justify-content:space-between;gap:20px}.header .brand img{width:88px}.header .brand{padding:10px 14px}.header .top-channels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.header .top-channels a{min-width:0;align-items:center;padding:8px 6px;font-size:.875rem;min-height:50px}.header .top-channels .github-link{min-width:0}.header .top-channels a>span{font-size:.68rem}.footer{padding:24px 20px}.footer .footer-inner{gap:22px}.footer nav{gap:16px 22px;padding-top:20px;border-top:1px solid var(--line)}.footer-brand{gap:14px}.footer-name{font-size:1.35rem}.footer .footer-monogram{width:58px;height:58px}}
