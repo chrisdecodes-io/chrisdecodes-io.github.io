@@ -34,8 +34,12 @@ Show the exact tagline once per content page: in the Home introduction and in in
 
 Center the cat within its reserved open media area. The desktop blue panel uses a right-hand media column; mobile gives the cat a centered slot beside the status text. Empty-state character/text groups stay centered and compact. Preserve proportional scaling, inward orientation and clear controls.
 
-The Home footer includes the approved Rest character beside the links as a quiet closing companion requested by Christopher. Curious accompanies the Home panel, and Work accompanies the Skills empty state. `assets/characters/usage.json` records purposes, exact approved collection sources, timings and hashes. Original Expressive v7 artwork and full 12-second animations remain unchanged. Earlier short forward/reverse website derivatives are superseded; the shared character library and engines are not changed.
+The Home footer includes the approved Rest character beside the links as a quiet closing companion requested by Christopher. Curious accompanies the Home panel, and Work accompanies the Skills empty state. `assets/characters/usage.json` records purposes, exact approved collection sources, timings and hashes. Original Expressive v7 artwork and full 12-second timing are retained. Curious uses the approved November 24 neck refinement. Earlier short forward/reverse website derivatives are superseded. The shared library Curious exports carry the same approved correction; other character selections retain their separate approvals.
 
 Videos loop silently at normal speed, without pause controls; OS reduced-motion preferences do not alter playback under Christopher’s explicit website instruction. Matching stills provide unsupported/blocked-playback fallbacks. Characters load/play only while in the viewport, so the footer is lazy-loaded. Decorative media cannot intercept clicks.
 
 Font notices remain in `assets/licenses/`. Brand artwork and characters are included for this Chris Decodes site; no blanket redistribution license is granted. This README is the website maintenance/retrieval entry point. No other-client or other-Mac adoption is claimed.
+
+## Curious neck refinement, November 24, 2026
+
+Christopher approved propagation of the corrected Curious motion. The Home Skills banner uses one smaller tilt and quiet return, preserving the artwork, 12-second timing, blinks, tail and inward facing placement. Current exports in the shared character library and original export pack match this correction; old media remain in their history folders. See `assets/characters/usage.json`. The correction recipe and QA are in the shared collection’s `Curious-Refinement-2026-11-24.json` and source checkpoint. The separate Curious Notice animation is unchanged.
