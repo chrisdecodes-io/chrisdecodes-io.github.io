@@ -49,8 +49,9 @@ for p,q in pages.items():
   assert dest.is_file(),(p.relative_to(root),x)
   if u.fragment:assert u.fragment in pages[dest].ids,(p,x,'missing fragment')
 home=pages[root/'index.html']
-assert home.tile_count==8,'Home must contain exactly eight destination/featured tiles'
+assert home.tile_count==7,'Home must contain seven destinations below the separate Featured panel'
 assert sum('href' not in tile for tile in home.home_tiles)==2,'Only Instagram/Substack are non-clickable placeholders'
+assert 'featured-title' in home.ids,'Featured must have its own labeled panel'
 assert (root/'resources/index.html') in pages
 items=json.loads((root/'data/resources.json').read_text())
 assert len(items)==1 and items[0]['id']=='task-context-starter-prompt','Initial release must contain only the existing approved prompt'

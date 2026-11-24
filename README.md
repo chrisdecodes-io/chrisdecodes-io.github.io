@@ -2,7 +2,7 @@
 
 Public website: https://chrisdecodes-io.github.io/
 
-A home hub for released Chris Decodes resources, projects and channels. Home provides eight clear tiles and a resource search; Resources contains the searchable catalog. This remains a resource library, with no article feed or publishing chronology.
+A home hub for released Chris Decodes resources, projects and channels. Home provides a wide Featured panel, seven destination tiles and a resource search; Resources contains the searchable catalog. This remains a resource library, with no article feed or publishing chronology.
 
 ## Build and preview
 
@@ -12,7 +12,7 @@ Generated HTML is committed. GitHub Pages publishes `main` from the repository r
 
 ## Page map and navigation
 
-- `/`: Home, with one grid containing Resources, Skills, Projects, the available starter prompt, Instagram, Substack, GitHub and About Chris. The two social placeholders are non-clickable tiles. Search submits to `/resources/`.
+- `/`: Home, with a separate Featured rectangle for the newest available resource, followed by search and a seven-tile grid for Resources, Skills, Projects, Instagram, Substack, GitHub and About Chris. The two social placeholders are non-clickable tiles. Search submits to `/resources/`.
 - `/resources/`: searchable catalog. `?type=prompts`, `?type=templates` and `?type=workflows` select resource types; `q` preserves a search when changing type.
 - `/skills/` and `/projects/`: dedicated collections with honest empty states until approved releases are added.
 - `/resources/task-context-starter-prompt/`: instructions, requirements, copy, text download and source for the initial public resource.
@@ -27,7 +27,7 @@ Use sentence case throughout, preserving official names. Show the exact full tag
 
 `data/resources.json` is the sole resource catalog. The initial entry is the already-public starter prompt, with its original wording preserved. General advice articles have been removed. Skills, templates, workflows and projects have no available releases yet. Empty collections do not pretend files or products exist.
 
-Every entry specifies its ID, title, type, purpose, compatibility, format, availability, instructions, requirements and relevant content/download/source. Version information is omitted until verified. Add only explicitly approved, sanitized public resources. Catalog selection never imports or releases private repository contents automatically. Run the generator, review the generated diff and check the action destinations before publishing. When removing a resource, also remove its generated detail page and download from the published source.
+Every entry specifies its ID, title, type, purpose, compatibility, format, availability, publication date (`publishedOn`, YYYY-MM-DD), instructions, requirements and relevant content/download/source. Featured selects the newest publication date among available entries; same-day ties retain catalog order. The starter prompt’s November 23, 2026 publication is the existing public release, not a new version or a new resource. Version information is omitted until verified. Add only explicitly approved, sanitized public resources. Catalog selection never imports or releases private repository contents automatically. Run the generator, review the generated diff and check the action destinations before publishing. When removing a resource, also remove its generated detail page and download from the published source.
 
 `app.js` handles search, type navigation, selected states, mobile navigation and prompt copying. `legacy-guides.js` preserves old links. `scripts/build.mjs` owns the common page shell, so header/sidebar changes are made once.
 
@@ -35,10 +35,14 @@ Every entry specifies its ID, title, type, purpose, compatibility, format, avail
 
 Preserve cream #F4F1EA, blue #173FBF, Organic Emphasis headings and Inter body/controls. Christopher selected the exact cream wordmark on a blue background. Use the fixed artwork, not a text reconstruction.
 
-Decoder Cat is an inward-facing companion next to the relevant copy, not a detached ornament. Keep one visible character per main view, scale proportionally and protect the search, card and download reading lanes. Curious accompanies the library introduction or no-result state; Work accompanies Skills; Presenting accompanies Projects. Image alternatives are empty because the artwork is decorative and the adjacent text carries the meaning.
+Decoder Cat is an inward-facing companion next to the relevant copy, not a detached ornament. Keep one visible character per main view, scale proportionally and protect the search, card and download reading lanes. Curious accompanies the Home Featured panel, library introduction or no-result state; Work accompanies Skills; Presenting accompanies Projects. Image alternatives are empty because the artwork is decorative and the adjacent text carries the meaning.
 
 `assets/characters/usage.json` records source collections, exact source spans, roles, timings and derivative hashes. Source artwork remains in the established shared character library. Curious, Work and Presenting use the original approved Expressive v7 animations unchanged: 360 frames at 30 fps, twelve seconds each. Play the full gestures and their natural settling moments at normal speed, then loop. This calmer pacing supersedes the earlier short website derivatives and continuous-motion timing at the website scope. Matching transparent PNGs provide fallbacks. These website derivatives do not change the shared character library or production-engine defaults.
 
 Christopher requested calm full gestures in this revision; continuous looping, no pause option and playback unaffected by the OS reduced-motion setting remain in effect. Browser videos are silent, looped and inline. Still posters remain if the format is unsupported or playback is blocked. Hidden character instances do not play. Do not reintroduce the short forward/reverse website loops. New playback choices remain website-specific and do not alter the shared source library.
 
 Font license notices are preserved in `assets/licenses/`. The brand artwork and characters are included for this Chris Decodes site; no blanket right to redistribute them is granted. The website README is the maintenance and retrieval entry point for these assignments; no other-runtime or other-Mac adoption is claimed.
+
+## Featured visual direction
+
+Featured is a full-width rich #173FBF rectangle near the top of Home, with cream text, a restrained corner lift toward #4667CC, the Organic Emphasis heading and a cream primary action. It separates the newest usable resource from evergreen destinations. The cat faces the associated copy inside the panel. On mobile, the title uses the full reading width and the cat sits beside the action area. Decorative character layers do not intercept pointer input. Destination tiles use Organic Emphasis headings and quiet cream surfaces; repeated category eyebrows were removed. This is a website-specific application of the existing blue-surface direction, not a new global brand template.

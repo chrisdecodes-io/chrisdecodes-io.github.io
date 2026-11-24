@@ -1,22 +1,13 @@
 {
-  "state": "Validated Home hub revision; public deployment pending",
+  "state": "Featured-panel revision validated locally; deployment pending",
   "checks": [
-    "Seven pages: local links, assets, fragments, one h1 and unique IDs pass",
-    "Eight Home tiles; only Instagram/Substack are non-clickable placeholders",
-    "Shared five-entry navigation and exactly one visible tagline per page",
-    "Generated pages reproduce byte-for-byte from unchanged inputs",
-    "Browser: Home search, filters, Back navigation, prompt copying, legacy root filters and guide routes verified",
-    "Desktop 1440 px, tablet 820 px, mobile 390/320 px reviewed; menu open/close and Escape verified",
-    "Cat videos match original approved sources, each 360 frames at 30 fps (12 seconds), silent and looping at normal speed",
-    "Prompt download remains byte-identical to the sole approved catalog entry",
-    "Local HTTP: 11 destinations return 200; Home has eight tiles and prompt download matches catalog",
-    "Final tablet check: adjacent tile bounds separated by 20 px; final 320 px check: all eight tile right edges stay within the viewport",
-    "Browser: Home form explicitly reaches /resources/?q=context with Resources heading and one result; no console errors observed",
-    "Original Curious, Work and Presenting video playback observed across complete cycles and restarts; duration 12 seconds, rate 1, loop enabled"
+    "Seven generated pages: links, assets, fragments, heading hierarchy and one tagline per page checked",
+    "Home: one separate Featured panel plus seven destination tiles, with two honest social placeholders",
+    "Featured action opens the existing starter-prompt detail page",
+    "Desktop 1440 px and mobile 390/320 px inspected; no horizontal overflow at tested mobile widths",
+    "Mobile heading uses the full panel reading width; decorative cat does not capture clicks",
+    "Original 12-second silent cat loops retained",
+    "Single approved prompt and byte-identical text download retained"
   ],
-  "release_scope": "Existing starter prompt only; no additional private resources",
-  "placeholders": [
-    "Skills and Projects releases",
-    "Instagram and Substack profile links"
-  ]
+  "release_scope": "No additional resources or private materials released"
 }
