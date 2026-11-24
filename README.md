@@ -20,10 +20,20 @@ No build step, package install, external font service, analytics or backend is r
 
 ## Maintain and reuse
 
-Edit `index.html` to update copy, guides and social links; `styles.css` controls layout; `app.js` handles topic tabs, resource search and copying the prompt. All resources remain readable in the source; search and topic switching require JavaScript. Native resource disclosures work without JavaScript.
+Edit `index.html` to update copy, guides and social links; `styles.css` controls layout; `app.js` handles guide search, topic filters, mobile navigation and copying the prompt. All resources remain readable in the source; search and topic switching require JavaScript. Native resource disclosures work without JavaScript.
 
 Preserve cream #F4F1EA, blue #173FBF, the supplied fixed wordmark, Organic Emphasis headings and Inter body copy. The quiet resource surface supports reading; the organic blue hero shape balances the cream canvas. Basis: existing brand guidance and November 22 approved surface direction. The website composition is the initial hub; this does not adopt it as a template for other formats.
 
 Assets are copied from the existing project’s website concept and approved logo library. This folder is the reviewable source package for this task; the original concept is unchanged. Its README provides the local maintenance and retrieval route. Registration in the maintained external project catalog is pending, so future automatic discovery is not claimed.
 
 Font license notices are preserved in `assets/licenses/`. Chris Decodes brand artwork is included for this hub; no blanket license to reuse that artwork is granted.
+
+## Hub navigation direction
+
+Christopher requested a clear article grid and sidebar based on the supplied GitHub Docs screenshot. Preserve the left topic navigation, compact introduction, labeled search/category controls and aligned resource cards when expanding this hub. Keep the Chris Decodes cream and blue identity. On mobile, navigation collapses behind Browse the hub and cards stack. Sidebar categories and dropdown filter the same library; search combines with the selected category. This is the hub layout direction, not a change to Reel or carousel templates.
+
+Top header: Instagram and Substack link to clearly marked placeholder sections; GitHub links to the confirmed profile. Skills has a dedicated sidebar entry and section. No unreleased/private skills are exposed and no downloads are advertised as available.
+
+## Page map
+
+Home (`index.html`) introduces the hub and links to its three destinations. Guides (`guides/index.html`) contains the article grid, topic filters and copyable prompt. Skills (`skills/index.html`) explains skills and clearly marks downloads as coming soon. About Chris (`about/index.html`) introduces Chris and the channel destinations. Keep these names consistent in every page’s sidebar. Shared navigation currently lives in all four HTML files, so update it in each when adding a page.

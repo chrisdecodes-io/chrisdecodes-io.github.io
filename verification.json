@@ -1,10 +1,11 @@
 {
-  "state": "validated locally; public release authorized; deployment pending",
+  "state": "validated revision; public deployment pending",
   "checks": [
-    "HTML IDs unique; internal links and local assets resolve",
-    "JavaScript syntax passes node --check",
-    "Browser: resource search and no-results state, topic switching, copy confirmation",
-    "Desktop 1366px and mobile 390px document bounds checked; no horizontal overflow"
+    "All four pages: one h1, unique IDs, local asset and fragment links resolve",
+    "JavaScript syntax passes",
+    "Browser: direct topic links and category filter return correct guide counts; Skills and About destinations load",
+    "Mobile navigation tested; mobile document has no horizontal overflow",
+    "Instagram and Substack placeholders labeled; GitHub profile confirmed; no skill downloads claimed"
   ],
   "release_target": "chrisdecodes-io/chrisdecodes-io.github.io",
   "placeholders": [

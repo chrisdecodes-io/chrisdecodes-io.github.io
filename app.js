@@ -1,37 +1,38 @@
-const tabs = [...document.querySelectorAll('[role="tab"]')];
-function selectTab(tab) {
-  for (const item of tabs) {
-    const selected = item === tab;
-    item.setAttribute('aria-selected', String(selected));
-    item.tabIndex = selected ? 0 : -1;
-    document.getElementById(item.getAttribute('aria-controls')).hidden = !selected;
-  }
-}
-for (const tab of tabs) {
-  tab.addEventListener('click', () => selectTab(tab));
-  tab.addEventListener('keydown', event => {
-    const keys = ['ArrowDown', 'ArrowUp', 'ArrowRight', 'ArrowLeft', 'Home', 'End'];
-    if (!keys.includes(event.key)) return;
-    event.preventDefault();
-    const index = tabs.indexOf(tab);
-    const next = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 : (index + (['ArrowDown', 'ArrowRight'].includes(event.key) ? 1 : -1) + tabs.length) % tabs.length;
-    selectTab(tabs[next]);
-    tabs[next].focus();
-  });
-}
-
 const search = document.querySelector('#resource-search');
-search.addEventListener('input', () => {
+const category = document.querySelector('#resource-category');
+function filterResources() {
+  if (!search || !category) return;
   const query = search.value.trim().toLocaleLowerCase();
   let count = 0;
   for (const card of document.querySelectorAll('.resource')) {
-    card.hidden = !(card.textContent + ' ' + card.dataset.search).toLocaleLowerCase().includes(query);
+    const matchesQuery = (card.textContent + ' ' + card.dataset.search).toLocaleLowerCase().includes(query);
+    card.hidden = !matchesQuery || (category.value !== 'all' && category.value !== card.dataset.category);
     if (!card.hidden) count++;
   }
-  document.querySelector('#resource-count').textContent = `${count} resource${count === 1 ? '' : 's'}`;
+  document.querySelector('#resource-count').textContent = `${count} guide${count === 1 ? '' : 's'}`;
   document.querySelector('#no-results').hidden = count !== 0;
+  for (const link of document.querySelectorAll('[data-topic]')) {
+    if (link.dataset.topic === category.value) link.setAttribute('aria-current', 'true');
+    else link.removeAttribute('aria-current');
+  }
+}
+search?.addEventListener('input', filterResources);
+category?.addEventListener('change', filterResources);
+const sidebarToggle = document.querySelector('.sidebar-toggle');
+sidebarToggle.addEventListener('click', () => {
+  sidebarToggle.setAttribute('aria-expanded', String(sidebarToggle.getAttribute('aria-expanded') !== 'true'));
 });
-document.querySelector('#copy-prompt').addEventListener('click', async () => {
+for (const link of document.querySelectorAll('#sidebar-links a')) {
+  link.addEventListener('click', () => {
+    if (link.dataset.categoryLink) {
+      category.value = link.dataset.categoryLink;
+      search.value = '';
+      filterResources();
+    }
+    sidebarToggle.setAttribute('aria-expanded', 'false');
+  });
+}
+document.querySelector('#copy-prompt')?.addEventListener('click', async () => {
   const prompt = document.querySelector('#starter-prompt');
   const status = document.querySelector('#copy-status');
   try {
@@ -46,3 +47,9 @@ document.querySelector('#copy-prompt').addEventListener('click', async () => {
     status.textContent = 'Prompt selected. Use your device’s Copy command.';
   }
 });
+
+if (category) {
+  const requestedCategory = new URLSearchParams(location.search).get('category');
+  if ([...category.options].some(option => option.value === requestedCategory)) category.value = requestedCategory;
+  filterResources();
+}
