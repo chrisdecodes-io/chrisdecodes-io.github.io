@@ -41,8 +41,8 @@
       "singular": "Skill",
       "url": "/skills/",
       "nav": "skills",
-      "description": "Use a skill to give your AI app a saved set of steps for a specific task. The app must support skills. Some skills also include templates, files or scripts.",
-      "tileDescription": "Add saved steps for a repeatable task to an AI app that supports skills.",
+      "description": "A skill is a reusable set of instructions for a specific task, packaged for an AI app that supports skills. It may include templates, files or scripts.",
+      "tileDescription": "Reusable task instructions packaged for an AI app that supports skills.",
       "emptyDescription": "Each skill will name its supported app, explain any requirements and give exact setup and usage steps.",
       "useSteps": [
         "Open a skill and check its supported app, requirements and expected outcomes.",
@@ -56,8 +56,8 @@
       "singular": "Prompt",
       "url": "/prompts/",
       "nav": "prompts",
-      "description": "Use a prompt to ask an AI assistant for a result, such as an answer, a draft or a plan. Copy the text into a chat and add the details of your task.",
-      "tileDescription": "Copy text into a chat, add your task details and send it to your AI assistant.",
+      "description": "A prompt is a message you give an AI to request a result. It describes the task and can include context, constraints and examples.",
+      "tileDescription": "Messages that ask an AI to complete a task.",
       "emptyDescription": "Each prompt will include text to copy, details to fill in and steps for using it.",
       "useSteps": [
         "Open a prompt below and read its purpose, expected outcomes and requirements.",
@@ -95,8 +95,8 @@
       "singular": "Instruction set",
       "url": "/instructions/",
       "nav": "instructions",
-      "description": "Use instructions to set rules for how an AI assistant should respond, such as its tone, answer format or checks to follow. Save them for use within a chat or project.",
-      "tileDescription": "Save response rules, such as tone or answer format, for a chat or project.",
+      "description": "Instructions are rules that guide how an AI works or responds, such as its tone, answer format or steps to follow. They apply within the chat, project or app where they are provided.",
+      "tileDescription": "Rules for how an AI works or responds.",
       "emptyDescription": "Each instruction set will name the supported app, where to save the text and when the rules apply.",
       "useSteps": [
         "Open an instruction set and check which app it supports and where its rules apply.",

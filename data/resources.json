@@ -3,7 +3,7 @@
     "id": "task-context-starter-prompt",
     "title": "Task context starter prompt",
     "type": "prompts",
-    "description": "Use this text to tell an AI assistant what you need before it starts. Fill in the bracketed fields, then send it as a chat message.",
+    "description": "A reusable message template that helps you describe your goal, background, constraints and desired output before an AI starts a task.",
     "compatibility": "Any AI assistant that accepts text prompts",
     "format": "Plain text (.txt)",
     "availability": "available",

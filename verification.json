@@ -1,5 +1,5 @@
 {
-  "state": "Direct descriptions and per-collection usage steps reviewed",
+  "state": "Definition-led descriptions with direct usage steps retained",
   "content_pages": [
     "/",
     "/prompts/",
@@ -53,7 +53,10 @@
     "Descriptions lead with paste a task prompt, save response rules, or add saved task steps to a supported app",
     "All three collection pages contain three direct usage steps and explicit availability wording",
     "36 updated layouts checked: one H1 per page, no horizontal overflow, readable mobile wrapping",
-    "Starter prompt text and download unchanged; revised steps explicitly identify the message box and bracket replacement"
+    "Starter prompt text and download unchanged; revised steps explicitly identify the message box and bracket replacement",
+    "Definition wording consistent across Home, collections and About; starter prompt defined as a reusable message template",
+    "Existing usage steps, routes, public release scope and downloadable prompt text preserved",
+    "Definition wording checked in 18 responsive cases across six pages at 1440, 390 and 320 px; no overflow and one H1"
   ],
   "release_scope": "Existing public resource only; existing brand/platform mark geometry; no new private content",
   "motion_viewports": [
