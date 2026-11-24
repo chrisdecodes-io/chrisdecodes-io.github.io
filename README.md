@@ -34,7 +34,7 @@ The blue Home banner selects the newest dated item from confirmed Instagram publ
 
 For a published Instagram post, add an entry with `id`, `title`, `description`, `publishedOn` (`YYYY-MM-DD`), direct HTTPS `url` (`/p/…/` or `/reel/…/`), and `confirmed: true`. Use the actual publication date, verify the destination and use an approved short summary. Do not put drafts, private media or planned posts here. Build, review and publish the site after updating the list. An Instagram highlight changes only the banner, not the resource collections.
 
-The list is currently empty because the latest Instagram publication has not been supplied or verified. The existing starter prompt remains the truthful fallback. There is no live Instagram feed, polling or automatic detection configured. Christopher is deciding whether website updates should accompany joint posting sessions or use a separate automated integration.
+Christopher confirmed on November 24, 2026 that no Instagram posts have been published yet. The list therefore remains empty and the existing starter prompt stays Featured. Update this website as part of publishing Instagram posts together: verify the live post URL and date, add approved title/summary metadata, link any already-released related resource, rebuild, review and publish, then verify the live highlight. There is no live Instagram feed, polling or automatic detection configured or requested.
 
 ## Channel links
 

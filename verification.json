@@ -29,7 +29,7 @@
   ],
   "release_scope": "Usability and animation framing only; no new resources or private content",
   "highlight_selection": {
-    "state": "Prepared and tested; awaiting current Instagram publication and update-trigger choice",
+    "state": "Prepared and tested; no Instagram posts published yet per Christopher",
     "checks": [
       "Newest confirmed publication selected over older resource",
       "Future-dated publication excluded",
@@ -37,6 +37,7 @@
       "Unconfirmed publication and non-Instagram destination rejected",
       "Empty publication list leaves existing Featured HTML unchanged"
     ],
-    "live_instagram_detection": false
+    "live_instagram_detection": false,
+    "update_trigger": "Update website during joint Instagram publication sessions"
   }
 }
