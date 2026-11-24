@@ -1,0 +1,5 @@
+I want to [specific goal].
+Here’s the relevant context: [background].
+My constraints are [time, tools, or limits].
+A useful result would look like [format or example].
+Ask me about any missing information that would materially change your answer.

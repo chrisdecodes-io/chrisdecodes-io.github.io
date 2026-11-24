@@ -1,15 +1,20 @@
 {
-  "state": "validated revision; public deployment pending",
+  "state": "Validated resource-library revision; public deployment pending",
+  "release_scope": "One already-public starter prompt plus selected character artwork derivatives; no private resource releases",
   "checks": [
-    "All four pages: one h1, unique IDs, local asset and fragment links resolve",
-    "JavaScript syntax passes",
-    "Browser: direct topic links and category filter return correct guide counts; Skills and About destinations load",
-    "Mobile navigation tested; mobile document has no horizontal overflow",
-    "Instagram and Substack placeholders labeled; GitHub profile confirmed; no skill downloads claimed"
+    "Six static pages: one h1, unique IDs, local links/assets/fragments resolve",
+    "Build is deterministic for unchanged catalog and shared template",
+    "JavaScript syntax checks pass",
+    "Local HTTP: all ten checked destinations return 200; text download equals catalog content",
+    "Browser: search no-match, filtered collection labels/counts, Skills and Projects empty states, legacy guide route and prompt copy verified",
+    "Desktop 1440 px and mobile 390/320 px reviewed; no horizontal overflow at mobile widths; three channel links remain visible",
+    "Mobile sidebar open/close and Escape keyboard behavior verified",
+    "Curious and Presenting: 100 frames at 30 fps, 3.333 seconds; Work: 120 frames at 30 fps, 4 seconds",
+    "Transparent WebM playback observed; looping enabled; no visible pause controls; one visible cat per main view"
   ],
-  "release_target": "chrisdecodes-io/chrisdecodes-io.github.io",
-  "placeholders": [
-    "Instagram",
-    "Substack"
+  "limitations": [
+    "Other collections are intentionally empty until approved releases are available",
+    "Instagram and Substack URLs remain placeholders",
+    "Unsupported or blocked video playback uses transparent still posters"
   ]
 }

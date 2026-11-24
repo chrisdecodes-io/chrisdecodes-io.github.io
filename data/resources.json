@@ -1,0 +1,24 @@
+[
+  {
+    "id": "task-context-starter-prompt",
+    "title": "Task context starter prompt",
+    "type": "prompts",
+    "description": "Give an AI assistant your goal, relevant context and constraints before it starts a task.",
+    "compatibility": "Any AI assistant that accepts text prompts",
+    "format": "Plain text (.txt)",
+    "availability": "available",
+    "download": "/downloads/task-context-starter-prompt.txt",
+    "source": "https://github.com/chrisdecodes-io/chrisdecodes-io.github.io/blob/main/data/resources.json",
+    "instructions": [
+      "Copy the prompt or download the text file.",
+      "Replace every bracketed field with information about your task.",
+      "Paste it into your AI assistant, then review and refine the answer."
+    ],
+    "requirements": [
+      "An AI assistant that accepts text input.",
+      "Your goal, relevant background, constraints and preferred output format."
+    ],
+    "note": "Keep private information out unless you understand and accept how your chosen tool handles it.",
+    "content": "I want to [specific goal].\nHere’s the relevant context: [background].\nMy constraints are [time, tools, or limits].\nA useful result would look like [format or example].\nAsk me about any missing information that would materially change your answer."
+  }
+]

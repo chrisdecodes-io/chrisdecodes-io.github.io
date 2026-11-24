@@ -1,0 +1,40 @@
+{
+  "state": "Website derivatives of approved artwork; user requested shorter continuous loops",
+  "display": "One visible character per main view; inward facing, close to related copy; proportional scaling",
+  "motion": "Autoplay, muted, loop, playsinline; no pause control; OS reduced-motion setting intentionally does not change playback per user instruction",
+  "fallback": "Matching transparent poster if WebM playback is unsupported or blocked",
+  "assets": {
+    "curious": {
+      "source": "Decoder Cat Expressive v7 2026-11-01/Editor Exports/curious/transparent.webm",
+      "sourceFramesZeroBased": [
+        45,
+        95
+      ],
+      "playback": "Forward then reverse active gesture, with duplicate endpoints omitted; 30 fps; no idle hold",
+      "frames": 100,
+      "seconds": 3.333,
+      "sha256": "337f4503642c9965a8fe771e986650d77904c7e79ce0b990554032684ab372a0",
+      "role": "Library introduction and search empty state"
+    },
+    "presenting": {
+      "source": "Decoder Cat Expressive v7 2026-11-01/Editor Exports/presenting/transparent.webm",
+      "sourceFramesZeroBased": [
+        50,
+        100
+      ],
+      "playback": "Forward then reverse active gesture, with duplicate endpoints omitted; 30 fps; no idle hold",
+      "frames": 100,
+      "seconds": 3.333,
+      "sha256": "365b17ac5ca8fdf4f118c99675cbc5998b3b05079bcab7742c9f1b902f7451b1",
+      "role": "Projects collection"
+    },
+    "work": {
+      "source": "Decoder Cat Work Laptop Lean and Loop 2026-11-16/Work - Loop.webm",
+      "playback": "Existing continuously moving approved loop, unmodified",
+      "frames": 120,
+      "seconds": 4,
+      "sha256": "53067cb2d1f30d1ae11d8c3742d56e39a2674572b29798ed6b35131f45152fca",
+      "role": "Skills collection"
+    }
+  }
+}
