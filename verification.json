@@ -1,5 +1,5 @@
 {
-  "state": "Prompts, Instructions and Skills pages with explicit purpose and outcomes reviewed",
+  "state": "Direct descriptions and per-collection usage steps reviewed",
   "content_pages": [
     "/",
     "/prompts/",
@@ -49,7 +49,11 @@
     "Resource detail explicitly includes purpose, expected outcomes, requirements, usage and limitations",
     "Legacy type/category routes reach the right active collection",
     "Copy success feedback observed; pending clipboard falls back to a matching full-text selection",
-    "Original prompt file unchanged and browser Back returns to Prompts"
+    "Original prompt file unchanged and browser Back returns to Prompts",
+    "Descriptions lead with paste a task prompt, save response rules, or add saved task steps to a supported app",
+    "All three collection pages contain three direct usage steps and explicit availability wording",
+    "36 updated layouts checked: one H1 per page, no horizontal overflow, readable mobile wrapping",
+    "Starter prompt text and download unchanged; revised steps explicitly identify the message box and bracket replacement"
   ],
   "release_scope": "Existing public resource only; existing brand/platform mark geometry; no new private content",
   "motion_viewports": [

@@ -3,16 +3,17 @@
     "id": "task-context-starter-prompt",
     "title": "Task context starter prompt",
     "type": "prompts",
-    "description": "Give an AI assistant your goal, relevant context and constraints before it starts a task.",
+    "description": "Use this text to tell an AI assistant what you need before it starts. Fill in the bracketed fields, then send it as a chat message.",
     "compatibility": "Any AI assistant that accepts text prompts",
     "format": "Plain text (.txt)",
     "availability": "available",
     "download": "/downloads/task-context-starter-prompt.txt",
     "source": "https://github.com/chrisdecodes-io/chrisdecodes-io.github.io/blob/main/data/resources.json",
     "instructions": [
-      "Copy the prompt or download the text file.",
-      "Replace every bracketed field with information about your task.",
-      "Paste it into your AI assistant, then review and refine the answer."
+      "Select Copy prompt below. If you download the .txt file instead, open it and copy the text.",
+      "Paste the text into your AI assistant’s message box.",
+      "Replace each bracketed field with your own details. For example, replace [specific goal] with the task you want completed.",
+      "Send the message. Answer any follow-up questions, then review the response."
     ],
     "requirements": [
       "An AI assistant that accepts text input.",
@@ -24,8 +25,8 @@
     "listed": true,
     "featured": true,
     "expectedOutcomes": [
-      "A task brief that brings your goal, relevant context, constraints and preferred output together.",
-      "A request for the assistant to clarify missing information that could materially change its answer."
+      "One message stating what you want, the background the assistant needs, your constraints and the format you want back.",
+      "The assistant is asked to check for important missing details before answering."
     ],
     "limitations": [
       "This prompt organizes your task brief. It does not verify facts or guarantee a correct answer; review the assistant’s response before using it."

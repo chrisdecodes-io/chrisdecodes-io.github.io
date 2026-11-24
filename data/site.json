@@ -41,9 +41,14 @@
       "singular": "Skill",
       "url": "/skills/",
       "nav": "skills",
-      "description": "Reusable task packages built around instructions, sometimes with templates, scripts or supporting files. Each skill will explain its requirements and setup.",
-      "tileDescription": "Reusable task packages, with requirements and setup guidance.",
-      "emptyDescription": "Released skills will appear here with their purpose, supported tools and setup steps."
+      "description": "Use a skill to give your AI app a saved set of steps for a specific task. The app must support skills. Some skills also include templates, files or scripts.",
+      "tileDescription": "Add saved steps for a repeatable task to an AI app that supports skills.",
+      "emptyDescription": "Each skill will name its supported app, explain any requirements and give exact setup and usage steps.",
+      "useSteps": [
+        "Open a skill and check its supported app, requirements and expected outcomes.",
+        "Follow that resource’s setup steps to add the skill to the supported app. The method depends on the app and the skill.",
+        "Use the skill for your task as its resource page describes, then review the result."
+      ]
     },
     "prompts": {
       "label": "Prompts",
@@ -51,9 +56,14 @@
       "singular": "Prompt",
       "url": "/prompts/",
       "nav": "prompts",
-      "description": "Copyable starting points for a specific task. Add your context, paste into your AI assistant and refine the result.",
-      "tileDescription": "Copyable starting points for a task, with space for your context.",
-      "emptyDescription": "Released prompts will appear here with copyable text and usage steps."
+      "description": "Use a prompt to ask an AI assistant for a result, such as an answer, a draft or a plan. Copy the text into a chat and add the details of your task.",
+      "tileDescription": "Copy text into a chat, add your task details and send it to your AI assistant.",
+      "emptyDescription": "Each prompt will include text to copy, details to fill in and steps for using it.",
+      "useSteps": [
+        "Open a prompt below and read its purpose, expected outcomes and requirements.",
+        "Copy the prompt into your AI assistant’s message box. Replace any bracketed fields with your own task details.",
+        "Send the message, answer any follow-up questions and review the response."
+      ]
     },
     "templates": {
       "label": "Templates",
@@ -85,9 +95,14 @@
       "singular": "Instruction set",
       "url": "/instructions/",
       "nav": "instructions",
-      "description": "Reusable rules and preferences that guide how an AI assistant works. Each set will explain where to save or paste it and when it applies.",
-      "tileDescription": "Reusable rules and preferences for how your AI assistant should work.",
-      "emptyDescription": "Released instruction sets will appear here with requirements and steps for saving or pasting them into your AI assistant."
+      "description": "Use instructions to set rules for how an AI assistant should respond, such as its tone, answer format or checks to follow. Save them for use within a chat or project.",
+      "tileDescription": "Save response rules, such as tone or answer format, for a chat or project.",
+      "emptyDescription": "Each instruction set will name the supported app, where to save the text and when the rules apply.",
+      "useSteps": [
+        "Open an instruction set and check which app it supports and where its rules apply.",
+        "Adapt the rules to your needs. Save or paste them in the location named on the resource page, such as project instructions or the start of a chat.",
+        "Give the assistant your task, then check that its response follows the rules."
+      ]
     }
   },
   "shortcuts": [

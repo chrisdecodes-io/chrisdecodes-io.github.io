@@ -8,7 +8,7 @@ Taglines use the wordmark-led Editorial serif associated with “Chris”, at it
 
 Current visual decisions and supersessions: [website maintenance notes](HOME-NOTES.md).
 
-Preferred format for future resources: [starter-prompt detail page pattern](HOME-NOTES.md#preferred-resource-detail-format).
+Preferred format for future resources: [starter-prompt detail page pattern](HOME-NOTES.md#preferred-resource-detail-format). Use [direct descriptions and usage steps](HOME-NOTES.md#direct-resource-descriptions-and-usage) to distinguish the resource types.
 
 ## Build and preview
 
