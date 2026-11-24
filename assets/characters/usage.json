@@ -46,13 +46,13 @@
       "role": "Three separate section locations per content page, coordinated so at most one peek plays; Home Featured-edge slot is centered beneath the tagline"
     },
     "walk": {
-      "source": "Decoder Cat Flow Neon Walk 2026-10-20/Loop asset v1/loop-transparent.webm",
-      "playback": "Native one-second gait during a 7.5\u201317-second straight horizontal Home crossing at fixed height; symmetric off-lane entrance and exit, no media changes",
+      "source": "Website-only paw-baseline-registered derivative of Decoder Cat Flow Neon Walk 2026-10-20/Loop asset v1/loop-transparent.webm; see walk-registration.json and scripts/prepare-walk.py",
+      "playback": "Native one-second, 30-frame gait with a constant decoded paw baseline; straight 7.5\u201317-second Home crossing at fixed height, symmetric softly masked horizontal entrance and exit",
       "frames": 30,
       "seconds": 1,
-      "sha256": "0e60369b88139db064f3afd565a59db9bd37712421360edda578d8802e4ac217",
+      "sha256": "b85d0eef2d5dc10990c6d1a60fc3435516750dfad06145947131148e0b21b068",
       "role": "Home only: Featured-width lane; enters through the left boundary and exits through the right, without vertical travel or outer-margin drift; exclusive with peeking cats",
-      "limits": "Approved source retains generated shape variation. No artwork or timing changes; no new engine integration."
+      "limits": "Original shape variation and natural leg/head articulation retained. Integer frame registration only, no scaling, warping, redrawing, retiming or shared-library modification."
     }
   }
 }

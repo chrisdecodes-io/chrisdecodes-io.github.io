@@ -41,14 +41,16 @@
     "update_trigger": "Update website during joint Instagram publication sessions"
   },
   "tagline_cat_revision": {
-    "state": "Straight entrance/exit observed on desktop and mobile",
-    "scope": "Home tagline peek and walking interlude only",
+    "state": "Registered ground line and full desktop/mobile cycles reviewed",
+    "scope": "Walking interlude beneath Home tagline only",
     "checks": [
-      "Home-only 1.12x entry and 1.18x idle; complete dip at 1x",
-      "Walker fits Featured and travels horizontally through matching left/right boundaries at a fixed height, without outer-margin drift",
-      "Tagline peek returns after walking when visible; inactive walker hidden",
-      "Approved source media hashes unchanged; primary Featured and inner-page pacing unchanged",
-      "Timed full cycles show identical Y coordinates and no transform during entrance, travel and exit; entire frame starts left of the lane and finishes right of it"
+      "Delivered 30-frame VP9-alpha clip decoded and every paw baseline equals row 620; zero baseline shift at the loop join",
+      "Only integer vertical frame registration; no source artwork, dimensions, gait timing or shared-library changes",
+      "Entire walking frame starts and finishes outside the Featured-width lane; matching 10px soft horizontal boundary masks",
+      "Timed desktop and actual 390px mobile entry, crossing, exit and restart observed with constant container/video Y, no CSS transform and no active peek during walking",
+      "Original selected Home tab refreshed; publication closeout must refresh it again to the latest version",
+      "Generated-site checks verify the media hash against the encoded-frame registration receipt",
+      "Actual original-tab viewport widths 1440, 900, 390 and 320 checked: paw-to-banner ground alignment within 0.005 CSS px and no horizontal overflow"
     ]
   }
 }

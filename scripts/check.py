@@ -103,3 +103,8 @@ for key in ['prompts','instructions','skills']:
  assert page.index('class="skills-collection') < page.index('class="collection-how"'),'Resources and availability must precede general usage steps'
  if key!='prompts':assert 'Browse prompts' in page,'Empty collections need a useful next destination'
 assert 'href="#prompt-title"' in (root/'resources/task-context-starter-prompt/index.html').read_text(),'Prompt text needs direct access from its introduction'
+
+walk_qa=json.loads((root/'assets/characters/walk-registration.json').read_text())
+assert walk_qa['sha256']==hashlib.sha256((root/'assets/characters/walk.webm').read_bytes()).hexdigest(),'Walk registration receipt must match deployed media'
+assert len(walk_qa['encoded_paw_baselines'])==30 and set(walk_qa['encoded_paw_baselines'])=={walk_qa['baseline']},'All decoded gait frames must share one ground line'
+assert walk_qa['loop_join_baseline_delta']==0 and walk_qa['visible_pixels_cropped'] is False,'Walk restart must preserve ground contact without cropping artwork'

@@ -217,3 +217,14 @@ Review: full desktop and 390 px mobile cycles, ready playback, rise/cross/dip an
 ## Straight, matching walking entrance and exit, November 24, 2026
 
 Christopher found the walking rise strange and requested straight entry from one end with a matching exit. This supersedes the vertical rise/dip for the walking interlude only. Retain the Featured-width lane, fixed walking baseline and current timing, but begin the entire frame beyond its left boundary and finish beyond its right. Use identical horizontal masking at both ends, without vertical translation, fade or movement into the page’s outer margins. The separate peeking cat retains its complete physical dip. Artwork, native gait, earlier tagline return and other-page behavior remain unchanged.
+
+
+## Registered walking ground line and full-cycle review, November 24, 2026
+
+Christopher still saw the walking cat move up and down. The original selected Home tab was using an older stylesheet; refresh that actual tab after deployment instead of only opening a separate proof tab. The current horizontal CSS had no vertical keyframes, but decoded source frames had paw baselines between rows 615 and 621 on the 720 px canvas.
+
+Create a website-only derivative that registers every frame’s opaque paw baseline to row 620 with integer vertical offsets from -1 to +5 source pixels. Preserve shapes, scale, source-frame order, colors, alpha and one-second 30 fps timing. The shared approved library source stays unchanged. No interpolation, warping, new illustration or retiming. Keep the source hash, per-frame offsets and actual encoded-frame measurements in assets/characters/walk-registration.json. Reproduce with scripts/prepare-walk.py and an available ffmpeg binary. The PNG poster comes from the registered first frame.
+
+Retain straight horizontal entry/exit and the Featured-width lane. Derive the bottom offset from the registered visible-pixel boundary (621/720 of the frame), so paws meet the banner to within browser subpixel rounding at both sizes. Use matching 10 px horizontal edge masks to soften the boundary without any rise or dip. The entire frame starts and finishes outside the lane before state handoff. The separate peeking cat is unchanged.
+
+Verification: decode all 30 delivered video frames with libvpx-vp9 and require the same row-620 baseline, zero restart baseline difference and no cropped visible pixels. Observe timed complete desktop and actual 390 px mobile cycles, including entry, exit and restart. Container and video Y stay constant, no CSS transform is present, and no peek is active during walking. Primary characters and inner pages remain unchanged. This supersedes earlier statements that the website walk media was byte-identical to the shared source.
