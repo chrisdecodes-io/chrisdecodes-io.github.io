@@ -1,5 +1,5 @@
 {
-  "state": "Centered compact Home introduction reviewed",
+  "state": "Home cat aligned directly beneath the tagline",
   "content_pages": [
     "/"
   ],
@@ -10,20 +10,17 @@
     1150,
     1024,
     900,
-    899,
-    800,
     761,
     760,
     390,
     320
   ],
   "checks": [
-    "Intro group geometrically centered against Featured at ten main/breakpoint widths; text alignment centered",
-    "Before/after intro heights unchanged at five measured widths and about 10px shorter at 900px; no added whitespace",
-    "Conservative icon travel envelopes clear text, one another and cat lane",
-    "Narrow-tablet card title overflow corrected; 761, 800, 899 and 900px checks show no clipped headings or horizontal overflow",
-    "Resource content remains left-aligned; existing generated-site checks pass",
-    "Public content, links, download text, cat behavior and platform motion timings unchanged"
+    "Peek center and walking-lane center match tagline center with zero measured error at all ten widths",
+    "Walking-lane width matches the tagline column at each width",
+    "Intro heights unchanged, no horizontal overflow and no new vertical spacing",
+    "Existing cat sequence, artwork, normal gait and opaque dip retained; crossing duration uses its existing width-based calculation",
+    "All generated-site checks pass; resource content, routes and downloads unchanged"
   ],
-  "release_scope": "Existing approved public prompt only; no additional resources"
+  "release_scope": "Existing public prompt and approved character media only"
 }

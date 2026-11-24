@@ -43,7 +43,7 @@
       "frames": 390,
       "seconds": 13,
       "sha256": "a9a381fa64bb903fff54e3fb9df2f5ed168f21554e78243b7fc9dae3ca438f61",
-      "role": "Three separate section locations on each content page, coordinated so at most one peek plays"
+      "role": "Three separate section locations per content page, coordinated so at most one peek plays; Home Featured-edge slot is centered beneath the tagline"
     },
     "walk": {
       "source": "Decoder Cat Flow Neon Walk 2026-10-20/Loop asset v1/loop-transparent.webm",
@@ -51,7 +51,7 @@
       "frames": 30,
       "seconds": 1,
       "sha256": "0e60369b88139db064f3afd565a59db9bd37712421360edda578d8802e4ac217",
-      "role": "Home only: cream lane immediately above Featured, mutually exclusive with all peeking cats",
+      "role": "Home only: cream lane directly beneath the tagline, matching its text column width and center; mutually exclusive with all peeking cats",
       "limits": "Approved source retains generated shape variation. No artwork or timing changes; no new engine integration."
     }
   }
