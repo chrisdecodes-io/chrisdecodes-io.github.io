@@ -57,3 +57,7 @@ The shared generator places Home left, the cream-on-blue wordmark at the true ce
 The page frame is capped at 1440 px; body content remains left-aligned. Desktop page headings cap at 56 px and Featured headings at 40 px. Home grid headings return to ink by Christopher’s explicit direction. Existing companion scale, compact 80/64 px peek clearance, silent animation timing and three-section sequence remain unchanged.
 
 Header/footer CSS is consolidated into the final authoritative frame section of styles.css, replacing competing old rules. Reuse that section for future refinements. Review evidence covers four content pages at 1920, 1440, 1024, 900, 390 and 320 px, with exact center alignment and no horizontal overflow.
+
+## Proportional Home spacing
+
+Featured uses 32 px wide-screen padding. Grid cards use 24 px padding with a 210 px minimum height, allowing content to determine final height, and ink headings at 2 rem. On desktop the last About Chris destination spans the grid as a compact copy-and-action row; this removes the empty half-row without adding content. Mobile keeps the single-column card flow. Keep the 80/64 px section-edge allowance for the visible peek; shrinking transparent canvas clearance must not crowd surrounding text.

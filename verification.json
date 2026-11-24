@@ -1,5 +1,5 @@
 {
-  "state": "Balanced shared layout reviewed across all agreed viewports",
+  "state": "Balanced shared layout and proportional Home spacing reviewed",
   "content_pages": [
     "/",
     "/skills/",
@@ -26,7 +26,9 @@
     "Companion cats stay inside their areas; three peek slots and one active per page",
     "Mobile sidebar expands, prompt copies, header Home and browser Back work",
     "Legacy guide, Resources, Projects and root-query links reach Skills",
-    "Text download matches catalog; all local links and assets resolve"
+    "Text download matches catalog; all local links and assets resolve",
+    "Home spacing refinements rechecked at all six widths",
+    "About Chris spans the desktop grid as a compact row, avoiding an empty half-row"
   ],
   "release_scope": "No new resources, private content, product claims or animation sources"
 }
