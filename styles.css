@@ -47,3 +47,15 @@
 /* Skills is the sole library section; channel tiles remain important Home destinations. */
 .home-grid{margin-top:28px}.skills-page .page-intro{min-height:0;margin-bottom:30px}.skills-page .page-intro h1{margin-bottom:15px}
 @media(max-width:760px){.featured-copy:not(:has(.featured-label)) h2{grid-row:1}.featured-copy:not(:has(.featured-label)) .featured-description{grid-row:2}.featured-copy:not(:has(.featured-label)) .featured-meta{grid-row:3}.featured-copy:not(:has(.featured-label))+.decoder-cat{grid-row:3}.featured-copy:not(:has(.featured-label)) .featured-button{grid-row:4}.skills-page .page-intro{display:block}.skills-page .page-intro>div:first-child{display:block}}
+
+/* Stronger reading hierarchy and useful sidebar shortcuts. */
+.home-page .home-intro h1,.skills-page .page-intro h1,.about-page h1,.detail-intro h1{font-size:clamp(2.8rem,4.5vw,4.25rem);line-height:1.08;letter-spacing:-.015em}
+.featured-panel h2{font-size:clamp(2.2rem,3.4vw,3.1rem);line-height:1.1;max-width:650px}
+.home-tile h2{font-size:2.1rem;line-height:1.12;color:var(--blue)}
+.resource-detail section h2,.about-page>h2,.channels>h2{font:800 2rem/1.15 Emphasis,Arial,sans-serif;color:var(--blue)}
+.channel-grid h3{font-size:1.4rem;font-weight:750;color:var(--blue)}
+.sidebar .nav-label{color:var(--blue);font-size:.875rem;margin:0 14px 10px;padding:0;font-weight:750}
+.sidebar nav>a{font-size:1rem;font-weight:600}.sidebar nav>a.shortcut-link{font-size:.9rem;font-weight:450;line-height:1.5}
+.footer{display:grid;grid-template-columns:minmax(0,1fr) 80px;align-items:center;gap:32px}.footer-monogram{display:block;width:80px;height:80px;border-radius:8px}.footer-monogram img{display:block;width:100%;height:auto}
+@media(max-width:760px){.home-page .home-intro h1,.skills-page .page-intro h1,.about-page h1,.detail-intro h1{font-size:clamp(2.6rem,9.5vw,3.1rem)}.featured-panel h2{font-size:clamp(2.05rem,7.5vw,2.55rem);overflow-wrap:break-word}.home-tile h2{font-size:1.95rem}.resource-detail section h2,.about-page>h2,.channels>h2{font-size:1.8rem}.sidebar .nav-label{margin-top:10px}.footer{grid-template-columns:minmax(0,1fr) 60px;gap:18px}.footer-monogram{width:60px;height:60px}.footer-inner:has([data-footer-cat]){grid-template-columns:76px minmax(0,1fr);gap:12px}.footer .decoder-cat[data-footer-cat]{width:76px;height:76px}}
+@media(max-width:480px){.footer{grid-template-columns:minmax(0,1fr)}.footer-monogram{justify-self:end}.footer-inner:has([data-footer-cat]){grid-template-columns:76px minmax(0,1fr)}}

@@ -12,7 +12,7 @@ class Page(HTMLParser):
   if t in ['script','style']:self.ignore_text=True
   if 'home-tile' in a.get('class','').split():self.tile_count+=1;self.home_tiles.append(a)
   if t=='nav' and a.get('id')=='sidebar-links':self.in_sidebar=True
-  if t=='a' and self.in_sidebar:self.nav_items.append(a.get('data-nav'))
+  if t=='a' and self.in_sidebar and 'data-nav' in a:self.nav_items.append(a.get('data-nav'))
   if t=='h1':self.h1+=1
   if t in ['h1','h2','h3']:self.heading=True
   if t=='video':self.videos.append(a)

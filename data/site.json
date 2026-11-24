@@ -65,5 +65,19 @@
       "nav": "resources",
       "description": "Released tools and code projects, with documentation and source links."
     }
-  }
+  },
+  "shortcuts": [
+    {
+      "label": "Featured",
+      "url": "/#featured"
+    },
+    {
+      "label": "Starter prompt",
+      "url": "/resources/task-context-starter-prompt/"
+    },
+    {
+      "label": "Find Chris Decodes",
+      "url": "/about/#channels-title"
+    }
+  ]
 }

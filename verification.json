@@ -1,12 +1,15 @@
 {
-  "state": "Featured public prompt and separate Skills tile validated locally",
+  "state": "Heading hierarchy, sidebar shortcuts and approved footer CD logo reviewed",
   "checks": [
     "Seven HTML routes: links, assets, fragments and original prompt download checked",
     "Main navigation: Home, Skills, About Chris",
     "Home: one heading plus tagline, featured starter prompt, separate Skills tile, restored Instagram/Substack/GitHub squares and About Chris tile",
     "No empty Resources/Projects sections or broad filter controls in active navigation",
     "Compatibility routes forward to standalone Skills; prior prompt remains direct-link-only",
-    "Centered cat media slots and approved quiet Rest footer animation; original twelve-second pacing retained"
+    "Centered cat media slots and approved quiet Rest footer animation; original twelve-second pacing retained",
+    "Larger page/feature/tile headings reviewed on desktop and 390 px mobile",
+    "Sidebar Featured and Find Chris Decodes destinations checked; local fragments validated",
+    "Approved Organic v2 CD footer link checked on mobile with keyboard focus"
   ],
   "release_scope": "No public skills or new private resources released"
 }
