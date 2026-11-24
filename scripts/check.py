@@ -84,7 +84,7 @@ for key in ['prompts','instructions','skills']:
  page=(root/f'{key}/index.html').read_text()
  assert f'data-nav="{key}" aria-current="page"' in page,'Collection navigation must be selected'
  if key=='prompts':assert 'href="/resources/task-context-starter-prompt/"' in page and '1 prompt available' in page
- else:assert f'No public {key} available yet' in page and 'download=' not in page
+ else:assert f'No {"instruction sets" if key=="instructions" else key} available yet' in page and 'download=' not in page
 assert '<a href="/prompts/">Prompts</a>' in (root/'resources/task-context-starter-prompt/index.html').read_text()
 
 for item in items:
@@ -97,3 +97,9 @@ for channel in channels:
  for route in ['index.html','about/index.html','prompts/index.html','instructions/index.html','skills/index.html','resources/task-context-starter-prompt/index.html']:
   assert f'href="{channel["url"]}"' in (root/route).read_text(),(route,channel['id'],'missing confirmed channel link')
 assert 'Coming soon' not in (root/'index.html').read_text(),'Confirmed profiles replace the channel placeholders'
+
+for key in ['prompts','instructions','skills']:
+ page=(root/f'{key}/index.html').read_text()
+ assert page.index('class="skills-collection') < page.index('class="collection-how"'),'Resources and availability must precede general usage steps'
+ if key!='prompts':assert 'Browse prompts' in page,'Empty collections need a useful next destination'
+assert 'href="#prompt-title"' in (root/'resources/task-context-starter-prompt/index.html').read_text(),'Prompt text needs direct access from its introduction'

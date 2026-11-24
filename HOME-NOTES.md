@@ -183,3 +183,16 @@ Current hosting decision, confirmed by Christopher on November 24, 2026: keep Gi
 ## Public commit attribution
 
 Christopher confirmed that future commits and similar public attribution should omit his last name. Use Christopher as the Git author and committer display name. This Mac’s global Git name and this repository’s local Git name are set accordingly. This public repository uses the verified chrisdecodes-io account’s ID-based GitHub noreply address for future commits. Do not rewrite existing published history for this preference; Christopher explicitly scoped the change to future commits. On other machines or fresh clones, apply the name preference before committing and check for repository-specific overrides. A synced note does not establish that another machine’s Git configuration has changed.
+
+
+## Usability review and walking entrance/exit repair, November 24, 2026
+
+Keep the definition-led Home tiles and collection introductions. Show available entries or an honest empty state immediately after the definition, before general usage guidance. Empty Skills and Instructions collections offer Browse prompts and Back to Home. Use “None available yet” in empty Home tiles, without internal release terminology. The starter prompt introduction has a Go to prompt link; its fragment target accepts keyboard focus. Preserve the existing purpose, outcomes, requirements, copy action and verified text download as the pattern for future approved resources.
+
+Supersedes the walking-lane part of “Cat centered below the tagline”: the narrow text-width clip produced an abrupt interior entrance/exit. Keep the peek centered beneath the tagline, but let the walking lane enter at the main-content/sidebar boundary on desktop and the left viewport edge on mobile. Its exit reaches the actual right viewport edge, including outer cream margins on wide displays. The complete cat frame begins outside and finishes outside the lane, so no interior cut happens. Do not let the lane cover sidebar controls.
+
+Measure this lane on load, resize and each crossing. Pause CSS travel until the source video is playing so loading does not consume part of the entrance. Use the track’s visibility to start playback, since the actor intentionally begins offscreen. Pause travel with document visibility. Keep the native one-second approved gait, width-based 8–18-second crossing, silent playback, unchanged vertical clearance and exclusive peek/walk handoff. No character assets were modified.
+
+Recognized legacy category/type links open the matching current collection. Unknown and retired category/project destinations return to Home, where visitors can choose, rather than sending them to an unrelated empty Skills page. Retrieval: README → these notes → scripts/build.mjs, cat-motion.js, styles.css and assets/characters/usage.json.
+
+Verification: six content pages at 1920, 1440, 1024, 900, 390 and 320 px, one H1 and three header channels with no horizontal overflow; collection ordering/empty states; mobile menu; fragment focus, successful Copy prompt feedback and browser Back; compatibility URLs and matching download bytes. Timed desktop and mobile samples show off-lane entry, uninterrupted playback through the right edge, zero active peeks during travel, one after handoff, and the next cycle. See verification.json for the current reviewed scope.

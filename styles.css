@@ -448,10 +448,12 @@ body{min-height:100vh;display:flex;flex-direction:column}
 @media(prefers-reduced-motion:reduce){.platform-token{animation:none}}
 
 /* A reserved cream lane lets the walk take a turn after a complete peek dip. */
-.walk-track{position:absolute;inset:-80px auto auto max(0px,calc(50% - 421px));width:min(var(--tagline-max),calc(100% - var(--tagline-rest)));height:80px;overflow:hidden;pointer-events:none;visibility:hidden}
+.walk-track{position:absolute;inset:-80px auto auto var(--walk-left,0px);width:var(--walk-width,100%);height:80px;overflow:hidden;pointer-events:none;visibility:hidden}
 .walk-track .decoder-cat{position:absolute;left:-120px;bottom:-16px;width:120px;height:120px}
 .walk-track[data-walk-active]{visibility:visible}
-.walk-track[data-walk-active] .decoder-cat{animation:cat-crossing var(--walk-duration,15s) linear both}
+.walk-track[data-walk-active] .decoder-cat{animation:cat-crossing var(--walk-duration,15s) linear both;animation-play-state:paused}
+.walk-track[data-walk-active] .decoder-cat.has-video{animation-play-state:running}
+.walk-track[data-walk-active][data-walk-paused] .decoder-cat{animation-play-state:paused}
 @keyframes cat-crossing{from{left:-120px}to{left:100%}}
 @media(max-width:760px){.walk-track{top:-64px;height:64px}.walk-track .decoder-cat{width:96px;height:96px;bottom:-13px;left:-96px}@keyframes cat-crossing{from{left:-96px}to{left:100%}}}
 
@@ -464,6 +466,11 @@ body{min-height:100vh;display:flex;flex-direction:column}
 
 .detail-intro .purpose-label{font:650 1.0625rem/1.5 Inter,Arial,sans-serif;margin:20px 0 8px;letter-spacing:0}
 
-.collection-how{max-width:800px}
+.collection-how{max-width:800px;margin-top:28px}
 .collection-how>p{color:var(--muted);margin-bottom:10px}
 .collection-how li{margin-bottom:12px;line-height:1.65}
+
+.empty-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px 20px}
+.detail-quick-link{margin-top:6px}
+#prompt-title{scroll-margin-top:24px}
+@media(max-width:760px){.empty-actions{justify-content:center}}

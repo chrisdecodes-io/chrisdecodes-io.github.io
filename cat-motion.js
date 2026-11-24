@@ -8,6 +8,17 @@ let activePeek = -1;
 const walkTrack = document.querySelector('.walk-track');
 let walking = false;
 let nextPeek = 0;
+function fitWalkingTrack() {
+  if (!walkTrack) return;
+  const host = walkTrack.offsetParent.getBoundingClientRect();
+  const main = document.querySelector('main').getBoundingClientRect();
+  // Enter at the visible content boundary, exit beyond the actual viewport edge.
+  const left = Math.max(0, main.left);
+  walkTrack.style.setProperty('--walk-left', `${left - host.left}px`);
+  walkTrack.style.setProperty('--walk-width', `${document.documentElement.clientWidth - left}px`);
+}
+fitWalkingTrack();
+window.addEventListener('resize', fitWalkingTrack);
 function finishWalk() {
   if (!walking) return;
   walking = false;
@@ -18,10 +29,12 @@ function finishWalk() {
 }
 function startWalk(next) {
   if (!walkTrack || !inViewport(walkTrack) || document.hidden) return false;
+  fitWalkingTrack();
   const video = walkTrack.querySelector('video');
   if (!video.canPlayType('video/webm; codecs="vp9"')) return false;
   nextPeek = next;
   walking = true;
+  walkTrack.querySelector('.decoder-cat').classList.remove('has-video');
   activatePeek(-1);
   const size = walkTrack.querySelector('.decoder-cat').getBoundingClientRect().width;
   const seconds = Math.min(18, Math.max(8, (walkTrack.clientWidth + size) / (size * .65)));
@@ -31,7 +44,7 @@ function startWalk(next) {
   refreshCharacter(walkTrack.querySelector('.decoder-cat'));
   return true;
 }
-walkTrack?.querySelector('.decoder-cat').addEventListener('animationend', finishWalk);
+walkTrack?.querySelector('.decoder-cat').addEventListener('animationend', event => { if (event.animationName === 'cat-crossing') finishWalk(); });
 walkTrack?.querySelector('video').addEventListener('error', finishWalk);
 function inViewport(element) {
   const box = element.getBoundingClientRect();
@@ -74,20 +87,20 @@ function refreshCharacter(container) {
     video.poster = image.src;
   }
   const bounds = container.getBoundingClientRect();
-  const visible = !container.hidden && container.getClientRects().length > 0 && !document.hidden && bounds.bottom > 0 && bounds.top < innerHeight && bounds.right > 0 && bounds.left < innerWidth;
+  const visible = !container.hidden && !document.hidden && (action === 'walk' ? inViewport(walkTrack) : container.getClientRects().length > 0 && bounds.bottom > 0 && bounds.top < innerHeight && bounds.right > 0 && bounds.left < innerWidth);
   if (!visible) { video.pause(); return; }
   if (!video.getAttribute('src')) {
     video.src = assetURL(`/assets/characters/${action}.webm`);
     video.muted = true;
   }
-  video.play().catch(() => container.classList.remove('has-video'));
+  video.play().catch(() => { container.classList.remove('has-video'); if (action === 'walk') finishWalk(); });
 }
 for (const container of characters) {
   const video = container.querySelector('video');
   video.addEventListener('playing', () => container.classList.add('has-video'));
   video.addEventListener('error', () => container.classList.remove('has-video'));
 }
-function refreshCharacters() { followVisibleSection(); characters.forEach(refreshCharacter); }
+function refreshCharacters() { walkTrack?.toggleAttribute('data-walk-paused', document.hidden); followVisibleSection(); characters.forEach(refreshCharacter); }
 document.addEventListener('library:motion-update', refreshCharacters);
 document.addEventListener('visibilitychange', refreshCharacters);
 refreshCharacters();

@@ -2,7 +2,7 @@ const params = new URLSearchParams(location.search);
 const siteConfig = JSON.parse(document.querySelector('#site-config')?.textContent || '{}');
 if (location.pathname === '/' && (params.has('type') || params.has('q'))) {
   const type = params.get('type');
-  location.replace(['prompts','instructions','skills'].includes(type) ? siteConfig.types[type].url : '/skills/');
+  location.replace(['prompts','instructions','skills'].includes(type) ? siteConfig.types[type].url : '/');
 }
 const sidebarToggle = document.querySelector('.sidebar-toggle');
 sidebarToggle?.addEventListener('click', () => {

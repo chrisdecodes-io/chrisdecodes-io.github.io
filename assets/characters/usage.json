@@ -51,7 +51,7 @@
       "frames": 30,
       "seconds": 1,
       "sha256": "0e60369b88139db064f3afd565a59db9bd37712421360edda578d8802e4ac217",
-      "role": "Home only: cream lane directly beneath the tagline, matching its text column width and center; mutually exclusive with all peeking cats",
+      "role": "Home only: cream lane beneath the tagline, entering at the main-content boundary (viewport edge on mobile) and exiting at the actual right viewport edge; mutually exclusive with all peeking cats",
       "limits": "Approved source retains generated shape variation. No artwork or timing changes; no new engine integration."
     }
   }

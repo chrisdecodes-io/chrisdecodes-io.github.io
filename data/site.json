@@ -60,7 +60,7 @@
       "tileDescription": "Messages that ask an AI to complete a task.",
       "emptyDescription": "Each prompt will include text to copy, details to fill in and steps for using it.",
       "useSteps": [
-        "Open a prompt below and read its purpose, expected outcomes and requirements.",
+        "Open a prompt and read its purpose, expected outcomes and requirements.",
         "Copy the prompt into your AI assistant’s message box. Replace any bracketed fields with your own task details.",
         "Send the message, answer any follow-up questions and review the response."
       ]
