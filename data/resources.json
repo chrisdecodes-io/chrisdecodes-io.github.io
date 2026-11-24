@@ -20,6 +20,7 @@
     ],
     "note": "Keep private information out unless you understand and accept how your chosen tool handles it.",
     "content": "I want to [specific goal].\nHere’s the relevant context: [background].\nMy constraints are [time, tools, or limits].\nA useful result would look like [format or example].\nAsk me about any missing information that would materially change your answer.",
-    "publishedOn": "2026-11-23"
+    "publishedOn": "2026-11-23",
+    "listed": false
   }
 ]

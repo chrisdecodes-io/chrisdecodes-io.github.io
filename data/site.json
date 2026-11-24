@@ -7,19 +7,9 @@
       "url": "/"
     },
     {
-      "id": "resources",
-      "label": "Resources",
-      "url": "/resources/"
-    },
-    {
       "id": "skills",
       "label": "Skills",
       "url": "/skills/"
-    },
-    {
-      "id": "projects",
-      "label": "Projects",
-      "url": "/projects/"
     },
     {
       "id": "about",
@@ -71,8 +61,8 @@
       "label": "Projects",
       "title": "Projects",
       "singular": "Project",
-      "url": "/projects/",
-      "nav": "projects",
+      "url": "/resources/?type=projects",
+      "nav": "resources",
       "description": "Released tools and code projects, with documentation and source links."
     }
   }

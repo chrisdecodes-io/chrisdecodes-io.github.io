@@ -35,3 +35,15 @@
 @media(max-width:360px){.featured-panel h2{font-size:1.75rem;max-width:none}.featured-panel .decoder-cat{width:100px;height:100px;right:10px}.featured-meta{max-width:calc(100% - 92px)}.featured-button{max-width:none}}
 .decoder-cat{pointer-events:none}
 @media(max-width:760px){.featured-panel .featured-button{padding-inline:18px}}
+/* Two meaningful Home destinations, with resource types kept in the catalog. */
+.home-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.home-tile{aspect-ratio:auto;min-height:235px}.home-tile>p{max-width:410px}
+@media(max-width:580px){.home-grid{grid-template-columns:1fr}.home-tile{min-height:220px}}
+/* Center the companion inside an explicit open media area. */
+.featured-panel{grid-template-columns:minmax(0,1.9fr) minmax(220px,1fr)}.featured-panel .decoder-cat{justify-self:center;align-self:center}.empty-state{justify-content:center}.empty-state .decoder-cat{align-self:center;margin:0}.home-page .home-intro{margin-bottom:26px}.home-page .home-intro h1{margin-bottom:12px}.home-intro>.home-tagline{margin-top:0!important}.home-search{margin-bottom:28px}
+@media(max-width:1150px){.featured-panel{grid-template-columns:minmax(0,1.7fr) minmax(160px,1fr)}}
+@media(max-width:760px){.featured-panel{display:grid;grid-template-columns:minmax(0,1fr) 100px;column-gap:16px;row-gap:0}.featured-copy{display:contents}.featured-label{grid-column:1/-1;grid-row:1}.featured-panel h2{grid-column:1/-1;grid-row:2;max-width:none}.featured-description{grid-column:1/-1;grid-row:3}.featured-meta{grid-column:1;grid-row:4;align-self:center;max-width:none;margin:0}.featured-panel .decoder-cat{position:relative;inset:auto;grid-column:2;grid-row:4;width:100px;height:100px;justify-self:center;align-self:center}.featured-panel .featured-button{grid-column:1/-1;grid-row:5;justify-self:start;max-width:none;margin-top:16px}.home-page .home-intro{margin-bottom:24px}}
+.footer-inner:has([data-footer-cat]){display:grid;grid-template-columns:140px minmax(0,auto);align-items:center;justify-content:center}.footer .decoder-cat[data-footer-cat]{width:140px;height:140px;justify-self:center;align-self:center}.footer-inner:has([data-footer-cat]) nav{justify-content:flex-start}
+@media(max-width:760px){.footer-inner:has([data-footer-cat]){grid-template-columns:100px minmax(0,1fr);gap:16px}.footer .decoder-cat[data-footer-cat]{width:100px;height:100px}.footer-inner:has([data-footer-cat]) nav{justify-content:flex-start}}
+/* Skills is the sole library section; channel tiles remain important Home destinations. */
+.home-grid{margin-top:28px}.skills-page .page-intro{min-height:0;margin-bottom:30px}.skills-page .page-intro h1{margin-bottom:15px}
+@media(max-width:760px){.featured-copy:not(:has(.featured-label)) h2{grid-row:1}.featured-copy:not(:has(.featured-label)) .featured-description{grid-row:2}.featured-copy:not(:has(.featured-label)) .featured-meta{grid-row:3}.featured-copy:not(:has(.featured-label))+.decoder-cat{grid-row:3}.featured-copy:not(:has(.featured-label)) .featured-button{grid-row:4}.skills-page .page-intro{display:block}.skills-page .page-intro>div:first-child{display:block}}

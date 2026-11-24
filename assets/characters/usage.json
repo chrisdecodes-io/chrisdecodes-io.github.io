@@ -1,6 +1,6 @@
 {
   "state": "Original approved Expressive v7 assets selected for calmer website pacing; supersedes short website derivatives",
-  "display": "One visible inward-facing character next to related text, proportionally sized",
+  "display": "Center characters in their reserved open media areas. One main-content companion plus a quiet Home footer Rest pose requested by Christopher; no extra cards or headings.",
   "motion": "Normal-speed 12-second full gestures; automatic silent inline loops without pause controls; OS reduced-motion preferences do not alter playback per standing website direction",
   "fallback": "Original matching transparent still if playback is unsupported or blocked",
   "assets": {
@@ -27,6 +27,14 @@
       "seconds": 12,
       "sha256": "2687e1ab91516801987c944e8cd95ce9948ee7d7d52f743f462b80d948c075e6",
       "role": "Projects collection"
+    },
+    "rest": {
+      "source": "Decoder Cat Expressive v7 2026-11-01/Editor Exports/rest/transparent.webm",
+      "playback": "Original full gesture unchanged at 30 fps; play only while visible, loop silently",
+      "frames": 360,
+      "seconds": 12,
+      "sha256": "f57a9287e5f8accc488139c39a6c4e0e5690483b24b4d7f3c8a629f66ca94219",
+      "role": "Quiet Home footer companion centered beside navigation links"
     }
   }
 }

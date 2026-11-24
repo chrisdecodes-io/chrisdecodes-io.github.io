@@ -16,7 +16,8 @@ function refreshCharacter(container) {
     image.src = assetURL(`/assets/characters/${action}.png`);
     video.poster = image.src;
   }
-  const visible = !container.hidden && container.getClientRects().length > 0 && !document.hidden;
+  const bounds = container.getBoundingClientRect();
+  const visible = !container.hidden && container.getClientRects().length > 0 && !document.hidden && bounds.bottom > 0 && bounds.top < innerHeight && bounds.right > 0 && bounds.left < innerWidth;
   if (!visible) { video.pause(); return; }
   if (!video.getAttribute('src')) {
     video.src = assetURL(`/assets/characters/${action}.webm`);
@@ -33,3 +34,9 @@ function refreshCharacters() { characters.forEach(refreshCharacter); }
 document.addEventListener('library:motion-update', refreshCharacters);
 document.addEventListener('visibilitychange', refreshCharacters);
 refreshCharacters();
+
+// Load/play a character only when its reserved area enters the viewport.
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(entries => entries.forEach(entry => refreshCharacter(entry.target)));
+  characters.forEach(container => observer.observe(container));
+}

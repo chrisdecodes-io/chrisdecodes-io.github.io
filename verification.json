@@ -1,13 +1,12 @@
 {
-  "state": "Featured-panel revision validated locally; deployment pending",
+  "state": "Skills-focused consolidation validated locally; deployment pending",
   "checks": [
-    "Seven generated pages: links, assets, fragments, heading hierarchy and one tagline per page checked",
-    "Home: one separate Featured panel plus seven destination tiles, with two honest social placeholders",
-    "Featured action opens the existing starter-prompt detail page",
-    "Desktop 1440 px and mobile 390/320 px inspected; no horizontal overflow at tested mobile widths",
-    "Mobile heading uses the full panel reading width; decorative cat does not capture clicks",
-    "Original 12-second silent cat loops retained",
-    "Single approved prompt and byte-identical text download retained"
+    "Seven HTML routes: links, assets, fragments and original prompt download checked",
+    "Main navigation: Home, Skills, About Chris",
+    "Home: one heading plus tagline, Skills panel, restored Instagram/Substack/GitHub squares and About Chris tile",
+    "No empty Resources/Projects sections or broad filter controls in active navigation",
+    "Compatibility routes forward to standalone Skills; prior prompt remains direct-link-only",
+    "Centered cat media slots and approved quiet Rest footer animation; original twelve-second pacing retained"
   ],
-  "release_scope": "No additional resources or private materials released"
+  "release_scope": "No public skills or new private resources released"
 }

@@ -31,8 +31,8 @@ for p in root.rglob('*.html'):
  if '.git' in p.parts:continue
  q=Page();q.feed(p.read_text());pages[p]=q
  assert q.h1==1,(p,'one h1 required')
- if p!=root/'guides/index.html':
-  assert q.nav_items==['home','resources','skills','projects','about'],(p,'unexpected sidebar entries')
+ if p not in [root/f'{name}/index.html' for name in ['guides','resources','projects']]:
+  assert q.nav_items==['home','skills','about'],(p,'unexpected sidebar entries')
   text=' '.join(' '.join(q.text).split())
   assert text.count("Understand what's possible. Decide what matters to you.")==1,(p,'tagline must appear once')
  assert len(q.ids)==len(set(q.ids)),(p,'duplicate IDs')
@@ -49,8 +49,8 @@ for p,q in pages.items():
   assert dest.is_file(),(p.relative_to(root),x)
   if u.fragment:assert u.fragment in pages[dest].ids,(p,x,'missing fragment')
 home=pages[root/'index.html']
-assert home.tile_count==7,'Home must contain seven destinations below the separate Featured panel'
-assert sum('href' not in tile for tile in home.home_tiles)==2,'Only Instagram/Substack are non-clickable placeholders'
+assert home.tile_count==4,'Home must highlight Instagram, Substack, GitHub and About Chris'
+assert sum('href' not in tile for tile in home.home_tiles)==2,'Instagram and Substack remain visible placeholders'
 assert 'featured-title' in home.ids,'Featured must have its own labeled panel'
 assert (root/'resources/index.html') in pages
 items=json.loads((root/'data/resources.json').read_text())
@@ -63,4 +63,4 @@ for name,asset in usage['assets'].items():
  assert hashlib.sha256((root/f'assets/characters/{name}.webm').read_bytes()).hexdigest()==asset['sha256']
 print(f'{len(pages)} pages checked: headings, links, assets, fragments, video attributes and prompt download match.')
 assert all(asset['frames']==360 and asset['seconds']==12 for asset in usage['assets'].values()),'Use original 12-second full gestures'
-print('Release scope: one public prompt, three approved character animations; no private resource imports.')
+print('Release scope: one public prompt, approved character animations; no private resource imports.')
