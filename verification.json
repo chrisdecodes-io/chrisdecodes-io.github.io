@@ -1,0 +1,14 @@
+{
+  "state": "validated locally; public release authorized; deployment pending",
+  "checks": [
+    "HTML IDs unique; internal links and local assets resolve",
+    "JavaScript syntax passes node --check",
+    "Browser: resource search and no-results state, topic switching, copy confirmation",
+    "Desktop 1366px and mobile 390px document bounds checked; no horizontal overflow"
+  ],
+  "release_target": "chrisdecodes-io/chrisdecodes-io.github.io",
+  "placeholders": [
+    "Instagram",
+    "Substack"
+  ]
+}
