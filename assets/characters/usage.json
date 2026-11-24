@@ -38,7 +38,7 @@
     },
     "peek": {
       "source": "Approved Peek Rise and Blink entry (49 frames), On-Screen Loops/peek continuation (147 frames twice), Peek Dip Exit (28 frames), 19 transparent frames; see scripts/prepare-peek.py",
-      "playback": "13-second normal-speed composition with opaque dip, silent continuous loop while visible",
+      "playback": "13-second approved rise, natural idle blinks and complete opaque dip; relocate right, left, center only in the 19 fully transparent end frames",
       "frames": 390,
       "seconds": 13,
       "sha256": "a9a381fa64bb903fff54e3fb9df2f5ed168f21554e78243b7fc9dae3ca438f61",

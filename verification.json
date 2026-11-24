@@ -1,5 +1,5 @@
 {
-  "state": "Square CD footer logo and approved edge peeks reviewed",
+  "state": "Three-position peek with existing natural blink reviewed",
   "checks": [
     "Seven HTML routes: links, assets, fragments and original prompt download checked",
     "Main navigation: Home, Skills, About Chris",
@@ -12,7 +12,9 @@
     "Approved Organic v2 CD footer link checked on mobile with keyboard focus",
     "Approved cream-on-blue Organic v2 logo proportionally placed in footer",
     "One peek per page, clear of text and controls; desktop About and mobile Home reviewed",
-    "Encoded 13-second peek checked for alpha, 390 frames, physical dip and fully hidden ending"
+    "Encoded 13-second peek checked for alpha, 390 frames, physical dip and fully hidden ending",
+    "Existing encoded idle has full blink closure and reopening while held in place",
+    "Single peek rotates right, left, center only during fully transparent dip ending"
   ],
   "release_scope": "No public skills or new private resources released"
 }

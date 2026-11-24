@@ -21,3 +21,7 @@ The footer now uses the approved Organic v2 CD-blue-cream.svg, cream letters on 
 Approved peeking cat placements: Home and Skills footer edge, About channel-section edge, and the starter prompt’s copyable-text section edge. Keep one peek per page, beyond the primary reading area and clear of controls. Retain Curious in the feature and Work in Skills. The Home footer peek replaces Rest, avoiding stacked companions.
 
 The website peek is a 13-second transparent derivative of existing approved source clips: 49 entry frames, two 147-frame quiet continuations, 28 opaque dip frames, and 19 fully hidden frames. No artwork generation or deformation. Align source row 436 of 512 to the section edge; clip beneath that originating edge. Source library remains unchanged. Rebuild with scripts/prepare-peek.py and an installed FFmpeg binary path. Provenance and output hash are in assets/characters/usage.json.
+
+## Three-position peek sequence
+
+One peek per page rotates right, left and center along its originating section edge. Reposition only during the 19 fully transparent end frames after the complete opaque dip. Existing approved idle continuation supplies natural blinks while the cat holds in place; do not add rapid blinking or move the cat while visible. The loop remains 13 seconds. No extra simultaneous peeking cats, extra empty sections or artwork changes.

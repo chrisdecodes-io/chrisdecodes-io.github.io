@@ -40,3 +40,20 @@ if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver(entries => entries.forEach(entry => refreshCharacter(entry.target)));
   characters.forEach(container => observer.observe(container));
 }
+
+// Relocate only during the fully transparent end of the approved dip.
+// The existing continuation supplies natural blinks while the cat stays put.
+for (const edge of document.querySelectorAll('.peek-edge')) {
+  const video = edge.querySelector('video');
+  const positions = ['right', 'left', 'center'];
+  let position = 0;
+  let relocated = false;
+  video.addEventListener('timeupdate', () => {
+    if (video.currentTime < 1) relocated = false;
+    if (!relocated && Number.isFinite(video.duration) && video.currentTime >= video.duration - 19 / 30) {
+      position = (position + 1) % positions.length;
+      edge.dataset.peekPosition = positions[position];
+      relocated = true;
+    }
+  });
+}
