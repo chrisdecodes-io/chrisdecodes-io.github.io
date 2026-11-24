@@ -118,5 +118,31 @@
       "label": "Find Chris Decodes",
       "url": "/about/#channels-title"
     }
+  ],
+  "channels": [
+    {
+      "id": "instagram",
+      "label": "Instagram",
+      "url": "https://www.instagram.com/chris.decodes/",
+      "statusLabel": "Private profile",
+      "description": "Short explanations, practical demonstrations and a look behind the scenes.",
+      "action": "Visit Instagram"
+    },
+    {
+      "id": "substack",
+      "label": "Substack",
+      "url": "https://substack.com/@chrisdecodes",
+      "statusLabel": "Public profile",
+      "description": "Longer explanations and updates from Chris Decodes.",
+      "action": "Visit Substack"
+    },
+    {
+      "id": "github",
+      "label": "GitHub",
+      "url": "https://github.com/chrisdecodes-io",
+      "statusLabel": "",
+      "description": "Explore public source code and released projects.",
+      "action": "Visit GitHub"
+    }
   ]
 }

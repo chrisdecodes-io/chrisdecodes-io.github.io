@@ -1,26 +1,24 @@
 {
-  "state": "Home cat aligned directly beneath the tagline",
+  "state": "Confirmed Instagram and Substack profile links reviewed",
   "content_pages": [
-    "/"
+    "/",
+    "/about/"
   ],
   "viewport_widths": [
-    1920,
     1440,
-    1151,
-    1150,
-    1024,
     900,
-    761,
-    760,
     390,
     320
   ],
+  "layout_cases": 8,
   "checks": [
-    "Peek center and walking-lane center match tagline center with zero measured error at all ten widths",
-    "Walking-lane width matches the tagline column at each width",
-    "Intro heights unchanged, no horizontal overflow and no new vertical spacing",
-    "Existing cat sequence, artwork, normal gait and opaque dip retained; crossing duration uses its existing width-based calculation",
-    "All generated-site checks pass; resource content, routes and downloads unchanged"
+    "Instagram user-confirmed handle and Chris Decodes identity verified in public browser view; private profile label accurate at review",
+    "Public Substack profile verified directly and from the Instagram bio; no private-publication gate used as the hub link",
+    "Header, Home social tiles and About actions derive from one channel configuration",
+    "Confirmed channel hrefs present on all six content pages; no Coming soon social placeholders remain",
+    "Home and About at four widths: visible channel labels and no horizontal overflow",
+    "Actual Home tile and header clicks reach the intended profiles; browser Back returns to hub",
+    "Existing generated-site checks pass; public resource catalog, downloads, brand styling and cat behavior unchanged"
   ],
-  "release_scope": "Existing public prompt and approved character media only"
+  "release_scope": "Channel links only; no new private resources or account visibility changes"
 }

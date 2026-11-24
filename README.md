@@ -28,6 +28,10 @@ Legacy `/resources/` type links and old root type queries route to the correspon
 
 Keep `data/resources.json` as the explicit public-release catalog. Do not scan or publish private repositories automatically. The generic article feed and standalone Projects/Resources indexes remain retired. New collection pages do not authorize releasing additional content.
 
+## Channel links
+
+`data/site.json` → `channels` is the single source for channel links in every header, the Home tiles and About Chris. Instagram is [chris.decodes](https://www.instagram.com/chris.decodes/), currently labeled Private profile. Substack links to the [public @chrisdecodes profile](https://substack.com/@chrisdecodes), confirmed by the Instagram bio. GitHub remains [chrisdecodes-io](https://github.com/chrisdecodes-io). Both former social placeholders are now clickable. Profile-status labels reflect the November 24 review and should be updated when account visibility changes.
+
 ## Visual and character direction
 
 Preserve cream #F4F1EA, rich blue #173FBF, the restrained corner lift toward #4667CC, Organic Emphasis headings and Inter supporting text. Use the restored CTA lockup in the header and footer: the original stacked ink wordmark beside the cream-on-blue CD square, proportionally scaled as one centered group. The original stacked wordmark masters remain unchanged. Use sentence case, preserving official names.

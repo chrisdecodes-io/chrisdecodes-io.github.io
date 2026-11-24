@@ -58,7 +58,7 @@ cta=[p.attrib['d'] for p in ET.parse(root/'assets/wordmark-cta-ink.svg').getroot
 assert original==cta,'CTA wordmark must preserve the original approved outlines and stacked arrangement'
 assert (root/'index.html').read_text().count('class="platform-token"')==3,'Home should show the three named platform marks'
 assert home.tile_count==7,'Home must highlight three resource collections, the three channels and About Chris'
-assert sum('href' not in tile for tile in home.home_tiles)==2,'Instagram and Substack remain visible placeholders'
+assert all('href' in tile for tile in home.home_tiles),'All confirmed Home destinations should be linked'
 assert 'featured-title' in home.ids,'Featured must have its own labeled panel'
 assert (root/'resources/index.html') in pages
 items=json.loads((root/'data/resources.json').read_text())
@@ -91,3 +91,9 @@ for item in items:
  page=(root/f"resources/{item['id']}/index.html").read_text()
  assert 'Purpose</h2>' in page and 'Expected outcomes</h2>' in page and 'What you need</h2>' in page and 'How to use it</h2>' in page
  assert item['expectedOutcomes'] and item['requirements'] and item['instructions']
+
+channels=json.loads((root/'data/site.json').read_text())['channels']
+for channel in channels:
+ for route in ['index.html','about/index.html','prompts/index.html','instructions/index.html','skills/index.html','resources/task-context-starter-prompt/index.html']:
+  assert f'href="{channel["url"]}"' in (root/route).read_text(),(route,channel['id'],'missing confirmed channel link')
+assert 'Coming soon' not in (root/'index.html').read_text(),'Confirmed profiles replace the channel placeholders'
