@@ -30,7 +30,7 @@ Keep `data/resources.json` as the explicit public-release catalog. Do not scan o
 
 ## Channel links
 
-`data/site.json` → `channels` is the single source for channel links in every header, the Home tiles and About Chris. Instagram is [chris.decodes](https://www.instagram.com/chris.decodes/), currently labeled Private profile. Substack links to the [public @chrisdecodes profile](https://substack.com/@chrisdecodes), confirmed by the Instagram bio. GitHub remains [chrisdecodes-io](https://github.com/chrisdecodes-io). Both former social placeholders are now clickable. Profile-status labels reflect the November 24 review and should be updated when account visibility changes.
+`data/site.json` → `channels` is the single source for channel links in every header, the Home tiles and About Chris. Destinations are [Instagram chris.decodes](https://www.instagram.com/chris.decodes/), the [Substack @chrisdecodes profile](https://substack.com/@chrisdecodes) and [GitHub chrisdecodes-io](https://github.com/chrisdecodes-io). Header links use matching blue-and-cream buttons labeled Instagram, Substack and GitHub. Do not display private/public status labels unless Christopher requests them. Both former social placeholders are linked.
 
 ## Visual and character direction
 

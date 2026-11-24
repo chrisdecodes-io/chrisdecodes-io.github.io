@@ -1,24 +1,26 @@
 {
-  "state": "Confirmed Instagram and Substack profile links reviewed",
+  "state": "Matching name-only social buttons reviewed",
   "content_pages": [
     "/",
     "/about/"
   ],
   "viewport_widths": [
+    1920,
     1440,
+    1024,
+    1023,
     900,
     390,
     320
   ],
-  "layout_cases": 8,
+  "layout_cases": 14,
   "checks": [
-    "Instagram user-confirmed handle and Chris Decodes identity verified in public browser view; private profile label accurate at review",
-    "Public Substack profile verified directly and from the Instagram bio; no private-publication gate used as the hub link",
-    "Header, Home social tiles and About actions derive from one channel configuration",
-    "Confirmed channel hrefs present on all six content pages; no Coming soon social placeholders remain",
-    "Home and About at four widths: visible channel labels and no horizontal overflow",
-    "Actual Home tile and header clicks reach the intended profiles; browser Back returns to hub",
-    "Existing generated-site checks pass; public resource catalog, downloads, brand styling and cat behavior unchanged"
+    "All three header buttons show only Instagram, Substack and GitHub",
+    "Computed blue background, cream text, radius and button heights match at each width",
+    "No private/public profile labels remain in Home or About",
+    "No clipped button names, branding overlap or horizontal overflow at all seven widths",
+    "Existing confirmed URLs, resource content, routes and cat behavior unchanged",
+    "All generated-site checks pass"
   ],
-  "release_scope": "Channel links only; no new private resources or account visibility changes"
+  "release_scope": "Presentation only; no account visibility or resource release changes"
 }
