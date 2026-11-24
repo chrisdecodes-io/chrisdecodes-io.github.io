@@ -56,7 +56,7 @@ assert ' '.join(' '.join(home.h1_text).split())==json.loads((root/'data/site.jso
 original=[p.attrib['d'] for p in ET.parse(root/'assets/wordmark-ink.svg').getroot().iter() if p.tag.endswith('path')]
 cta=[p.attrib['d'] for p in ET.parse(root/'assets/wordmark-cta-ink.svg').getroot().iter() if p.tag.endswith('path')]
 assert original==cta,'CTA wordmark must preserve the original approved outlines and stacked arrangement'
-assert (root/'index.html').read_text().count('class="platform-token"')==3,'Home should show the three named platform marks'
+assert (root/'index.html').read_text().count('class="platform-token"')==4,'Home should show four named platform marks flanking the tagline'
 assert home.tile_count==7,'Home must highlight three resource collections, the three channels and About Chris'
 assert all('href' in tile for tile in home.home_tiles),'All confirmed Home destinations should be linked'
 assert 'featured-title' in home.ids,'Featured must have its own labeled panel'

@@ -341,8 +341,8 @@ a.home-tile:hover{background:#f8f9ff;border-color:#8b9fd8}
 .peek-edge[data-peek-position=center]{left:calc(50% - 60px)}}
 .peek-edge{visibility:hidden}
 .peek-edge[data-peek-active]{visibility:visible}
-.feature-peek-wrap{--tagline-rest:292px;--tagline-max:550px;--peek-half:75px;padding:0;border:0}
-.feature-peek-wrap>.peek-edge{left:calc(50% - var(--tagline-rest) * .5 - var(--peek-half));right:auto}
+.feature-peek-wrap{--peek-half:75px;padding:0;border:0}
+.feature-peek-wrap>.peek-edge{left:calc(50% - var(--peek-half));right:auto}
 .feature-peek-wrap>.featured-panel{margin-bottom:0}
 .home-grid.peek-surface{margin-top:80px;padding-top:24px}
 .home-grid>.peek-edge{display:block}
@@ -427,24 +427,22 @@ body{min-height:100vh;display:flex;flex-direction:column}
 .tile-icon{width:32px;height:32px;border-radius:9px}
 .tile-heading h2{font-size:1.8rem}}
 
-/* Tagline-led Home introduction; no repeated brand-name heading. */
-.home-intro{display:grid;grid-template-columns:minmax(0,550px) 280px;gap:12px;align-items:center;width:100%;max-width:842px;margin:0 auto;}
-.home-tagline{font-family:WordmarkEditorial,Georgia,serif;font-weight:400;font-synthesis:none;font-kerning:normal;font-size:clamp(1.75rem,3vw,2.5rem);line-height:1.3;letter-spacing:0;color:var(--ink);margin:0;max-width:100%;text-align:center}
+/* A centered, larger tagline flanked by two platform marks on each side. */
+.home-intro{position:relative;display:grid;place-items:center;width:100%;min-height:216px;padding:8px 112px;margin:0 auto}
+.home-tagline{font-family:WordmarkEditorial,Georgia,serif;font-weight:400;font-synthesis:none;font-kerning:normal;font-size:clamp(2rem,3.4vw,3rem);line-height:1.18;letter-spacing:0;color:var(--ink);margin:0;width:100%;text-align:center}
 .home-tagline .tagline-opening,.home-tagline .tagline-closing{display:block}
 .home-tagline .tagline-opening{color:var(--ink);font-weight:400}.home-tagline .tagline-closing{color:var(--blue);font-weight:400}
-@media(max-width:760px){.home-tagline{font-size:1.75rem}}
-@media(max-width:360px){.brand{--cta-width:128px}.home-link{padding-inline:4px;gap:4px;font-size:.84375rem}.home-icon{width:14px;height:14px}}
-
-/* Three real platform marks share one visual system beside the tagline. */
-.platform-orbit{--float-left:8px;--float-right:18px;--float-up:20px;--float-down:14px;position:relative;justify-self:start;width:280px;height:144px;list-style:none;padding:0;margin:0}
+.platform-orbit{--float-left:5px;--float-right:5px;--float-up:5px;--float-down:5px;position:absolute;inset:8px 8px;list-style:none;padding:0;margin:0;pointer-events:none}
 .platform-token{position:absolute;display:flex;flex-direction:column;align-items:center;width:84px;gap:6px;animation:platform-float 20s ease-in-out infinite}
 .platform-mark{display:grid;place-items:center;width:64px;height:64px;background:var(--blue);border-radius:16px}
 .platform-mark img{display:block;width:36px;height:36px;object-fit:contain}.platform-token[data-platform=chatgpt] img{width:48px;height:48px}
-.platform-label{font:600 .75rem/1.5 Inter,Arial,sans-serif;color:var(--ink)}
-.platform-token[data-platform=claude]{left:0;top:38px;animation-delay:-6s}.platform-token[data-platform=chatgpt]{--float-left:14px;--float-right:14px;--float-up:0px;--float-down:40px;left:98px;top:0;animation-duration:22s;animation-delay:-12s}.platform-token[data-platform=codex]{--float-left:18px;--float-right:8px;--float-up:28px;--float-down:8px;left:196px;top:48px;animation-duration:24s;animation-delay:-4s}
+.platform-label{font:600 .75rem/1.5 Inter,Arial,sans-serif;color:var(--ink);text-align:center}
+.platform-token[data-platform=claude]{left:0;top:0;animation-delay:-6s}.platform-token[data-platform=claude-code]{left:0;bottom:0;animation-duration:23s;animation-delay:-10s}.platform-token[data-platform=chatgpt]{right:0;top:0;animation-duration:22s;animation-delay:-12s}.platform-token[data-platform=codex]{right:0;bottom:0;animation-duration:24s;animation-delay:-4s}
 @keyframes platform-float{0%,100%{transform:translate(calc(var(--float-left) * -.5),calc(var(--float-down) * .3))}22%{transform:translate(var(--float-right),calc(var(--float-up) * -1))}48%{transform:translate(calc(var(--float-right) * .4),var(--float-down))}74%{transform:translate(calc(var(--float-left) * -1),calc(var(--float-up) * -.5))}88%{transform:translate(calc(var(--float-right) * .2),calc(var(--float-down) * .65))}}
-@media(max-width:1150px){.feature-peek-wrap{--tagline-rest:232px;--tagline-max:610px}.home-intro{grid-template-columns:minmax(0,1fr) 220px;gap:12px}.platform-orbit{--float-left:8px;--float-right:8px;--float-up:18px;--float-down:14px;width:220px;height:136px}.platform-token{width:72px}.platform-mark{width:56px;height:56px;border-radius:14px}.platform-token[data-platform=chatgpt]{--float-left:8px;--float-right:8px;--float-up:0px;--float-down:30px;left:74px}.platform-token[data-platform=codex]{--float-left:8px;--float-right:8px;--float-up:24px;--float-down:10px;left:148px;top:46px}}
-@media(max-width:760px){.feature-peek-wrap{--tagline-rest:0px;--tagline-max:100%;--peek-half:60px}.home-intro{display:block}.platform-orbit{display:flex;justify-content:center;align-items:start;gap:16px;width:100%;height:82px;margin-top:12px;padding-left:0}.platform-token{--float-left:14px!important;--float-right:14px!important;--float-up:10px!important;--float-down:2px!important;position:relative!important;inset:auto!important;width:72px;flex-shrink:0}.platform-mark img{width:32px;height:32px}.platform-token[data-platform=chatgpt] img{width:44px;height:44px}}
+.tile-icon img{display:block;object-fit:contain}
+@media(max-width:1150px){.home-intro{padding-inline:92px;min-height:192px}.platform-orbit{inset:8px 4px}.platform-token{width:72px}.platform-mark{width:56px;height:56px;border-radius:14px}}
+@media(max-width:760px){.feature-peek-wrap{--peek-half:60px}.home-intro{padding:4px 60px;min-height:180px}.home-tagline{font-size:2rem;line-height:1.18}.platform-orbit{--float-left:3px;--float-right:3px;--float-up:3px;--float-down:3px;inset:10px 0}.platform-token{width:52px;gap:5px}.platform-mark{width:44px;height:44px;border-radius:12px}.platform-mark img{width:28px;height:28px}.platform-token[data-platform=chatgpt] img{width:34px;height:34px}.platform-label{line-height:1.25}}
+@media(max-width:360px){.brand{--cta-width:128px}.home-link{padding-inline:4px;gap:4px;font-size:.84375rem}.home-icon{width:14px;height:14px}.home-intro{padding-inline:51px}.home-tagline{font-size:1.875rem}.platform-token{width:44px}.platform-mark{width:38px;height:38px;border-radius:10px}.platform-mark img{width:25px;height:25px}.platform-token[data-platform=chatgpt] img{width:30px;height:30px}.platform-label{font-size:.75rem}}
 @media(prefers-reduced-motion:reduce){.platform-token{animation:none}}
 
 /* A reserved cream lane lets the walk take a turn after a complete peek dip. */

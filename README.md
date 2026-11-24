@@ -18,7 +18,7 @@ GitHub Pages publishes `main` from the repository root. `.nojekyll` preserves th
 
 ## Navigation and release scope
 
-The shared main navigation and footer offer Home, Prompts, Instructions, Skills and About Chris. `data/site.json` supplies the labels, destinations and collection descriptions. Home retains the compact tagline and floating-icon layout, blue Featured panel and social tiles; each resource collection also has its own Home tile.
+The shared main navigation and footer offer Home, Prompts, Instructions, Skills and About Chris. `data/site.json` supplies the labels, destinations and collection descriptions. Home uses a larger centered tagline with two platform icons on each side, a matching centered peek, the blue Featured panel and social tiles; each resource collection also has its own Home tile.
 
 `/prompts/` lists the existing task context starter prompt. `/instructions/` and `/skills/` explain their respective resource types and show honest empty states. Collections show resources or availability before general usage steps, offer a useful next destination when empty, and derive entries and counts from `data/resources.json` through one shared template. No private skills or instruction sets have been released.
 
@@ -63,3 +63,9 @@ Font notices remain in `assets/licenses/`. Brand artwork and characters are incl
 Christopher approved propagation of the corrected Curious motion. The Home Featured banner uses one smaller tilt and quiet return, preserving the artwork, 12-second timing, blinks, tail and inward facing placement. Current exports in the shared character library and original export pack match this correction; old media remain in their history folders. See `assets/characters/usage.json`. The correction recipe and QA are in the shared collection’s `Curious-Refinement-2026-11-24.json` and source checkpoint. The separate Curious Notice animation is unchanged.
 
 The CTA wordmark is reproducible with `python3 scripts/prepare-cta-wordmark.py`. Its receipt is `assets/wordmark-cta-usage.json`; the unchanged source letter paths are checked by `scripts/check.py`. The earlier horizontal derivative is superseded and unused. Home’s Claude, ChatGPT and Codex cluster uses consistent cream-on-blue platform marks; see `assets/platforms/usage.json` and HOME-NOTES.md for roles and behavior.
+
+## Home tagline and icon alignment
+
+The Home tagline is centered in the content frame at up to 48 px on desktop, 32 px on phones and 30 px on the narrowest layout. Claude and the Claude Code pixel avatar flank the left; ChatGPT and Codex flank the right. Their full float envelopes must clear the words and cat lane. The Featured-edge peek follows the same centerline. Header branding retains the approved CD/wordmark proportions, common vertical center and geometrically centered lockup.
+
+Platform asset provenance is recorded in assets/platforms/usage.json. The Claude Code avatar reuses Lobe Icons vector geometry with its license in assets/licenses/lobe-icons-LICENSE. The GitHub Home square reuses the existing GitHub mark rather than the retired folder pictogram. Instructions uses one clear, centered clipboard checkmark.

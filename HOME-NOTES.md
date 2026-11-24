@@ -228,3 +228,16 @@ Create a website-only derivative that registers every frame’s opaque paw basel
 Retain straight horizontal entry/exit and the Featured-width lane. Derive the bottom offset from the registered visible-pixel boundary (621/720 of the frame), so paws meet the banner to within browser subpixel rounding at both sizes. Use matching 10 px horizontal edge masks to soften the boundary without any rise or dip. The entire frame starts and finishes outside the lane before state handoff. The separate peeking cat is unchanged.
 
 Verification: decode all 30 delivered video frames with libvpx-vp9 and require the same row-620 baseline, zero restart baseline difference and no cropped visible pixels. Observe timed complete desktop and actual 390 px mobile cycles, including entry, exit and restart. Container and video Y stay constant, no CSS transform is present, and no peek is active during walking. Primary characters and inner pages remain unchanged. This supersedes earlier statements that the website walk media was byte-identical to the shared source.
+
+
+## Larger centered tagline with four flanking icons, November 24, 2026
+
+Christopher requested a larger centered tagline, platform icons on both sides, the Claude Code avatar, preserved peek/tagline alignment, a real GitHub mark in its square, a corrected Instructions tick, and review of header branding alignment. This supersedes the earlier text-and-right-cluster composition and its asymmetric peek offset.
+
+Use the existing WordmarkEditorial serif at up to 48 px, retaining ink then blue and exact wording. Two labeled platform marks sit on each side: Claude/Claude Code on the left and ChatGPT/Codex on the right. Keep the same cream-on-blue tiles, bounded 20–24-second floats and existing shapes; use 5 px travel on desktop and 3 px on mobile to protect text. Scale side marks at phone widths so they stay beside the tagline without extra icon rows. Mobile typography is 32 px, or 30 px below 361 px. Preserve one H1 and one complete tagline.
+
+The Featured-edge peek shares the heading’s centerline at every breakpoint. Walking behavior and the approved registered gait are unchanged. Header CD and wordmark preserve the approved CTA lockup proportions; measurements confirm a common vertical center and zero whole-lockup horizontal centering error, so no artwork or optical distortion is introduced.
+
+Reuse the existing Claude Code pixel avatar vector from Lobe Icons, with source geometry, checksum and license recorded in assets/platforms/usage.json. GitHub reuses the existing local platform mark with native proportions, converted only to cream. Replace the folder pictogram in the GitHub card. Instructions uses one clean blue tick centered within its cream clipboard, without the interfering short list line.
+
+Review: Home at actual 1920, 1440, 1024, 900, 760, 390 and 320 px; heading, peek and header centers match; no horizontal overflow. Conservative full-motion mark/label bounds do not intersect any tagline text line at all seven widths. The header lockup’s square and wordmark vertical centers match. Review the corrected grid icons and keyboard focus. Existing generated-site checks pass; no resource releases or route changes.

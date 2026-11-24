@@ -1,5 +1,5 @@
 {
-  "role": "Home introduction platform cluster; three non-interactive labeled marks",
+  "role": "Home introduction: four named platform marks, two on either side of the centered larger tagline",
   "palette": {
     "field": "#173FBF",
     "mark": "#F4F1EA"
@@ -22,62 +22,32 @@
       "source_sha256": "2c2564eefacbe75904ebc4c30857d4036dfb07e8295ae470e558fa6506e32145",
       "output_sha256": "cc28015facdeca301ac5d6ea9f58b94b66389a36cec5a759c1ff2e0bbf923040",
       "treatment": "Existing mark geometry, monochrome cream on a blue website tile; no redraw"
+    },
+    "claude-code": {
+      "source": "https://github.com/lobehub/lobe-icons/blob/master/packages/static-svg/icons/claudecode.svg",
+      "source_sha256": "d7eb2d876b49e51cc16291a42b681d7cf4906e60e0150776dbfb353ec4ca3746",
+      "output_sha256": "d10b4ccf72e0e14217ee52ddb2577a9c22888d7fe23ce725ddd349cf43cc35a9",
+      "treatment": "Existing pixel avatar geometry and proportions; cream on blue, no redraw",
+      "license": "../licenses/lobe-icons-LICENSE"
+    },
+    "github": {
+      "source": "Existing Chris Decodes platform-marks/github.svg",
+      "source_sha256": "693d7abe6f899646cc2e96856723b45e95f71885a54910b2749f6decdf7e1ee1",
+      "output_sha256": "df5f8faaebfad7120d16ab0247db5073b7529b5642e28b7b221e0407a156653f",
+      "treatment": "Native 98x96 viewBox and mark outlines preserved; cream on blue Home tile icon"
     }
   },
   "motion": {
     "duration_seconds": {
       "claude": 20,
+      "claude-code": 23,
       "chatgpt": 22,
       "codex": 24
     },
-    "style": "Gentle asymmetric two-axis paths within the unchanged compact icon region; staggered phases",
-    "wide_travel_px": {
-      "claude": {
-        "left": 8,
-        "right": 18,
-        "up": 20,
-        "down": 14
-      },
-      "chatgpt": {
-        "left": 14,
-        "right": 14,
-        "up": 0,
-        "down": 40
-      },
-      "codex": {
-        "left": 18,
-        "right": 8,
-        "up": 28,
-        "down": 8
-      }
-    },
-    "intermediate_travel_px": {
-      "claude": {
-        "left": 8,
-        "right": 8,
-        "up": 18,
-        "down": 14
-      },
-      "chatgpt": {
-        "left": 8,
-        "right": 8,
-        "up": 0,
-        "down": 30
-      },
-      "codex": {
-        "left": 8,
-        "right": 8,
-        "up": 24,
-        "down": 10
-      }
-    },
-    "mobile_travel_px": {
-      "left": 14,
-      "right": 14,
-      "up": 10,
-      "down": 2
-    },
-    "reduced_motion": "Static positions when preferred; cat video behavior is separate",
-    "constraint": "No changes to intro, heading, orbit or Featured geometry. Frame-and-label travel envelopes must remain separate and clear of text and the cat lane."
+    "style": "Gentle bounded asymmetric float around four fixed flank positions",
+    "desktop_travel_px": 5,
+    "mobile_travel_px": 3,
+    "reduced_motion": "Static positions when preferred; cat behavior separate",
+    "constraint": "Two marks per side, clear of the heading and cat lane through their full movement envelopes; retain compact mobile composition"
   }
 }

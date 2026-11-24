@@ -29,7 +29,7 @@ for(const item of catalog){
 }
 async function save(file,content){const p=path.join(root,file);await mkdir(path.dirname(p),{recursive:true});await writeFile(p,content);}
 function tagline(){const split=site.tagline.indexOf('. ')+1;return `<span class="tagline-opening">${esc(site.tagline.slice(0,split))}</span> <span class="tagline-closing">${esc(site.tagline.slice(split+1))}</span>`;}
-function platformCluster(){return `<ul class="platform-orbit" aria-label="Platforms Chris Decodes explores">${[['claude','Claude'],['chatgpt','ChatGPT'],['codex','Codex']].map(([id,label])=>`<li class="platform-token" data-platform="${id}"><span class="platform-mark"><img src="/assets/platforms/${id}.svg" width="40" height="40" alt=""></span><span class="platform-label">${label}</span></li>`).join('')}</ul>`;}
+function platformCluster(){return `<ul class="platform-orbit" aria-label="Platforms Chris Decodes explores">${[['claude','Claude'],['claude-code','Claude Code'],['chatgpt','ChatGPT'],['codex','Codex']].map(([id,label])=>`<li class="platform-token" data-platform="${id}"><span class="platform-mark"><img src="/assets/platforms/${id}.svg" width="40" height="40" alt=""></span><span class="platform-label">${label}</span></li>`).join('')}</ul>`;}
 function channelLinks(){return site.channels.map(channel=>`<a class="channel-button" href="${esc(channel.url)}">${esc(channel.label)}</a>`).join('');}
 function sidebar(active){return `<aside class="sidebar"><button class="sidebar-toggle" aria-expanded="false" aria-controls="sidebar-links">Browse the hub <span aria-hidden="true">+</span></button><nav id="sidebar-links" aria-label="Main navigation"><p class="nav-label">Explore</p>${site.navigation.map(item=>`<a href="${item.url}" data-nav="${item.id}"${active===item.id?' aria-current="page"':''}>${item.label}</a>`).join('')}<div class="nav-divider"></div><p class="nav-label">Quick access</p>${site.shortcuts.map(item=>`<a class="shortcut-link" href="${item.url}">${item.label}</a>`).join('')}</nav></aside>`;}
 function shell(title,active,body){return `<!doctype html>
@@ -44,15 +44,14 @@ function collectionRedirect() {
 }
 const tileIcons={
  Prompts:'<path d="M4 2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H9l-7 5V4a2 2 0 0 1 2-2z"/><path fill="#173fbf" d="M6 7h12v2H6zm0 4h8v2H6z"/>',
- Instructions:'<path d="M7 2h3a2 2 0 0 1 4 0h3v3H7zM4 4h1v3h14V4h1a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path fill="#173fbf" d="m6 13 3 3 5-5 1.5 1.5L9 19l-4.5-4.5zM16 11h3v2h-3z"/>',
+ Instructions:'<path d="M7 2h3a2 2 0 0 1 4 0h3v3H7zM4 4h1v3h14V4h1a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path fill="none" stroke="#173fbf" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m7 13 3 3 7-7"/>',
  Skills:'<path d="M6 5h4V3a2 2 0 0 1 4 0v2h4a2 2 0 0 1 2 2v3h2a2 2 0 0 1 0 4h-2v4a2 2 0 0 1-2 2h-4v-2a2 2 0 0 0-4 0v2H6a2 2 0 0 1-2-2v-4h2a2 2 0 0 0 0-4H4V7a2 2 0 0 1 2-2z"/>',
  Instagram:'<path fill-rule="evenodd" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm5-2a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/><circle cx="12" cy="12" r="3"/>',
  Substack:'<path d="M4 2h16v3H4zM4 7h16v3H4zM4 12h16v10l-8-4-8 4z"/>',
- GitHub:'<path d="M4 4h5l3 3h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path fill="#173fbf" d="m10 10-4 4 4 4 1.5-1.5L9 14l2.5-2.5zm4 0-1.5 1.5L15 14l-2.5 2.5L14 18l4-4z"/>',
  'About Chris':'<circle cx="12" cy="7" r="4"/><path d="M3 22v-2a9 9 0 0 1 18 0v2z"/>'
 };
 function homeTile({title,description,label,url,action}) {
- const body=`<div class="tile-heading"><span class="tile-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" focusable="false">${tileIcons[title]}</svg></span><h2>${esc(title)}</h2></div><p>${esc(description)}</p><div class="tile-bottom">${label?`<span class="tile-status">${esc(label)}</span>`:''}${action?`<span class="tile-action">${esc(action)}</span>`:''}</div>`;
+ const body=`<div class="tile-heading"><span class="tile-icon" aria-hidden="true">${title==='GitHub'?'<img src="/assets/platforms/github.svg" width="20" height="20" alt="">':`<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" focusable="false">${tileIcons[title]}</svg>`}</span><h2>${esc(title)}</h2></div><p>${esc(description)}</p><div class="tile-bottom">${label?`<span class="tile-status">${esc(label)}</span>`:''}${action?`<span class="tile-action">${esc(action)}</span>`:''}</div>`;
  return url?`<a class="home-tile" href="${url}">${body}</a>`:`<article class="home-tile placeholder-tile">${body}</article>`;
 }
 const collectionKeys=['prompts','instructions','skills'];
