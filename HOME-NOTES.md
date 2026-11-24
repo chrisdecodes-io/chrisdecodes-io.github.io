@@ -49,3 +49,11 @@ Footer: group the cream-on-blue CD mark and Chris Decodes name as one brand bloc
 ## Exact footer wordmark and whole-site review
 
 The footer name is now assets/wordmark-ink.svg, the approved fixed outlined Chris Decodes wordmark, alongside the cream-on-blue CD monogram. Do not retype it using Emphasis or a substitute font. Use the same artwork across every content page, scale proportionally (132 px desktop, 120 px mobile), and keep the live-text tagline separate. Header uses the matching cream wordmark. This fulfills Christopher’s request for the true brand wordmark lettering.
+
+## Adopted balanced frame
+
+The shared generator places Home left, the cream-on-blue wordmark at the true center, and channels right in equal-sided header columns. Below 1024 px the channels occupy a centered second row. Instagram/Substack use quiet text/status treatments; GitHub remains blue. Footer CD-and-wordmark lockup, optional inner-page tagline and navigation are vertically stacked and centered on a full-width paper background. These choices supersede earlier left/right frame arrangements.
+
+The page frame is capped at 1440 px; body content remains left-aligned. Desktop page headings cap at 56 px and Featured headings at 40 px. Home grid headings return to ink by Christopher’s explicit direction. Existing companion scale, compact 80/64 px peek clearance, silent animation timing and three-section sequence remain unchanged.
+
+Header/footer CSS is consolidated into the final authoritative frame section of styles.css, replacing competing old rules. Reuse that section for future refinements. Review evidence covers four content pages at 1920, 1440, 1024, 900, 390 and 320 px, with exact center alignment and no horizontal overflow.

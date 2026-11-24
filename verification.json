@@ -1,5 +1,5 @@
 {
-  "state": "Whole-site desktop and mobile review passed; exact footer wordmark installed",
+  "state": "Balanced shared layout reviewed across all agreed viewports",
   "content_pages": [
     "/",
     "/skills/",
@@ -7,24 +7,26 @@
     "/resources/task-context-starter-prompt/"
   ],
   "viewport_widths": [
+    1920,
     1440,
+    1024,
     900,
     390,
     320
   ],
-  "layout_cases": 16,
+  "layout_cases": 24,
   "checks": [
-    "No horizontal overflow across all 16 layouts",
-    "All three header channel links remain within the viewport",
-    "One consistent heading scale across content pages at each width",
-    "Exactly three separate peek slots per page with one active",
-    "Curious and Work companions reviewed for proportions and text clearance",
-    "Approved footer wordmark SVG used across all content pages, preserving its 624:340 ratio",
-    "Desktop and mobile footer alignment and keyboard focus visually checked",
-    "Tagline appears once per content page",
-    "Legacy guides, Resources, Projects and root-query links reach Skills",
-    "Copy prompt confirmed in browser; text download matches catalog",
-    "Seven generated HTML routes checked for heading hierarchy, IDs, links, assets and fragments"
+    "Header wordmark and footer brand centers measured within 1 px of page center in every case",
+    "Shared page frame no wider than 1440 px; footer spans page width",
+    "No horizontal overflow; channels visible and clear of branding",
+    "Desktop page headings no larger than 56 px; Featured no larger than 40 px",
+    "Home tile headings render in ink",
+    "Exact approved wordmark SVGs retained; proportions preserved",
+    "Desktop and mobile screenshots reviewed for all four content pages",
+    "Companion cats stay inside their areas; three peek slots and one active per page",
+    "Mobile sidebar expands, prompt copies, header Home and browser Back work",
+    "Legacy guide, Resources, Projects and root-query links reach Skills",
+    "Text download matches catalog; all local links and assets resolve"
   ],
-  "release_scope": "Existing public prompt and approved branding/characters only"
+  "release_scope": "No new resources, private content, product claims or animation sources"
 }
