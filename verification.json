@@ -75,7 +75,7 @@
     ]
   },
   "header_content_alignment": {
-    "state": "Reviewed",
+    "state": "Superseded by wordmark-first alignment",
     "widths": [
       1920,
       1440,
@@ -97,7 +97,7 @@
     ]
   },
   "freer_platform_motion": {
-    "state": "Full desktop cycle and complete responsive motion bounds reviewed",
+    "state": "Earlier bounded drift reviewed; superseded by independent-axis motion",
     "widths": [
       1920,
       1440,
@@ -120,6 +120,45 @@
       "No horizontal overflow or changes to intro dimensions, header/peek centerlines or approved artwork",
       "25-second desktop observation: roughly 35\u201336px horizontal travel, 17px upper and 8px lower vertical travel",
       "Lower pair moves in reverse with separate staggered durations; decorative reduced-motion preference retained"
+    ]
+  },
+  "independent_axis_motion": {
+    "state": "Full conservative bounds, complete desktop cycles and phone pacing reviewed",
+    "widths": [
+      1920,
+      1440,
+      1280,
+      1279,
+      1151,
+      1150,
+      1024,
+      951,
+      950,
+      900,
+      761,
+      760,
+      480,
+      430,
+      420,
+      411,
+      410,
+      401,
+      400,
+      399,
+      390,
+      375,
+      361,
+      360,
+      340,
+      320
+    ],
+    "checks": [
+      "Independent X/Y motion has shorter distinct periods and larger ranges; no synchronized full-stop waypoints",
+      "Full movement envelopes clear every actual text line and neighboring icon at tested responsive widths",
+      "Header wordmark itself aligns to tagline within 0.02 CSS px; CD sits alongside and moves right on phones, with no Home overlap",
+      "No horizontal overflow or added intro spacing; native brand geometry and cat behavior unchanged",
+      "25-second desktop observation covers all axis periods and about 76px horizontal, 32px upper/14px lower vertical travel; phone pacing reviewed",
+      "Both axis animations honor the decorative reduced-motion preference"
     ]
   }
 }

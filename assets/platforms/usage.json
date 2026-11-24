@@ -38,36 +38,65 @@
     }
   },
   "motion": {
-    "duration_seconds": {
-      "claude": 20,
-      "claude-code": 23,
-      "chatgpt": 22,
-      "codex": 24
+    "style": "Broader, quicker and calm independent-axis drift; horizontal and vertical loops have different periods and phases so each icon follows a changing smooth path",
+    "horizontal_seconds": {
+      "claude": 18,
+      "claude-code": 21,
+      "chatgpt": 20,
+      "codex": 23
     },
-    "style": "Wider asymmetric inward drift with distinct staggered phases; lower pair follows the path in reverse",
-    "desktop_travel_px": {
+    "vertical_seconds": {
+      "claude": 13,
+      "claude-code": 16,
+      "chatgpt": 15,
+      "codex": 18
+    },
+    "horizontal_reverse": [
+      "claude-code",
+      "codex"
+    ],
+    "wide_travel_px": {
+      "inward": 64,
+      "outward": 12,
+      "upper_rise": 24,
+      "upper_drop": 8,
+      "lower_rise": 10,
+      "lower_drop": 4
+    },
+    "below_1280px": {
       "inward": 32,
-      "outward": 4,
-      "upper_rise": 14,
-      "lower_rise": 5,
-      "settle": 3
+      "outward": 8,
+      "upper_rise": 20,
+      "upper_drop": 6,
+      "lower_rise": 8,
+      "lower_drop": 3
     },
-    "mobile_travel_px": {
+    "below_1151px": {
+      "inward": 24,
+      "outward": 8,
+      "upper_rise": 16,
+      "upper_drop": 4,
+      "lower_rise": 6,
+      "lower_drop": 3
+    },
+    "phone_travel_px": {
       "inward": 8,
       "outward": 2,
-      "upper_rise": 10,
-      "lower_rise": 5,
-      "settle": 3,
-      "inward_below_361px": 5
+      "upper_rise": 14,
+      "upper_drop": 6,
+      "lower_rise": 6,
+      "lower_drop": 4
     },
-    "reduced_motion": "Static positions when preferred; cat behavior separate",
-    "constraint": "Keep existing intro dimensions and centerlines. Complete mark/label movement envelopes must clear text, other icons and the cat lane; desktop Claude Code label stays on one line.",
-    "intermediate_travel_px": {
-      "inward": 14,
-      "outward": 4,
-      "upper_rise": 12,
-      "lower_rise": 4,
-      "settle": 2
-    }
+    "below_401px": {
+      "upper_rise": 18,
+      "upper_drop": 12,
+      "lower_rise": 16
+    },
+    "below_361px": {
+      "inward": 5,
+      "chatgpt_origin_shift_outward": 4
+    },
+    "reduced_motion": "Both axis animations disabled; cat preferences remain separate",
+    "constraint": "Preserve intro geometry and wordmark/tagline/peek alignment. Conservative mark and label movement bounds must clear text, neighboring icons and the walking lane."
   }
 }

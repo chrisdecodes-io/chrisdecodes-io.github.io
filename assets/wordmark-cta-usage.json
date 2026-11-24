@@ -17,5 +17,6 @@
   "proportion_source": "Adopted refined logo lockup v2, October 16, 2026",
   "output_sha256": "d1f946fed0f652dd8bd2d88a4d55cc39283a9dfc2880bb81458d5681829eafc3",
   "role": "Header and footer CTA-style lockup",
-  "rebuild": "python3 scripts/prepare-cta-wordmark.py"
+  "rebuild": "python3 scripts/prepare-cta-wordmark.py",
+  "header_alignment": "Center the wordmark itself over the tagline/main column. Position the CD square on its left above 760px and on its right at phone widths to preserve Home clearance; keep source proportions and vertical centers. Footer retains its existing lockup."
 }
