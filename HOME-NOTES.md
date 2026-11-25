@@ -1,5 +1,12 @@
 # Home feature and destinations
 
+
+## Current hub structure, November 25, 2026
+
+Christopher prioritized Skills and approved removing the Prompts/Instructions choice from the main experience. Main and footer navigation: Home, Skills, About Chris. Home grid: Skills, Instagram, Substack, GitHub, About Chris. Preserve all three prominent channel buttons. Featured remains the latest approved highlight; the existing starter prompt is a free resource with its direct URL and copy/download format retained.
+
+Skills is the only collection. Keep availability honest, place requirements and instructions beside each item, and link directly to the starter prompt from the empty Skills page. Do not reclassify a prompt as a skill. About explains Skills and free resources without requiring a taxonomy decision. Old Prompts links go to the starter prompt; Instructions and Resources links go to Skills. `data/site.json` owns the legacy mapping; `scripts/build.mjs`, `app.js` and `legacy-guides.js` apply it. This direction supersedes earlier multi-collection navigation notes below. Brand, typography and cat behavior are unchanged.
+
 The blue Home banner highlights recent approved public content, including prompts and skills. The catalog field `featured: true` explicitly permits a previously public item to appear here even when it is outside the Skills collection. Eligible entries are ordered by `publishedOn`; catalog order breaks same-day ties. Display the actual resource type and action.
 
 The published task context starter prompt is the current feature. It remains outside the standalone Skills collection. No new resources or private skills are released.

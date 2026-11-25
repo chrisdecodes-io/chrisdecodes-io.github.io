@@ -2,13 +2,13 @@
 
 Public website: https://chrisdecodes-io.github.io/
 
-A focused home for Chris Decodes prompts, instructions and skills, alongside Instagram, Substack and GitHub. Each released resource has a practical detail page with its purpose, expected outcomes, requirements and usage steps.
+A focused home for Chris Decodes skills and free resources, alongside Instagram, Substack and GitHub. Each released resource has a practical detail page with its purpose, expected outcomes, requirements and usage steps.
 
 Taglines use the wordmark-led Editorial serif associated with “Chris”, at its native regular weight. Body text remains Inter.
 
 Current visual decisions and supersessions: [website maintenance notes](HOME-NOTES.md).
 
-Preferred format for future resources: [starter-prompt detail page pattern](HOME-NOTES.md#preferred-resource-detail-format). Use [direct descriptions and usage steps](HOME-NOTES.md#direct-resource-descriptions-and-usage) to distinguish the resource types.
+Preferred format for future resources: [starter-prompt detail page pattern](HOME-NOTES.md#preferred-resource-detail-format). Keep descriptions direct and place usage instructions beside each resource.
 
 ## Build and preview
 
@@ -18,13 +18,13 @@ GitHub Pages publishes `main` from the repository root. `.nojekyll` preserves th
 
 ## Navigation and release scope
 
-The shared main navigation and footer offer Home, Prompts, Instructions, Skills and About Chris. `data/site.json` supplies the labels, destinations and collection descriptions. Home uses a larger centered tagline with two platform icons on each side, a matching centered peek, the blue Featured panel and social tiles; each resource collection also has its own Home tile.
+The shared main navigation and footer offer Home, Skills and About Chris. `data/site.json` supplies the labels, channel destinations and legacy route mapping. Home has Featured plus five destination tiles: Skills, Instagram, Substack, GitHub and About Chris. Skills is the only resource collection; visitors do not need to choose between prompts, instructions and skills.
 
-`/prompts/` lists the existing task context starter prompt. `/instructions/` and `/skills/` explain their respective resource types and show honest empty states. Collections show resources or availability before general usage steps, offer a useful next destination when empty, and derive entries and counts from `data/resources.json` through one shared template. No private skills or instruction sets have been released.
+`/skills/` explains what a skill does and shows an honest empty state until a skill is released. It links directly to the existing free starter prompt as a useful next step. No private skills or instruction sets have been released.
 
-The starter prompt remains at `/resources/task-context-starter-prompt/`, with its original text and download unchanged and a Go to prompt shortcut that moves keyboard focus to the copyable text. Its catalog entry is now listed under Prompts, with a matching breadcrumb and selected navigation. Detail pages explicitly show Purpose, Expected outcomes, Works with, Format, How to use it, What you need, relevant content/actions and Things to know when applicable. Describe outcomes without guaranteeing model results. Only show actions backed by actual public content or files.
+The starter prompt remains at `/resources/task-context-starter-prompt/`, with its original text, purpose, expected outcomes, requirements, usage steps, copy button and download unchanged. Featured labels it as a free resource. It is not relabeled as a skill, and its breadcrumb returns directly to Home. Keep the existing practical detail-page pattern for future resources.
 
-Legacy `/resources/` type links and old root type queries route to the corresponding active collection. `/guides/?category=prompting` routes to Prompts. Recognized Prompts, Instructions and Skills guide categories open their matching collection. Unknown or retired guide/project routes return to Home rather than an unrelated empty collection. The fallback HTML links offer all three current collections without JavaScript.
+Old `/prompts/` and prompting guide/filter links open the starter prompt directly. `/instructions/`, `/resources/`, skill/instruction guide links and unfiltered `/guides/` open Skills. Retired Projects and unknown categories return Home. Compatibility pages provide ordinary destination links without JavaScript; cached redirect scripts are versioned by content hash. No active navigation or home tile links to a retired collection.
 
 Keep `data/resources.json` as the explicit public-release catalog. Do not scan or publish private repositories automatically. The generic article feed and standalone Projects/Resources indexes remain retired. New collection pages do not authorize releasing additional content.
 
@@ -52,7 +52,7 @@ Show the exact tagline once per content page: in the Home introduction and in in
 
 Center the cat within its reserved open media area. The desktop blue panel uses a right-hand media column; mobile gives the cat a centered slot beside the status text. Empty-state character/text groups stay centered and compact. Preserve proportional scaling, inward orientation and clear controls.
 
-One peeking character takes turns among three distinct section edges per content page, completing the dip before moving. The Home footer peek replaces the earlier Rest placement. Curious accompanies Featured, and Work accompanies the Skills and Instructions empty states. `assets/characters/usage.json` records purposes, exact approved collection sources, timings and hashes. Original Expressive v7 artwork and full 12-second timing are retained. Curious uses the approved November 24 neck refinement. Earlier short forward/reverse website derivatives are superseded. The shared library Curious exports carry the same approved correction; other character selections retain their separate approvals.
+One peeking character takes turns among three distinct section edges per content page, completing the dip before moving. The Home footer peek replaces the earlier Rest placement. Curious accompanies Featured, and Work accompanies the Skills empty state. `assets/characters/usage.json` records purposes, exact approved collection sources, timings and hashes. Original Expressive v7 artwork and full 12-second timing are retained. Curious uses the approved November 24 neck refinement. Earlier short forward/reverse website derivatives are superseded. The shared library Curious exports carry the same approved correction; other character selections retain their separate approvals.
 
 Videos loop silently without pause controls. The Home tagline peek uses a 1.12× entrance and 1.18× idle to shorten the hold by about 1.5 seconds, returning to 1× for the complete dip. Other peeks and primary companions retain normal speed; OS reduced-motion preferences do not alter playback under Christopher’s explicit website instruction. Matching stills provide unsupported/blocked-playback fallbacks. The Home walker travels horizontally at a fixed height, entering through Featured’s left boundary and exiting through its right boundary. Its entire frame starts and finishes outside the lane, with matching 10 px soft boundaries. The website-only walk derivative registers all 30 decoded frames to one paw baseline; see `assets/characters/walk-registration.json` and `scripts/prepare-walk.py`. Original shared artwork and native one-second gait timing remain unchanged. It returns to the tagline peek while that area remains visible. Characters load/play only while in the viewport, so the footer is lazy-loaded. Decorative media cannot intercept clicks.
 

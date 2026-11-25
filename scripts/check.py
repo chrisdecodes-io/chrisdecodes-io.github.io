@@ -33,7 +33,7 @@ for p in root.rglob('*.html'):
  if '.git' in p.parts:continue
  q=Page();q.feed(p.read_text());pages[p]=q
  assert q.h1==1,(p,'one h1 required')
- if p not in [root/f'{name}/index.html' for name in ['guides','resources','projects']]:
+ if p not in [root/f'{name}/index.html' for name in ['guides','resources','projects','prompts','instructions']]:
   assert p.read_text().count('class="peek-edge"')==3,(p,'three distinct peek slots required')
   assert q.nav_items==[item['id'] for item in json.loads((root/'data/site.json').read_text())['navigation']],(p,'unexpected sidebar entries')
   text=' '.join(' '.join(q.text).split())
@@ -57,7 +57,8 @@ original=[p.attrib['d'] for p in ET.parse(root/'assets/wordmark-ink.svg').getroo
 cta=[p.attrib['d'] for p in ET.parse(root/'assets/wordmark-cta-ink.svg').getroot().iter() if p.tag.endswith('path')]
 assert original==cta,'CTA wordmark must preserve the original approved outlines and stacked arrangement'
 assert (root/'index.html').read_text().count('class="platform-token"')==4,'Home should show four named platform marks flanking the tagline'
-assert home.tile_count==7,'Home must highlight three resource collections, the three channels and About Chris'
+assert home.tile_count==5,'Home must highlight Skills, the three channels and About Chris'
+assert [item['id'] for item in json.loads((root/'data/site.json').read_text())['navigation']]==['home','skills','about'],'Navigation should prioritize Skills without a resource taxonomy'
 assert all('href' in tile for tile in home.home_tiles),'All confirmed Home destinations should be linked'
 assert 'featured-title' in home.ids,'Featured must have its own labeled panel'
 assert (root/'resources/index.html') in pages
@@ -80,12 +81,17 @@ assert (root/'assets'/font_usage['license']).is_file(),'Tagline font license mus
 assert (root/'index.html').read_text().count('class="walk-track"')==1,'Home has one reserved walking lane'
 assert all('class="walk-track"' not in p.read_text() for p in pages if p!=root/'index.html'),'Walking interlude is Home-only'
 
-for key in ['prompts','instructions','skills']:
+skill_page=(root/'skills/index.html').read_text()
+assert 'data-nav="skills" aria-current="page"' in skill_page
+assert 'No skills available yet' in skill_page and 'download=' not in skill_page
+assert 'Try the starter prompt' in skill_page
+assert '<a href="/prompts/">Prompts</a>' not in (root/'resources/task-context-starter-prompt/index.html').read_text()
+for key,target in {'prompts':'/resources/task-context-starter-prompt/','instructions':'/skills/','resources':'/skills/','projects':'/','guides':'/skills/'}.items():
  page=(root/f'{key}/index.html').read_text()
- assert f'data-nav="{key}" aria-current="page"' in page,'Collection navigation must be selected'
- if key=='prompts':assert 'href="/resources/task-context-starter-prompt/"' in page and '1 prompt available' in page
- else:assert f'No {"instruction sets" if key=="instructions" else key} available yet' in page and 'download=' not in page
-assert '<a href="/prompts/">Prompts</a>' in (root/'resources/task-context-starter-prompt/index.html').read_text()
+ assert f'data-redirect="{target}"' in page,(key,'legacy destination')
+for route in ['index.html','skills/index.html','about/index.html','resources/task-context-starter-prompt/index.html']:
+ page=(root/route).read_text()
+ assert 'href="/prompts/"' not in page and 'href="/instructions/"' not in page,(route,'retired collection still linked')
 
 for item in items:
  page=(root/f"resources/{item['id']}/index.html").read_text()
@@ -94,14 +100,11 @@ for item in items:
 
 channels=json.loads((root/'data/site.json').read_text())['channels']
 for channel in channels:
- for route in ['index.html','about/index.html','prompts/index.html','instructions/index.html','skills/index.html','resources/task-context-starter-prompt/index.html']:
+ for route in ['index.html','about/index.html','skills/index.html','resources/task-context-starter-prompt/index.html']:
   assert f'href="{channel["url"]}"' in (root/route).read_text(),(route,channel['id'],'missing confirmed channel link')
 assert 'Coming soon' not in (root/'index.html').read_text(),'Confirmed profiles replace the channel placeholders'
 
-for key in ['prompts','instructions','skills']:
- page=(root/f'{key}/index.html').read_text()
- assert page.index('class="skills-collection') < page.index('class="collection-how"'),'Resources and availability must precede general usage steps'
- if key!='prompts':assert 'Browse prompts' in page,'Empty collections need a useful next destination'
+assert skill_page.index('class="skills-collection') < skill_page.index('class="collection-how"'),'Availability must precede optional usage guidance'
 assert 'href="#prompt-title"' in (root/'resources/task-context-starter-prompt/index.html').read_text(),'Prompt text needs direct access from its introduction'
 
 walk_qa=json.loads((root/'assets/characters/walk-registration.json').read_text())

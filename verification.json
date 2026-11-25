@@ -1,9 +1,7 @@
 {
-  "state": "Mobile layout revised and Chromium/media checks passed; physical iPhone verification pending",
+  "state": "Skills-first hub layout, navigation and compatibility behavior reviewed",
   "content_pages": [
     "/",
-    "/prompts/",
-    "/instructions/",
     "/skills/",
     "/about/",
     "/resources/task-context-starter-prompt/"
@@ -18,7 +16,7 @@
     1440,
     1920
   ],
-  "layout_cases": 48,
+  "layout_cases": 32,
   "checks": [
     "No horizontal overflow, one descriptive H1 and all three channel links on six pages at six widths",
     "Definitions preserved; entries and availability precede general usage instructions; empty collections offer Browse prompts",
@@ -29,7 +27,7 @@
     "No active peek during walking; original approved media, native gait and vertical clearance unchanged",
     "Generated-site checks and JavaScript syntax checks pass"
   ],
-  "release_scope": "Usability and animation framing only; no new resources or private content",
+  "release_scope": "Navigation, descriptions and compatibility routing only; no new resources or media",
   "highlight_selection": {
     "state": "Prepared and tested; no Instagram posts published yet per Christopher",
     "checks": [
@@ -298,5 +296,25 @@
       "/tmp/chris-decodes-footer-peek-mobile.jpg"
     ],
     "limit": "Responsive browser evidence; physical iPhone Safari and Instagram playback remain unverified."
+  },
+  "skills_first_hub": {
+    "date": "2026-11-25",
+    "checks": [
+      "Home/Skills/About Chris navigation on all four content pages at eight widths, 320\u20131920px.",
+      "Home contains exactly five linked tiles: Skills, Instagram, Substack, GitHub, About Chris.",
+      "All three confirmed header channels remain; no active page links to retired collections.",
+      "Thirteen browser redirect cases reach expected useful destinations without loops.",
+      "Skills links directly to the starter prompt; copying and browser Back verified.",
+      "Starter prompt text/download, resource count and approved character media remain unchanged."
+    ],
+    "audits": [
+      "/tmp/chris-decodes-skills-hub-layout.json",
+      "/tmp/chris-decodes-skills-hub-legacy.json"
+    ],
+    "proofs": [
+      "/tmp/chris-decodes-skills-hub-desktop.jpg",
+      "/tmp/chris-decodes-skills-hub-mobile.jpg"
+    ],
+    "limit": "Responsive browser evidence; physical iPhone/Instagram playback remains unverified."
   }
 }
