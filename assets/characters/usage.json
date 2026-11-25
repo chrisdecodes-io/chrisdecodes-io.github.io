@@ -10,7 +10,7 @@
       "frames": 360,
       "seconds": 12,
       "sha256": "998fbcb05bd0c392339e244278a9e366c42bca02715220da78cb64c957d48f0e",
-      "role": "Home Featured resource banner, centered in its reserved media area",
+      "role": "Home Featured resource banner; 160px proportional media box on phones, with the full 360-frame alpha envelope checked against text and actions.",
       "refinement": "Approved November 24, 2026; no double neck extension; original art, blinks and tail retained",
       "safari_sha256": "37a42fb04d161b6f4b33e8c7ee9c33e8255544d6e350a6d76f01f954f110fca7"
     },
@@ -43,7 +43,7 @@
     },
     "peek": {
       "source": "Approved Peek Rise and Blink entry (49 frames), On-Screen Loops/peek continuation (147 frames twice), Peek Dip Exit (28 frames), 19 transparent frames; see scripts/prepare-peek.py",
-      "playback": "Encoded 13-second complete rise, natural blink and opaque dip. Home tagline slot only: entry 1.12x, idle 1.18x, dip 1x; other slots retain 1x. No source frames changed.",
+      "playback": "Encoded 13-second complete rise, natural blink and opaque dip, source unchanged. Home tagline slot: entry 1.12x, one 147-frame blink hold at 1.18x, skip the duplicated second hold, then dip 1x. Idle is about 4.15 seconds rather than 8.3. Other slots retain the complete 1x loop.",
       "frames": 390,
       "seconds": 13,
       "sha256": "a9a381fa64bb903fff54e3fb9df2f5ed168f21554e78243b7fc9dae3ca438f61",
@@ -65,7 +65,7 @@
     "purpose": "Preserve approved Decoder Cat artwork and timing in Safari and VP9-capable browsers without black matte rectangles.",
     "selection": "Apple playback prefers HEVC-with-alpha MOV; other browsers prefer VP9-alpha WebM. Actual corner alpha is checked before video is revealed.",
     "maintenance": "scripts/prepare-safari-alpha.py --ffmpeg <path>; native alpha inspection with scripts/check-safari-alpha.swift",
-    "mobile_role": "Home peek/walk lane and the main Curious/Work companions; secondary footer, grid and inner-page peeks hidden below 761 px to keep reading content clear.",
+    "mobile_role": "Home peek/walk lane, enlarged Curious and existing Work companions, plus a 48px reserved peek above the footer. Grid and inner-content peeks stay hidden below 761px. Footer uses the existing transparent art cropped to its edge; no text or controls underneath.",
     "verification_limit": "Apple AVFoundation decoded all HEVC frames with transparent corners and opaque character pixels. Chromium tested both codecs and opaque-video rejection. Physical iPhone/Instagram webview and Safari UI have not been verified in this revision."
   }
 }

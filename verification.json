@@ -267,5 +267,36 @@
     ],
     "audit": "/tmp/chris-decodes-larger-tagline-audit.json",
     "proof": "/tmp/chris-decodes-larger-tagline-mobile.jpg"
+  },
+  "mobile_cats_revision": {
+    "date": "2026-11-25",
+    "state": "Desktop/mobile browser cycles and full-source alpha clearance reviewed",
+    "widths": [
+      320,
+      390,
+      430,
+      760,
+      1440
+    ],
+    "layout_cases": 30,
+    "checks": [
+      "Curious increased from 110px to 160px on phones; the 360-frame alpha envelope clears headings, copy, metadata and the action.",
+      "Footer peek lane is entirely after main content and ends at the one-pixel footer border on all six pages at four mobile widths.",
+      "Home idle skips only the duplicated blink hold; desktop and mobile dip/walk/restart cycles remain exclusive and have constant walking Y.",
+      "Mobile footer completes its normal blink, full dip and restart; exactly one active peek.",
+      "Original media files and codec/fallback behavior unchanged."
+    ],
+    "audits": [
+      "/tmp/chris-decodes-mobile-cats-layout.json",
+      "/tmp/chris-decodes-shorter-peek-cycle.json",
+      "/tmp/chris-decodes-shorter-peek-desktop-cycle.json",
+      "/tmp/chris-decodes-footer-peek-cycle.json",
+      "/tmp/chris-decodes-curious-bounds.json"
+    ],
+    "proofs": [
+      "/tmp/chris-decodes-curious-larger-mobile.jpg",
+      "/tmp/chris-decodes-footer-peek-mobile.jpg"
+    ],
+    "limit": "Responsive browser evidence; physical iPhone Safari and Instagram playback remain unverified."
   }
 }

@@ -50,6 +50,13 @@ function inViewport(element) {
   const box = element.getBoundingClientRect();
   return box.bottom > 0 && box.top < innerHeight && box.right > 0 && box.left < innerWidth;
 }
+function nextVisiblePeek(index) {
+  for (let step = 1; step <= peekSlots.length; step++) {
+    const next = (index + step) % peekSlots.length;
+    if (inViewport(peekSlots[next])) return next;
+  }
+  return -1;
+}
 function activatePeek(index) {
   activePeek = index;
   peekSlots.forEach((slot, i) => {
@@ -152,12 +159,13 @@ if ('IntersectionObserver' in window) {
 for (const [index, slot] of peekSlots.entries()) {
   const video = slot.querySelector('video');
   video.addEventListener('timeupdate', () => {
-    // Home tagline only: a slightly quicker arrival and shorter idle, full-speed dip.
+    // Home tagline only: keep one complete blink hold, then use the original opaque dip.
     if (walkTrack && index === 0) {
+      if (video.currentTime >= 196 / 30 && video.currentTime < 343 / 30) video.currentTime = 343 / 30;
       video.playbackRate = video.currentTime < 49 / 30 ? 1.12 : video.currentTime < 343 / 30 ? 1.18 : 1;
     }
     if (index === activePeek && Number.isFinite(video.duration) && video.currentTime >= video.duration - 19 / 30) {
-      const next = (index + 1) % peekSlots.length;
+      const next = nextVisiblePeek(index);
       if (!startWalk(next)) activatePeek(next);
     }
   });
