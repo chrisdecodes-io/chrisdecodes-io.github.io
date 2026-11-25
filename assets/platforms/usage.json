@@ -72,16 +72,16 @@
       "lower_drop": 3
     },
     "below_1151px": {
-      "inward": 24,
-      "outward": 8,
+      "inward": 16,
+      "outward": 4,
       "upper_rise": 16,
       "upper_drop": 4,
       "lower_rise": 6,
       "lower_drop": 3
     },
     "phone_travel_px": {
-      "inward": 8,
-      "outward": 2,
+      "inward": 5,
+      "outward": 1,
       "upper_rise": 14,
       "upper_drop": 6,
       "lower_rise": 6,
@@ -93,10 +93,11 @@
       "lower_rise": 16
     },
     "below_361px": {
-      "inward": 5,
+      "inward": 3,
       "chatgpt_origin_shift_outward": 4
     },
     "reduced_motion": "Both axis animations disabled; cat preferences remain separate",
-    "constraint": "Preserve intro geometry and wordmark/tagline/peek alignment. Conservative mark and label movement bounds must clear text, neighboring icons and the walking lane."
+    "constraint": "Keep anchors closer to the tagline while preserving full text/label and neighboring-icon clearance. Retain existing intro geometry, independent-axis timing, header alignment and cat behavior.",
+    "origin_inset": "Wide: clamp(12px, (viewport width - 1150px) * .16, 48px) inward from each flank; 8px below 1151px, 3px on phones, 2px below 361px"
   }
 }

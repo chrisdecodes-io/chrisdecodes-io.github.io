@@ -270,3 +270,12 @@ Wide bounds extend 64 px inward and 12 px outward, with upper rise/drop 24/8 px 
 Christopher clarified that the Chris Decodes wordmark itself should center over the tagline, with the CD square positioned relative to it. This supersedes centering the combined lockup. Offset the group by half its square-plus-gap width so the wordmark center matches the main-column center; keep the CD on its left above 760 px. At phone widths put the square on the right with the corresponding reversed group offset, preserving room for Home. Native artwork, relative sizes and vertical alignment stay unchanged. Footer layout is unchanged.
 
 Review complete conservative icon/label envelopes at responsive breakpoints from 320 to 1920 px, including 400/401 and 410/411 px text-wrap boundaries. No intersections with text or neighboring icons, Home overlap or horizontal overflow remain. Wordmark/tagline centers differ by less than 0.02 CSS px from rounding. Observe complete desktop cycles and phone pacing: desktop horizontal motion spans about 76 px, with 32 px upper and 14 px lower vertical travel. Maintain source assignments through README and both platform/wordmark usage records.
+
+
+## Closer tagline-side icon anchors, November 24, 2026
+
+Christopher requested that icons drift closer to the tagline without covering text. Move their anchor positions inward rather than only enlarging excursions from the page edges. Wide-screen anchors move inward by clamp(12px, (viewport width - 1150px) * .16, 48px), retaining the broad independent-axis paths and quicker timing.
+
+At intermediate widths use an 8 px anchor inset with 16 px inward and 4 px outward travel, keeping the previous closest safe boundary while reducing time spent farther away. Phone anchors move in 3 px, with 5 px inward/1 px outward travel; below 361 px use a 2 px inset and 3 px inward travel. Preserve the narrow ChatGPT label offset relative to its new anchor. Vertical paths, timing, introduction dimensions, typography, wordmark/peek alignment, cat behavior, source artwork and resources are unchanged.
+
+Check complete conservative mark/label envelopes against actual text-line rectangles and every other icon. All 28 tested widths from 320 to 1920 px pass, including font-wrap and responsive boundaries. No Home overlap or horizontal overflow; wordmark/tagline alignment remains within 0.02 CSS px. This supersedes the previous edge-aligned icon anchor positions and small-screen horizontal amplitudes only.
