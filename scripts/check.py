@@ -108,3 +108,10 @@ walk_qa=json.loads((root/'assets/characters/walk-registration.json').read_text()
 assert walk_qa['sha256']==hashlib.sha256((root/'assets/characters/walk.webm').read_bytes()).hexdigest(),'Walk registration receipt must match deployed media'
 assert len(walk_qa['encoded_paw_baselines'])==30 and set(walk_qa['encoded_paw_baselines'])=={walk_qa['baseline']},'All decoded gait frames must share one ground line'
 assert walk_qa['loop_join_baseline_delta']==0 and walk_qa['visible_pixels_cropped'] is False,'Walk restart must preserve ground contact without cropping artwork'
+
+# Every maintained animation must have the verified Safari delivery derivative.
+usage=json.loads((root/'assets/characters/usage.json').read_text())
+for action,meta in usage['assets'].items():
+ file=root/'assets/characters'/f'{action}.mov'
+ assert file.is_file() and hashlib.sha256(file.read_bytes()).hexdigest()==meta['safari_sha256'],(action,'Safari derivative missing or changed without review')
+print('Safari derivatives match the maintained asset hashes.')

@@ -8,11 +8,13 @@ const sidebarToggle = document.querySelector('.sidebar-toggle');
 sidebarToggle?.addEventListener('click', () => {
   const expanded = sidebarToggle.getAttribute('aria-expanded') !== 'true';
   sidebarToggle.setAttribute('aria-expanded',String(expanded));
+  document.querySelector('#sidebar-links').classList.toggle('is-open', expanded);
   sidebarToggle.querySelector('span').textContent = expanded ? '−' : '+';
 });
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape' && sidebarToggle?.getAttribute('aria-expanded') === 'true') {
     sidebarToggle.setAttribute('aria-expanded','false');
+    document.querySelector('#sidebar-links').classList.remove('is-open');
     sidebarToggle.querySelector('span').textContent = '+';
     sidebarToggle.focus();
   }

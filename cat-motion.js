@@ -31,7 +31,7 @@ function startWalk(next) {
   if (!walkTrack || !inViewport(walkTrack) || document.hidden) return false;
   fitWalkingTrack();
   const video = walkTrack.querySelector('video');
-  if (!video.canPlayType('video/webm; codecs="vp9"')) return false;
+  if (video.dataset.exhausted === 'true') return false;
   nextPeek = next;
   walking = true;
   walkTrack.querySelector('.decoder-cat').classList.remove('has-video');
@@ -45,7 +45,7 @@ function startWalk(next) {
   return true;
 }
 walkTrack?.querySelector('.decoder-cat').addEventListener('animationend', event => { if (event.animationName === 'cat-crossing') finishWalk(); });
-walkTrack?.querySelector('video').addEventListener('error', finishWalk);
+
 function inViewport(element) {
   const box = element.getBoundingClientRect();
   return box.bottom > 0 && box.top < innerHeight && box.right > 0 && box.left < innerWidth;
@@ -77,7 +77,7 @@ function refreshCharacter(container) {
   const action = container.dataset.action;
   if (action === 'walk' && !walking) { video.pause(); return; }
   if (action === 'peek' && !container.closest('[data-peek-active]')) { video.pause(); return; }
-  if (!video.canPlayType('video/webm; codecs="vp9"')) return;
+  if (video.dataset.exhausted === 'true') return;
   if (video.dataset.action !== action) {
     video.pause();
     video.removeAttribute('src');
@@ -90,15 +90,51 @@ function refreshCharacter(container) {
   const visible = !container.hidden && !document.hidden && (action === 'walk' ? inViewport(walkTrack) : container.getClientRects().length > 0 && bounds.bottom > 0 && bounds.top < innerHeight && bounds.right > 0 && bounds.left < innerWidth);
   if (!visible) { video.pause(); return; }
   if (!video.getAttribute('src')) {
-    video.src = assetURL(`/assets/characters/${action}.webm`);
+    loadFormat(container);
     video.muted = true;
   }
   video.play().catch(() => { container.classList.remove('has-video'); if (action === 'walk') finishWalk(); });
 }
+// Safari supports HEVC alpha; some browsers accept VP9 but discard its alpha plane.
+// Validate decoded transparency before ever revealing a video over its PNG fallback.
+const applePlayback = /Apple/.test(navigator.vendor) || /iPhone|iPad|iPod/.test(navigator.userAgent);
+const formats = applePlayback ? ['mov', 'webm'] : ['webm', 'mov'];
+function loadFormat(container) {
+  const video = container.querySelector('video');
+  const index = +(video.dataset.formatIndex || 0);
+  video.src = assetURL(`/assets/characters/${container.dataset.action}.${formats[index]}`);
+  video.muted = true;
+}
+function rejectFormat(container) {
+  const video = container.querySelector('video');
+  container.classList.remove('has-video');
+  video.pause();
+  const next = +(video.dataset.formatIndex || 0) + 1;
+  video.dataset.formatIndex = String(next);
+  if (next >= formats.length) {
+    video.dataset.exhausted = 'true';
+    video.removeAttribute('src');
+    if (container.dataset.action === 'walk') finishWalk();
+    return;
+  }
+  loadFormat(container);
+  video.play().catch(() => { if (container.dataset.action === 'walk') finishWalk(); });
+}
 for (const container of characters) {
   const video = container.querySelector('video');
-  video.addEventListener('playing', () => container.classList.add('has-video'));
-  video.addEventListener('error', () => container.classList.remove('has-video'));
+  video.addEventListener('playing', () => {
+    try {
+      const canvas = document.createElement('canvas');
+      canvas.width = canvas.height = 2;
+      const context = canvas.getContext('2d', { willReadFrequently: true });
+      context.drawImage(video, 0, 0, 2, 2, 0, 0, 2, 2);
+      const pixels = context.getImageData(0, 0, 2, 2).data;
+      if ([3,7,11,15].some(index => pixels[index] > 8)) { rejectFormat(container); return; }
+      container.classList.add('has-video');
+      video.dataset.alphaVerified = 'true';
+    } catch { rejectFormat(container); }
+  });
+  video.addEventListener('error', () => { if (video.getAttribute('src')) rejectFormat(container); });
 }
 function refreshCharacters() { walkTrack?.toggleAttribute('data-walk-paused', document.hidden); followVisibleSection(); characters.forEach(refreshCharacter); }
 document.addEventListener('library:motion-update', refreshCharacters);

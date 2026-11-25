@@ -2,7 +2,7 @@
   "state": "Approved collection artwork with Curious neck refinement adopted November 24, 2026",
   "display": "One active peek or walking interlude at a time; primary Curious/Work companions stay in their roles.",
   "motion": "Normal-speed 12-second full gestures; automatic silent inline loops without pause controls; OS reduced-motion preferences do not alter playback per standing website direction",
-  "fallback": "Original matching transparent still if playback is unsupported or blocked",
+  "fallback": "Transparent PNG remains visible until decoded video alpha is verified; opaque/unsupported playback tries the other codec, then keeps the still.",
   "assets": {
     "curious": {
       "source": "Decoder Cat Expressive v7 2026-11-01/Editor Exports/curious/transparent.webm",
@@ -10,8 +10,9 @@
       "frames": 360,
       "seconds": 12,
       "sha256": "998fbcb05bd0c392339e244278a9e366c42bca02715220da78cb64c957d48f0e",
-      "role": "Home Skills banner, centered in the right-hand media area",
-      "refinement": "Approved November 24, 2026; no double neck extension; original art, blinks and tail retained"
+      "role": "Home Featured resource banner, centered in its reserved media area",
+      "refinement": "Approved November 24, 2026; no double neck extension; original art, blinks and tail retained",
+      "safari_sha256": "37a42fb04d161b6f4b33e8c7ee9c33e8255544d6e350a6d76f01f954f110fca7"
     },
     "work": {
       "source": "Decoder Cat Expressive v7 2026-11-01/Editor Exports/work/transparent.webm",
@@ -19,7 +20,8 @@
       "frames": 360,
       "seconds": 12,
       "sha256": "6533319961f9658980967b9ea008aeb1dcef7a6451ba4de15b63ce46869dfc43",
-      "role": "Skills and Instructions collection empty states, supporting the explanation without implying a released resource"
+      "role": "Skills and Instructions collection empty states, supporting the explanation without implying a released resource",
+      "safari_sha256": "38e88a0df277dd359699b3ecc2252b88241fab88738098273de45b82055706f1"
     },
     "presenting": {
       "source": "Decoder Cat Expressive v7 2026-11-01/Editor Exports/presenting/transparent.webm",
@@ -27,7 +29,8 @@
       "frames": 360,
       "seconds": 12,
       "sha256": "2687e1ab91516801987c944e8cd95ce9948ee7d7d52f743f462b80d948c075e6",
-      "role": "Projects collection"
+      "role": "Projects collection",
+      "safari_sha256": "0469c3a050dbaa541fe74312b185e1b6cab0df59134f76429c03efe71168be83"
     },
     "rest": {
       "source": "Decoder Cat Expressive v7 2026-11-01/Editor Exports/rest/transparent.webm",
@@ -35,7 +38,8 @@
       "frames": 360,
       "seconds": 12,
       "sha256": "f57a9287e5f8accc488139c39a6c4e0e5690483b24b4d7f3c8a629f66ca94219",
-      "role": "Quiet Home footer companion centered beside navigation links"
+      "role": "Quiet Home footer companion centered beside navigation links",
+      "safari_sha256": "0a169802d665dc0b39952be2b282a7851aa7dce0e288789ed11ffc5e7ea9255f"
     },
     "peek": {
       "source": "Approved Peek Rise and Blink entry (49 frames), On-Screen Loops/peek continuation (147 frames twice), Peek Dip Exit (28 frames), 19 transparent frames; see scripts/prepare-peek.py",
@@ -43,7 +47,8 @@
       "frames": 390,
       "seconds": 13,
       "sha256": "a9a381fa64bb903fff54e3fb9df2f5ed168f21554e78243b7fc9dae3ca438f61",
-      "role": "Three separate section locations per content page, coordinated so at most one peek plays; Home Featured-edge slot is centered beneath the tagline"
+      "role": "Three separate section locations per content page, coordinated so at most one peek plays; Home Featured-edge slot is centered beneath the tagline",
+      "safari_sha256": "93e07b1f538bc6c01868b75358f01a47a737cbc771913b1d3051657cb9be841c"
     },
     "walk": {
       "source": "Website-only paw-baseline-registered derivative of Decoder Cat Flow Neon Walk 2026-10-20/Loop asset v1/loop-transparent.webm; see walk-registration.json and scripts/prepare-walk.py",
@@ -52,7 +57,15 @@
       "seconds": 1,
       "sha256": "b85d0eef2d5dc10990c6d1a60fc3435516750dfad06145947131148e0b21b068",
       "role": "Home only: Featured-width lane; enters through the left boundary and exits through the right, without vertical travel or outer-margin drift; exclusive with peeking cats",
-      "limits": "Original shape variation and natural leg/head articulation retained. Integer frame registration only, no scaling, warping, redrawing, retiming or shared-library modification."
+      "limits": "Original shape variation and natural leg/head articulation retained. Integer frame registration only, no scaling, warping, redrawing, retiming or shared-library modification.",
+      "safari_sha256": "a64cdf4a67103c80190bc0aa72ecf43396226d81a273764322d869bcd115a4c2"
     }
+  },
+  "browser_delivery": {
+    "purpose": "Preserve approved Decoder Cat artwork and timing in Safari and VP9-capable browsers without black matte rectangles.",
+    "selection": "Apple playback prefers HEVC-with-alpha MOV; other browsers prefer VP9-alpha WebM. Actual corner alpha is checked before video is revealed.",
+    "maintenance": "scripts/prepare-safari-alpha.py --ffmpeg <path>; native alpha inspection with scripts/check-safari-alpha.swift",
+    "mobile_role": "Home peek/walk lane and the main Curious/Work companions; secondary footer, grid and inner-page peeks hidden below 761 px to keep reading content clear.",
+    "verification_limit": "Apple AVFoundation decoded all HEVC frames with transparent corners and opaque character pixels. Chromium tested both codecs and opaque-video rejection. Physical iPhone/Instagram webview and Safari UI have not been verified in this revision."
   }
 }

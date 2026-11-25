@@ -111,9 +111,9 @@ pre{font:400 1rem/1.85 Inter,Arial,sans-serif;white-space:pre-wrap;overflow-wrap
 @media(max-width:760px){
 .site-shell{display:block;min-height:0}
 .sidebar{position:relative;max-height:none;border-right:0;border-bottom:1px solid var(--line);padding:0 20px}
-.sidebar-toggle{display:flex;justify-content:space-between;width:100%;border:0;padding:16px 0;background:none;color:var(--blue);font-weight:600}
+.sidebar-toggle{grid-column:3;grid-row:1;justify-self:end;display:inline-flex;align-items:center;justify-content:center;gap:5px;width:auto;min-height:44px;padding:8px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink);font:600 .8125rem/1 Inter,Arial,sans-serif}
 .sidebar nav{display:none;padding-bottom:20px}
-.sidebar-toggle[aria-expanded=true]+nav{display:block}
+.sidebar nav.is-open{display:block}
 .sidebar-tagline{display:none}
 .sidebar .nav-label{padding-top:7px}
 .sidebar nav>a{min-height:46px}
@@ -445,9 +445,20 @@ body{min-height:100vh;display:flex;flex-direction:column}
 .tile-icon img{display:block;object-fit:contain}
 @media(max-width:1279px){.platform-orbit{--inward-travel:32px;--outward-travel:8px;--upper-rise:20px;--upper-drop:6px;--lower-rise:8px;--lower-drop:3px}}
 @media(max-width:1150px){.home-intro{padding-inline:92px;min-height:192px}.platform-orbit{--flank-inset:8px;--inward-travel:16px;--outward-travel:4px;--upper-rise:16px;--upper-drop:4px;--lower-rise:6px;--lower-drop:3px;inset:8px 4px}.platform-token{width:72px}.platform-mark{width:56px;height:56px;border-radius:14px}}
-@media(max-width:760px){.feature-peek-wrap{--peek-half:60px}.home-intro{padding:4px 60px;min-height:180px}.home-tagline{font-size:2rem;line-height:1.18}.platform-orbit{--flank-inset:3px;--inward-travel:5px;--outward-travel:1px;--upper-rise:14px;--upper-drop:6px;--lower-rise:6px;--lower-drop:4px;inset:10px 0}.platform-token{width:52px}.platform-content{gap:5px}.platform-mark{width:44px;height:44px;border-radius:12px}.platform-mark img{width:28px;height:28px}.platform-token[data-platform=chatgpt] img{width:34px;height:34px}.platform-label{line-height:1.25}}
-@media(max-width:400px){.platform-orbit{--upper-rise:18px;--upper-drop:12px;--lower-rise:16px}}
-@media(max-width:360px){.brand{--cta-width:128px}.home-link{padding-inline:4px;gap:4px;font-size:.84375rem}.home-icon{width:14px;height:14px}.home-intro{padding-inline:51px}.platform-orbit{--flank-inset:2px;--inward-travel:3px}.platform-token[data-platform=chatgpt]{right:calc(var(--flank-inset) - 4px)}.home-tagline{font-size:1.875rem}.platform-token{width:44px}.platform-mark{width:38px;height:38px;border-radius:10px}.platform-mark img{width:25px;height:25px}.platform-token[data-platform=chatgpt] img{width:30px;height:30px}.platform-label{font-size:.75rem}}
+@media(max-width:760px){
+.feature-peek-wrap{--peek-half:60px}
+.home-intro{display:flex;flex-direction:column;gap:16px;padding:0;min-height:0}
+.home-tagline{font-size:clamp(1.75rem,7.2vw,2.1rem);line-height:1.22}
+.platform-orbit{--inward-travel:2px;--outward-travel:2px;--upper-rise:3px;--upper-drop:3px;--lower-rise:3px;--lower-drop:3px;position:relative;inset:auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;width:100%;max-width:340px;min-height:70px}
+.platform-token[data-platform]{position:relative;inset:auto;width:auto;--float-left:2px;--float-right:2px;--float-up:3px;--float-down:3px}
+.platform-content{gap:4px}
+.platform-mark{width:40px;height:40px;border-radius:11px}
+.platform-mark img{width:26px;height:26px}
+.platform-token[data-platform=chatgpt] img{width:32px;height:32px}
+.platform-label{font-size:.6875rem;line-height:1.25}
+.brand{--cta-width:160px}
+}
+@media(max-width:360px){.brand{--cta-width:128px}.home-link{padding-inline:4px;gap:4px;font-size:.8125rem}.home-icon{width:14px;height:14px}}
 @media(min-width:761px){.platform-label{white-space:nowrap}}
 @media(prefers-reduced-motion:reduce){.platform-token,.platform-content{animation:none}}
 
@@ -478,3 +489,55 @@ body{min-height:100vh;display:flex;flex-direction:column}
 .detail-quick-link{margin-top:6px}
 #prompt-title{scroll-margin-top:24px}
 @media(max-width:760px){.empty-actions{justify-content:center}}
+
+/* Phone-first reading rhythm. Decorative peeks stay on desktop except the Home lane. */
+@media(max-width:760px){
+.sidebar{border-bottom:0}
+.sidebar nav.is-open{padding-block:16px;border-bottom:1px solid var(--line)}
+main{padding:24px 20px 28px}
+.header-inner{row-gap:10px}
+.home-grid.peek-surface{margin-top:24px;padding-top:24px}
+.home-grid>.peek-edge,.footer>.peek-edge,.skills-page .peek-edge,.about-page .peek-edge,.resource-detail .peek-edge,.collection-how .peek-edge{display:none}
+.footer{margin-top:12px;padding:24px 20px}
+.footer-brand{--cta-width:180px}
+.footer-inner{gap:12px}
+.footer nav{gap:0 22px}
+.footer nav a{font-size:.8125rem}
+.footer-tagline{font-size:.9375rem}
+.home-tile{min-height:0;aspect-ratio:auto;padding:20px;border-radius:12px}
+.home-tile h2{font-size:1.5rem;line-height:1.2}
+.tile-heading{margin-bottom:12px;gap:10px}
+.home-tile>p{font-size:.9375rem;line-height:1.55;margin-bottom:10px}
+.tile-bottom{padding-top:0;gap:4px}
+.tile-action{display:inline-flex;align-items:center;min-height:44px}
+.home-grid{gap:12px}
+.featured-panel{padding:22px;gap:12px;grid-template-columns:minmax(0,1fr) 80px}
+.featured-panel h2{font-size:1.75rem;line-height:1.15}
+.featured-description{font-size:1rem;line-height:1.55}
+.featured-panel .decoder-cat{width:80px;height:80px}
+.featured-panel .featured-copy .featured-label,.featured-panel .featured-copy h2,.featured-panel .featured-copy .featured-description{margin-bottom:0}
+.featured-panel .featured-copy .featured-button{grid-column:1;grid-row:5;margin-top:0;justify-self:start}
+.featured-panel>.decoder-cat{grid-row:4/6;width:110px;height:110px;align-self:center}
+.featured-panel{grid-template-columns:minmax(0,1fr) 110px}
+.featured-panel .featured-meta{align-self:end}
+.featured-meta{font-size:.8125rem}
+.skills-page .page-intro h1,.about-page h1,.detail-intro h1{font-size:2.2rem;line-height:1.12}
+.page-intro p:last-child{font-size:1rem;line-height:1.6}
+.empty-state{padding:20px;gap:4px}
+.empty-state .decoder-cat{width:140px;height:140px}
+.collection-how li{margin-bottom:10px;line-height:1.55}
+.resource-detail pre{padding:16px;font-size:.9375rem;line-height:1.65}
+.resource-actions{display:grid;grid-template-columns:1fr;gap:8px}
+.resource-actions .button{justify-content:center;text-align:center}
+.prompt-peek,.skills-collection.peek-surface,.skills-page .page-intro.peek-surface{margin-top:28px!important}
+}
+
+/* The extra CD badge is redundant in the narrow header; keep it in the footer. */
+@media(max-width:480px){
+.brand{left:0;width:120px;justify-content:center;gap:0}
+.brand .brand-symbol{display:none}
+.brand .brand-wordmark{width:120px}
+}
+@media(max-width:360px){.brand,.brand .brand-wordmark{width:104px}}
+
+@media(max-width:760px){.skills-page .page-intro.peek-surface{margin-top:0!important;padding-top:0;border-top:0}}

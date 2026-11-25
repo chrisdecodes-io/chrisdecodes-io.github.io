@@ -1,5 +1,5 @@
 {
-  "state": "Site usability and walking entrance/exit reviewed",
+  "state": "Mobile layout revised and Chromium/media checks passed; physical iPhone verification pending",
   "content_pages": [
     "/",
     "/prompts/",
@@ -9,14 +9,16 @@
     "/resources/task-context-starter-prompt/"
   ],
   "viewport_widths": [
-    1920,
-    1440,
-    1024,
-    900,
+    320,
     390,
-    320
+    430,
+    760,
+    900,
+    1024,
+    1440,
+    1920
   ],
-  "layout_cases": 36,
+  "layout_cases": 48,
   "checks": [
     "No horizontal overflow, one descriptive H1 and all three channel links on six pages at six widths",
     "Definitions preserved; entries and availability precede general usage instructions; empty collections offer Browse prompts",
@@ -123,7 +125,7 @@
     ]
   },
   "independent_axis_motion": {
-    "state": "Full conservative bounds, complete desktop cycles and phone pacing reviewed",
+    "state": "Desktop retained; phone icons now use a compact normal-flow row with 2px horizontal and 3px vertical drift",
     "widths": [
       1920,
       1440,
@@ -162,7 +164,7 @@
     ]
   },
   "closer_icon_anchors": {
-    "state": "Reviewed",
+    "state": "Desktop retained; former phone flanking layout superseded by mobile_revision",
     "widths": [
       1920,
       1600,
@@ -199,5 +201,23 @@
       "No Home overlap or horizontal overflow; existing wordmark/tagline centering preserved",
       "Animation periods, vertical paths, opening dimensions, typography and approved cat media unchanged"
     ]
+  },
+  "mobile_revision": {
+    "basis": "Christopher\u2019s actual iPhone screenshots showed opaque video backgrounds and a crowded opening.",
+    "layout_checks": "Six pages at eight widths: no horizontal overflow, one H1, no header collisions, channels have at least 44px height.",
+    "behavior_checks": [
+      "Header Menu expands all navigation; Escape closes and returns focus.",
+      "Copy prompt succeeds and browser Back returns Home.",
+      "13 HTTP destinations return 200; downloaded prompt matches catalog bytes.",
+      "26-second phone-width observation includes peek, walk and restart; one active peek maximum; walking box remains at constant Y.",
+      "Both VP9-alpha and HEVC-alpha decode transparently in Chromium. Deliberately opaque video is rejected; a second failure keeps the transparent PNG.",
+      "Native Apple AVFoundation checks every MOV frame for transparent corner alpha and opaque character pixels."
+    ],
+    "device_limit": "Native Safari UI access timed out. Actual iPhone Safari and Instagram in-app playback remain unverified; responsive Chromium screenshots are not physical-device evidence.",
+    "proofs": [
+      "/tmp/chris-decodes-mobile-polish-home.jpg",
+      "/tmp/chris-decodes-mobile-polish-desktop.jpg"
+    ],
+    "audit": "/tmp/chris-decodes-mobile-layout-audit.json"
   }
 }
