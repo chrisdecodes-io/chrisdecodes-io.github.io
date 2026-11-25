@@ -288,3 +288,10 @@ Real iPhone screenshots exposed opaque black video rectangles that Chromium view
 Phone layout puts the full-width tagline above one compact platform-icon row, with bounded drift. Menu shares the header with Home and the centered wordmark; the redundant CD header badge is hidden at phone widths and retained in the footer. All three channel buttons remain visible. Cards, Featured and the footer use a compact reading rhythm; secondary peeks are hidden on phones so they cannot overlap resource instructions. The Home peek/walk has its own clear lane. Desktop character behavior, approved artwork, walking baseline and content remain unchanged.
 
 QA distinguishes viewport emulation from device evidence. HEVC transparency is checked through Apple AVFoundation; both formats and deliberately opaque-video fallback are checked in Chromium. Native Safari UI access timed out, so actual iPhone Safari and Instagram in-app playback remain unverified until a device check. No physical-device success should be inferred from responsive screenshots.
+
+
+### Two-line phone tagline and optional guidance
+
+Home keeps the exact approved tagline, one sentence per line at normal text settings. Phone type scales from 18px to 32px rather than forcing unbreakable text; enlarged text can still wrap naturally. The platform row and reserved cat lane remain separate from the heading. This shortens the opening and brings the available resource action higher on the page.
+
+Empty Skills and Instructions collections use a native keyboard-accessible disclosure for future usage steps. Their definitions, availability and Browse prompts action remain visible. Prompts keeps its usage instructions expanded because a resource is available. Text actions and resource-card actions have a minimum 44px tap height. These are website usability refinements, not new resource releases. Review at 320–1920px covers two actual rendered tagline lines, no horizontal overflow, one H1 and action heights across all six pages. Physical-device playback remains subject to the previous mobile verification limit.

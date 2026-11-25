@@ -219,5 +219,28 @@
       "/tmp/chris-decodes-mobile-polish-desktop.jpg"
     ],
     "audit": "/tmp/chris-decodes-mobile-layout-audit.json"
+  },
+  "two_line_tagline_revision": {
+    "state": "Responsive layout and keyboard disclosure reviewed",
+    "widths": [
+      320,
+      390,
+      430,
+      760,
+      900,
+      1024,
+      1440,
+      1920
+    ],
+    "cases": 48,
+    "checks": [
+      "Both tagline sentences each occupy one rendered line at all eight widths.",
+      "Six pages have one H1, no horizontal overflow and text action tap heights of at least 44px.",
+      "Empty collection guidance opens and closes with Enter; Browse prompts reaches the available resource collection.",
+      "Tagline wording, brand font, platform row, resource content and cat behavior preserved."
+    ],
+    "audit": "/tmp/chris-decodes-two-line-audit.json",
+    "proof": "/tmp/chris-decodes-two-line-mobile.jpg",
+    "limit": "Browser viewport review; physical iPhone Safari/Instagram playback is still unverified."
   }
 }
