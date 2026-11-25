@@ -292,6 +292,8 @@ QA distinguishes viewport emulation from device evidence. HEVC transparency is c
 
 ### Two-line phone tagline and optional guidance
 
-Home keeps the exact approved tagline, one sentence per line at normal text settings. Phone type scales from 18px to 32px rather than forcing unbreakable text; enlarged text can still wrap naturally. The platform row and reserved cat lane remain separate from the heading. This shortens the opening and brings the available resource action higher on the page.
+Home keeps the exact approved tagline, one sentence per line at normal text settings. Compact-layout type scales from 19px to 36px rather than forcing unbreakable text; enlarged text can still wrap naturally. The platform row and reserved cat lane remain separate from the heading. This shortens the opening and brings the available resource action higher on the page.
 
 Empty Skills and Instructions collections use a native keyboard-accessible disclosure for future usage steps. Their definitions, availability and Browse prompts action remain visible. Prompts keeps its usage instructions expanded because a resource is available. Text actions and resource-card actions have a minimum 44px tap height. These are website usability refinements, not new resource releases. Review at 320–1920px covers two actual rendered tagline lines, no horizontal overflow, one H1 and action heights across all six pages. Physical-device playback remains subject to the previous mobile verification limit.
+
+The follow-up size refinement raises phone tagline type by about 11% (23.79px at 390px). The platform row now continues through 899px so the narrow sidebar layout also preserves two lines; larger desktop layouts retain their flanking icons. Fourteen widths from 320 to 1920px were checked for actual rendered lines and overflow.

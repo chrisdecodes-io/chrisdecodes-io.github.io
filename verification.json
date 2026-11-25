@@ -242,5 +242,30 @@
     "audit": "/tmp/chris-decodes-two-line-audit.json",
     "proof": "/tmp/chris-decodes-two-line-mobile.jpg",
     "limit": "Browser viewport review; physical iPhone Safari/Instagram playback is still unverified."
+  },
+  "larger_tagline_revision": {
+    "widths": [
+      320,
+      360,
+      375,
+      390,
+      430,
+      580,
+      760,
+      761,
+      800,
+      899,
+      900,
+      1024,
+      1440,
+      1920
+    ],
+    "checks": [
+      "Two actual rendered tagline lines and no horizontal overflow at all fourteen widths.",
+      "Phone type increased about 11%; platform row continues through 899px to prevent narrow-tablet wrapping.",
+      "Approved wording, font and cat behavior preserved."
+    ],
+    "audit": "/tmp/chris-decodes-larger-tagline-audit.json",
+    "proof": "/tmp/chris-decodes-larger-tagline-mobile.jpg"
   }
 }
